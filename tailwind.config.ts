@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        onset: ['Onset', 'sans-serif'],
       },
+      colors: {
+        primary: "#40BA77",
+        footerBg: "#E5F4EB",
+        skyblue: "#D6DFFF",
+        leafGreen: "#D6FFE9",
+        mellowYellow: "#E8F9CD",
+        purple: "#E5D6FF",
+      }
     },
   },
   plugins: [],
