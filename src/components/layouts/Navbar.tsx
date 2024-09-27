@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Button from "../shared/Button";
 import { FaArrowRight, FaArrowDown } from "react-icons/fa6";
-import { Tab } from "@/types/ui.types";
-import { brandLogoUri } from "@/constants/assets";
+import { Tab } from "types/ui.types";
+import { brandLogoUri } from "constants/assets.constants";
 
 const Navbar: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string | null>(null);

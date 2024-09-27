@@ -1,4 +1,4 @@
-import { brandImgUri, footerImgUri } from "@/constants/assets";
+import { brandImgUri, footerImgUri } from "constants/assets.constants";
 import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import {

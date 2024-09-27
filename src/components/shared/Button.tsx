@@ -1,4 +1,4 @@
-import { ButtonProps } from "@/types/ui.types";
+import { ButtonProps } from "types/ui.types";
 import React from "react";
 
 const Button: React.FC<ButtonProps> = ({
