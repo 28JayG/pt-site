@@ -4,9 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Onset&display=swap');
 
-:root {
-  padding: 20px;
-}
 .convex-curve {
   clip-path:  polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
 }
