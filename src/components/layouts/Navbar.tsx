@@ -24,9 +24,9 @@ const Navbar: React.FC = () => {
       <img
         src={brandLogoUri}
         alt="Logo"
-        className="w-44 h-10"
+        className="w-36 md:w-44 h-10"
       />
-      <div className="flex gap-12 items-center text-gray-400">
+      <div className="hidden md:flex gap-12 items-center text-gray-400">
         {tabs.map((tab) => (
           <div
             key={tab.name}

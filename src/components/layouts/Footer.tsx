@@ -14,8 +14,8 @@ const Footer: React.FC = () => {
   return (
     <div>
       <div className="bg-footerBg px-10 pb-10">
-        <div className="flex gap-20 justify-center p-6">
-          <img src={brandImgUri} alt="Brand Logo" className="w-52 h-12" />
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-center p-6">
+          <img src={brandImgUri} alt="Brand Logo" className="w-52 h-12 " />
           <p className="text-sm">
             At Propelius Technologies, we are more than just a technology
             company. We are a team of passionate innovators, dedicated to
@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
           </p>
         </div>
         <div className="border-white border mb-10"></div>
-        <div className="flex justify-evenly text-sm">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-start md:justify-evenly md:text-sm ">
           <div className="flex flex-col gap-4">
-            <p className="text-gray-400 text-base">Company</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">Company</p>
             <p>Home</p>
             <p>About Us</p>
             <p>Blog</p>
@@ -36,14 +36,14 @@ const Footer: React.FC = () => {
             <p>Contact Us</p>
           </div>
           <div className="flex flex-col gap-4 ">
-            <p className="text-gray-400 text-base">Services</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">Services</p>
             <p>Mobile App Development</p>
             <p>Web App Development</p>
             <p>SAAS Solution</p>
             <p>Custome E-Commerce Solution</p>
           </div>
           <div className="flex flex-col gap-4 ">
-            <p className="text-gray-400 text-base">Technologies</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">Technologies</p>
             <p>Tech Expertise</p>
             <p>AI Development</p>
             <p>Database Management</p>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             <p>Digitl Marketing</p>
           </div>
           <div className="flex flex-col gap-4 ">
-            <p className="text-gray-400 text-base">Other Links</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">Other Links</p>
             <p>Privacy Policy</p>
             <p>Terms And Conditions</p>
             <p>Security</p>
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-evenly py-10">
+      <div className="flex flex-col md:flex-row justify-start md:justify-evenly gap-5 md:gap-0 pl-5 md:pl-0 py-10">
         <div>
           <img src={footerImgUri} alt="" className="w-52 h-20" />
           <div className="flex gap-2 justify-center">
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-gray-400 text-base">Business Enquiries</p>
+          <p className="text-gray-400 text-base font-bold md:font-normal">Business Enquiries</p>
           <p className="flex gap-2 items-center">
             <LuPhone />
             +91 999 999 9999
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-gray-400 text-base">Career Enquiries</p>
+          <p className="text-gray-400 text-base font-bold md:font-normal">Career Enquiries</p>
           <p className="flex gap-2 items-center">
             <LuPhone />
             +91 999 999 9999
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
             <br />
             about your project?
           </p>
-          <div className="bg-black text-white rounded-full px-9 py-3">
+          <div className="bg-black text-white rounded-full px-9 py-3 w-fit">
             Book Appointment
           </div>
         </div>

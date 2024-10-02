@@ -4,7 +4,7 @@ import Navbar from "components/layouts/Navbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="pt-4">
       <Navbar />
       <Hero />
       {/* <Footer /> */}

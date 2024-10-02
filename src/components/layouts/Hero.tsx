@@ -23,8 +23,8 @@ const Hero: React.FC = () => {
       }}
       className="flex flex-col gap-20"
     >
-      <div className="flex flex-col justify-center items-center text-center gap-10 pt-20">
-        <h2 className="text-6xl font-bold">
+      <div className="flex flex-col justify-center items-center text-center md:gap-10 md:pt-20 pt-5 gap-5">
+        <h2 className="md:text-6xl font-bold text-3xl">
           Digital Solution For Your
           <br />
           Business Compititive Edge
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           e-commerce and SaaS solutions for
           <br /> overall digital success.
         </p>
-        <div className="flex gap-20">
+        <div className="flex-col flex md:flex-row md:gap-20 gap-8">
           <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
             Consult Our Experts
           </Button>
@@ -47,12 +47,12 @@ const Hero: React.FC = () => {
       <RoundedCard />
       <ServicesRange />
       <ExplorePotential />
-      <div className="rounded-2xl px-40 py-16 mx-20 text-center bg-white convex-curve mt-10 border border-primary flex flex-col gap-6">
-        <p className="font-bold text-3xl text-primary text-start">
+      <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border border-primary flex flex-col gap-6">
+        <p className="font-semibold md:font-bold text-xl md:text-3xl text-primary text-center md:text-start">
           Forge Your Digital Future
         </p>
-        <div className="flex justify-between ">
-          <p className="text-start">
+        <div className="flex flex-col md:flex-row justify-between ">
+          <p className="text-center md:text-start text-sm md:text-base">
             Implement Smart Digital Solutions with Propelius - Connect with is
             for
             <br /> a discovery call

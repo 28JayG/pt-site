@@ -5,10 +5,10 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 const FeaturedWork: React.FC = () => {
   return (
     <div className="bg-darkGray w-full flex flex-col gap-10 py-20">
-      <p className="text-4xl font-bold ml-28">
+      <p className="text-3xl md:text-4xl font-bold mx-auto md:ml-28 text-center ">
         Explore Our Potential In Our Work
       </p>
-      <div className="flex items-center justify-between px-28">
+      <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center justify-between px-5 md:px-28">
         <p>
           Explore our diverse portfolio and see how we have developed unique
           business solutions with our innovative
@@ -18,15 +18,15 @@ const FeaturedWork: React.FC = () => {
           View All Work
         </Button>
       </div>
-      <div className="flex gap-44">
-        <div className="bg-oliveGreen w-175 h-148 rounded-3xl relative ">
+      <div className="flex flex-col md:flex-row gap-16 md:gap-44 items-center">
+        <div className="bg-oliveGreen w-80 md:w-175 h-72 md:h-148 rounded-3xl relative ">
           <img
             src="/2z1wtNV1YqEW4A0JgbTED1quEk 2.png"
             alt=""
-            className="w-150 h-150 absolute right-0 bottom-0"
+            className="w-72 md:w-150 h-64 md:h-150 absolute right-0 bottom-0"
           />
         </div>
-        <div className="flex flex-col gap-6 ">
+        <div className="flex flex-col gap-6 pl-2 md:pl-0">
           <p className="font-bold text-4xl text-primary">LivLyt</p>
           <p>
             A cutting-edge web application for renting and subscribing to
@@ -78,10 +78,11 @@ const FeaturedWork: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex relative mt-10">
-        <div className="flex flex-col gap-6 ml-28">
+      <div className="border border-gray-300 md:hidden w-full"></div>
+      <div className="flex flex-col md:flex-row gap-10 md:gap-0 relative mt-10 items-center">
+        <div className="flex flex-col gap-6 ml-2 md:ml-28 ">
           <p className="font-bold text-4xl text-primary">Squad App</p>
-          <p className="font-bold text-4xl">
+          <p className="font-semibold md:font-bold text-2xl md:text-4xl">
             All the tech your team needs
             <br />
             One Place for SaaS, Devices & IT
@@ -132,11 +133,11 @@ const FeaturedWork: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-200 w-175 h-148 rounded-3xl absolute right-0 justify-end mt-10">
+        <div className="bg-gray-200 w-80 md:w-175 h-72 md:h-148 rounded-3xl relative md:absolute right-0 justify-end mt-10">
           <img
             src="/image 96.png"
             alt=""
-            className="w-150 h-150 absolute right-0 bottom-0"
+            className="md:w-150 w-72 h-64 md:h-150 absolute right-0 bottom-0"
           />
         </div>
       </div>

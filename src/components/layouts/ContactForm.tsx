@@ -5,7 +5,7 @@ import { LuMail, LuPhone } from "react-icons/lu";
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="bg-white p-20 text-center flex flex-col gap-10">
+    <div className="bg-white p-10  md:p-20 text-center flex flex-col gap-10">
       <p className="font-bold text-4xl">Get On Touch</p>
       <p className="text-gray-600">
         Let's Innovate Together: Reach out now to discuss your digital
@@ -13,7 +13,7 @@ const ContactForm: React.FC = () => {
         <br />
         Fill the form below to get in touch for personalised digital guidance.
       </p>
-      <div className="flex gap-32 justify-center">
+      <div className="flex flex-col md:flex-row gap-16 md:gap-32 justify-center">
         <div>
           <div className="p-5 w-60">
             <div className="flex gap-6 text-primary items-center">

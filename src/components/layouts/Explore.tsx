@@ -5,10 +5,10 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Explore: React.FC = () => {
   return (
-    <div className="bg-gray-100 py-20 px-20">
+    <div className="bg-gray-100 py-20 px-4 md:px-20">
       <div className="flex flex-col gap-5">
-        <p className="font-bold text-4xl ">Explore Our Digital Digest</p>
-        <div className="flex justify-between ">
+        <p className="font-semibold md:font-bold text-3xl md:text-4xl ">Explore Our Digital Digest</p>
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between ">
           <p>
             Scroll through our blog for expert views on web app development,
             mobile app, SaaS solutions and other
@@ -20,8 +20,8 @@ const Explore: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col gap-7 mt-14">
-        <div className="flex gap-5 justify-center">
-          <div className="bg-white w-185 h-68 rounded-3xl flex px-6 gap-10 items-center">
+        <div className="flex flex-col md:flex-row gap-5 justify-center">
+          <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
             <img
               src="/YzRGTDVc8ecYOMsMmIuj87FtoLg 1.png"
               alt=""
@@ -43,7 +43,7 @@ const Explore: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white w-185 h-68 rounded-3xl flex px-6 gap-10 items-center">
+          <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
             <img
               src="/YzRGTDVc8ecYOMsMmIuj87FtoLg 1 (1).png"
               alt=""
@@ -66,8 +66,8 @@ const Explore: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-5 justify-center">
-          <div className="bg-white w-185 h-68 rounded-3xl flex px-6 gap-10 items-center">
+        <div className="flex flex-col md:flex-row gap-5 justify-center">
+          <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
             <img
               src="/YzRGTDVc8ecYOMsMmIuj87FtoLg 1 (2).png"
               alt=""
@@ -89,7 +89,7 @@ const Explore: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white w-185 h-68 rounded-3xl flex px-6 gap-10 items-center">
+          <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
             <img
               src="/YzRGTDVc8ecYOMsMmIuj87FtoLg 1 (3).png"
               alt=""

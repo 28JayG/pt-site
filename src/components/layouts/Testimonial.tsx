@@ -5,15 +5,15 @@ const Testimonial: React.FC = () => {
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-6">
-        <p className="text-4xl font-bold text-center">Hear From our Clients</p>
+        <p className="text-2xl md:text-4xl font-semibold md:font-bold text-center">Hear From our Clients</p>
         <p className="text-gray-500 text-center">
           Check on some unfiltered feedback of the clients who have collaborated
           with us - Explore what they have got
           <br /> to say for us.
         </p>
       </div>
-      <div className="flex px-20 justify-between">
-        <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-96 ">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-0 px-3 md:px-20 justify-between items-center">
+        <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-80 md:w-96 ">
           <div className="flex gap-2 items-center">
             <img src="/Container (1).png" alt="" className="w-4 h-4" />
             <img src="/Container (1).png" alt="" className="w-4 h-4" />
@@ -43,7 +43,7 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-96 ">
+        <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl md:w-96 w-80">
           <div className="flex gap-2 items-center">
             <img src="/Container (1).png" alt="" className="w-4 h-4" />
             <img src="/Container (1).png" alt="" className="w-4 h-4" />
@@ -69,7 +69,7 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-96 ">
+        <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl md:w-96 w-80">
           <div className="flex gap-2 items-center">
             <img src="/Container (1).png" alt="" className="w-4 h-4" />
             <img src="/Container (1).png" alt="" className="w-4 h-4" />
