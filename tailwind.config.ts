@@ -9,10 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        onset: ['Onset', 'sans-serif'],
+        onset: ["Onset", "sans-serif"],
       },
       colors: {
+        'green-light': '#D6FFE9',
+        'green-medium': '#40BA77',
+        'green-dark': '#012D13',
         primary: "#40BA77",
+        secondary: "#000",
         footerBg: "#E5F4EB",
         skyblue: "#D6DFFF",
         leafGreen: "#D6FFE9",
@@ -36,8 +40,8 @@ const config: Config = {
         "68": "270px",
       },
       padding: {
-        "150": "450px"
-      }
+        "150": "450px",
+      },
     },
   },
   plugins: [],
