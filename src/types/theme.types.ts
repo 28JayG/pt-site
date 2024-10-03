@@ -6,4 +6,5 @@ export type Colors =
   | "error"
   | "success"
   | "warning"
-  | "info";
+  | "info"
+  | string;

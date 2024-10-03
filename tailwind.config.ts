@@ -24,6 +24,7 @@ const config: Config = {
         purple: "#E5D6FF",
         darkGray: "#F6F7F9",
         oliveGreen: "#E1F5F0",
+        textSecondary: '#484A61'
       },
       width: {
         "175": "580px",
