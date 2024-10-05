@@ -11,11 +11,11 @@ import About from "components/layouts/About";
 import Explore from "components/layouts/Explore";
 import ContactForm from "components/layouts/ContactForm";
 import FeaturedWork from "components/layouts/FeaturedWork";
+import PageLayout from "components/layouts/PageLayout";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <PageLayout>
       <Hero
         title="Digital solution For Your Business Competitive Edge"
         subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
@@ -40,16 +40,15 @@ export default function Home() {
       <Testimonial />
       <PotentialClients />
       <About
-        mainLine="Know More About 
-Propelius Technologies
-"
-        description="At Propelius, we dive deeper into the world of tech and work on our approach on how we're reshaping the digital landscape. Our team of seasoned experts brings a wealth of experience across various industries, ensuring that we understand your unique challenges and opportunities. 
+        mainLine="Know More About
+   Propelius Technologies
+   "
+        description="At Propelius, we dive deeper into the world of tech and work on our approach on how we're reshaping the digital landscape. Our team of seasoned experts brings a wealth of experience across various industries, ensuring that we understand your unique challenges and opportunities.
 
-We believe in the power of technology to transform businesses, and our track record speaks for itself. From advanced mobile apps to robust SaaS solutions, we've helped countless organisations achieve their digital goals. Connect with us to explore more about our case studies, and learn about our innovative approach to tech development. Our holistic approach to digital transformation encompasses everything from initial strategy to ongoing support. We're committed to transparency, keeping you involved and informed throughout the development process. "
+   We believe in the power of technology to transform businesses, and our track record speaks for itself. From advanced mobile apps to robust SaaS solutions, we've helped countless organisations achieve their digital goals. Connect with us to explore more about our case studies, and learn about our innovative approach to tech development. Our holistic approach to digital transformation encompasses everything from initial strategy to ongoing support. We're committed to transparency, keeping you involved and informed throughout the development process. "
       />
       <Explore />
       <ContactForm />
-      <Footer />
-    </>
+    </PageLayout>
   );
 }

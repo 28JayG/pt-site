@@ -12,9 +12,9 @@ const config: Config = {
         onset: ["Onset", "sans-serif"],
       },
       colors: {
-        'green-light': '#D6FFE9',
-        'green-medium': '#40BA77',
-        'green-dark': '#012D13',
+        "green-light": "#D6FFE9",
+        "green-medium": "#40BA77",
+        "green-dark": "#012D13",
         primary: "#40BA77",
         secondary: "#000",
         footerBg: "#E5F4EB",
@@ -24,7 +24,7 @@ const config: Config = {
         purple: "#E5D6FF",
         darkGray: "#F6F7F9",
         oliveGreen: "#E1F5F0",
-        textSecondary: '#484A61'
+        textSecondary: "#484A61",
       },
       width: {
         "175": "580px",
@@ -35,13 +35,16 @@ const config: Config = {
         "105": "424px",
         "185": "650px",
       },
+      spacing: {
+        footerHeight: "710px",
+      },
       height: {
         "148": "520px",
         "150": "435px",
         "68": "270px",
       },
-      padding: {
-        "150": "450px",
+      zIndex: {
+        appBar: "2000",
       },
     },
   },
