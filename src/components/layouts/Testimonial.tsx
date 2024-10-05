@@ -16,8 +16,8 @@ const Testimonial: React.FC = () => {
             <br /> to say for us.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-10 md:gap-0 px-3 md:px-20 justify-between items-center ">
-          <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-80 md:w-96 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 px-3 justify-between items-center">
+          <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-80 md:w-96">
             <div className="flex gap-2 items-center">
               <img src="/Container (1).png" alt="" className="w-4 h-4" />
               <img src="/Container (1).png" alt="" className="w-4 h-4" />
@@ -28,11 +28,8 @@ const Testimonial: React.FC = () => {
             </div>
             <p className="text-lg">
               “Game-changer! Simplified processes,
-              <br />
               intuitive interface. Increased productivity
-              <br />
               significantly. Worth every penny. Highly
-              <br />
               recommend!”
             </p>
             <div className="flex gap-4 items-center">
@@ -42,7 +39,7 @@ const Testimonial: React.FC = () => {
                 className="w-10 h-10"
               />
               <div>
-                <p className="font-semibold ">Ana De Armas</p>
+                <p className="font-semibold">Ana De Armas</p>
                 <p className="text-gray-500">UI/UX Designer</p>
               </div>
             </div>
@@ -58,17 +55,14 @@ const Testimonial: React.FC = () => {
             </div>
             <p className="text-lg">
               “Incredible efficiency boost! Seamless
-              <br />
               integration, outstanding support. A game-
-              <br />
               changer for productivity. Highly recommend
-              <br />
               for any team's success.”
             </p>
             <div className="flex gap-4 items-center">
               <img src="/Container (2).png" alt="" className="w-10 h-10" />
               <div>
-                <p className="font-semibold ">Leslie Alexander</p>
+                <p className="font-semibold">Leslie Alexander</p>
                 <p className="text-gray-500">UI/UX Designer</p>
               </div>
             </div>
@@ -84,22 +78,20 @@ const Testimonial: React.FC = () => {
             </div>
             <p className="text-lg">
               "Simplified processes, intuitive interface.
-              <br />
               Worth every penny. Exceptional service.
-              <br />
               Insightful analytics. Our workflow has never
-              <br />
               been smoother."
             </p>
             <div className="flex gap-4 items-center">
               <img src="/Container (3).png" alt="" className="w-10 h-10" />
               <div>
-                <p className="font-semibold ">Guy Hawkings</p>
+                <p className="font-semibold">Guy Hawkings</p>
                 <p className="text-gray-500">UI/UX Designer</p>
               </div>
             </div>
           </div>
         </div>
+
         <div className="px-9 py-3 border-2 border-black font-semibold flex gap-2 items-center rounded-full cursor-pointer w-fit mx-auto">
           See All Reviews
           <IoArrowForwardCircleOutline size={25} />

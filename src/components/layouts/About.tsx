@@ -2,19 +2,19 @@ import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 
 interface Props {
-  mainLine: string,
+  title: string,
   description: string
 }
 
-const About: React.FC<Props> = ({mainLine, description}) => {
+const About: React.FC<Props> = ({title, description}) => {
   return (
     <MaxWidthWrapper>
     <div className="bg-white py-20 flex flex-col gap-14">
       <div className="flex md:flex-row flex-col gap-8 md:gap-0 justify-around ">
-        <p className="font-semibold md:text-4xl text-2xl text-center md:text-left ">
-          {mainLine}
+        <p className="font-bold md:text-4xl text-2xl text-center md:text-left text-secondary flex-1">
+          {title}
         </p>
-        <div className= "px-1 md:px-0">
+        <div className= "px-1 md:px-0 flex-1">
           {description}
         </div>
       </div>

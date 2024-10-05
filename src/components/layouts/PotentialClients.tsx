@@ -3,8 +3,10 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const PotentialClients: React.FC = () => {
   return (
-    <div className="text-center flex flex-col gap-8 py-10 bg-gray-100">
-      <p className="text-3xl md:text-4xl font-bold">Who We Help</p>
+    <div className="bg-gray-100">
+    <MaxWidthWrapper>
+    <div className="text-center flex flex-col gap-8 py-10 ">
+      <p className="text-3xl md:text-4xl font-bold text-secondary">Who We Help</p>
       <p className="text-gray-500">
         Scaling Success: Helping businesses of all sizes achieve their digital
         potential.
@@ -61,6 +63,8 @@ const PotentialClients: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+    </MaxWidthWrapper>
     </div>
   );
 };
