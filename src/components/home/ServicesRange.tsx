@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import MaxWidthWrapper from "./MaxWidthWraper";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 
 const ServicesRange: React.FC = () => {
   return (

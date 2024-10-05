@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
 import Button from "../shared/Button";
-import MaxWidthWrapper from "./MaxWidthWraper";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import MaxWidthWrapper from "./MaxWidthWraper";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const PotentialClients: React.FC = () => {
   return (

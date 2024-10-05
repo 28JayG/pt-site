@@ -1,6 +1,6 @@
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import MaxWidthWrapper from "./MaxWidthWraper";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const Testimonial: React.FC = () => {
   return (

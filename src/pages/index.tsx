@@ -1,7 +1,6 @@
 import Footer from "components/layouts/Footer";
 import Hero from "components/shared/Hero";
 import Navbar from "components/layouts/Navbar";
-import ServicesRange from "components/layouts/ServicesRange";
 import ExplorePotential from "components/layouts/PotentialClients";
 import Button from "components/shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -12,6 +11,7 @@ import Explore from "components/layouts/Explore";
 import ContactForm from "components/layouts/ContactForm";
 import FeaturedWork from "components/layouts/FeaturedWork";
 import PageLayout from "components/layouts/PageLayout";
+import ServicesRange from "components/home/ServicesRange";
 
 export default function Home() {
   return (

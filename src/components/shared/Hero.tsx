@@ -1,18 +1,9 @@
-import React from "react";
-import Button from "./Button";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import RoundedCard from "./RoundedCard";
-import ServicesRange from "../layouts/ServicesRange";
-import ExplorePotential from "../layouts/FeaturedWork";
-import Testimonial from "../layouts/Testimonial";
-import PotentialClients from "../layouts/PotentialClients";
-import About from "../layouts/About";
-import Explore from "../layouts/Explore";
-import ContactForm from "../layouts/ContactForm";
-import Footer from "../layouts/Footer";
-import MaxWidthWrapper from "components/layouts/MaxWidthWraper";
-import { colors } from "components/theme/colors";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import { blurredBg } from "constants/assets.constants";
+import React from "react";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import Button from "./Button";
+import RoundedCard from "./RoundedCard";
 
 interface Props {
   title: string;
