@@ -10,6 +10,7 @@ import PotentialClients from "components/layouts/PotentialClients";
 import About from "components/layouts/About";
 import Explore from "components/layouts/Explore";
 import ContactForm from "components/layouts/ContactForm";
+import FeaturedWork from "components/layouts/FeaturedWork";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
         subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
       />
       <ServicesRange />
-      <ExplorePotential />
-      <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border border-primary flex flex-col gap-6">
+      <FeaturedWork />
+      <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border-2 border-primary flex flex-col gap-6">
         <p className="font-semibold md:font-bold text-xl md:text-3xl text-primary text-center md:text-start">
           Forge Your Digital Future
         </p>
@@ -38,7 +39,14 @@ export default function Home() {
       </div>
       <Testimonial />
       <PotentialClients />
-      <About />
+      <About
+        mainLine="Know More About 
+Propelius Technologies
+"
+        description="At Propelius, we dive deeper into the world of tech and work on our approach on how we're reshaping the digital landscape. Our team of seasoned experts brings a wealth of experience across various industries, ensuring that we understand your unique challenges and opportunities. 
+
+We believe in the power of technology to transform businesses, and our track record speaks for itself. From advanced mobile apps to robust SaaS solutions, we've helped countless organisations achieve their digital goals. Connect with us to explore more about our case studies, and learn about our innovative approach to tech development. Our holistic approach to digital transformation encompasses everything from initial strategy to ongoing support. We're committed to transparency, keeping you involved and informed throughout the development process. "
+      />
       <Explore />
       <ContactForm />
       <Footer />

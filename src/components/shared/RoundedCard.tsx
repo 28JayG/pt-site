@@ -2,7 +2,7 @@ import React from "react";
 
 const RoundedCard: React.FC = () => {
   return (
-    <div className="rounded-2xl px-28 pt-16 pb-28 mx-auto text-center bg-white convex-curve">
+    <div className="rounded-3xl px-28 pt-16 pb-28 mx-auto text-center bg-white convex-curve">
       <p className="text-lg md:text-xl font-semibold md:font-bold">
         Tailored Digital Solution For Leading Enterprises
       </p>

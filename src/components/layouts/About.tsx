@@ -1,41 +1,21 @@
 import React from "react";
+import MaxWidthWrapper from "./MaxWidthWraper";
 
-const About: React.FC = () => {
+interface Props {
+  mainLine: string,
+  description: string
+}
+
+const About: React.FC<Props> = ({mainLine, description}) => {
   return (
+    <MaxWidthWrapper>
     <div className="bg-white py-20 flex flex-col gap-14">
       <div className="flex md:flex-row flex-col gap-8 md:gap-0 justify-around ">
-        <p className="font-semibold md:text-5xl text-2xl text-center md:text-left">
-          Know More About
-          <br />
-          Propelius Technologies
+        <p className="font-semibold md:text-4xl text-2xl text-center md:text-left ">
+          {mainLine}
         </p>
-        <div className="flex flex-col gap-6 px-1 md:px-0">
-          <p>
-            At Propelius, we dive deeper into the world of tech and work on our
-            approach
-            <br /> on how we're reshaping the digital landscape. Our team of
-            seasoned experts
-            <br /> brings a wealth of experience across various industries,
-            ensuring that we
-            <br /> understand your unique challenges and opportunities.
-          </p>
-          <p>
-            We believe in the power of technology to transform businesses, and
-            our track
-            <br /> record speaks for itself. From advanced mobile apps to robust
-            SaaS solutions,
-            <br /> we've helped countless organisations achieve their digital
-            goals. Connect with
-            <br /> us to explore more about our case studies, and learn about
-            our innovative
-            <br /> approach to tech development. Our holistic approach to
-            digital
-            <br /> transformation encompasses everything from initial strategy
-            to ongoing
-            <br /> support. We're committed to transparency, keeping you
-            involved and
-            <br /> informed throughout the development process.{" "}
-          </p>
+        <div className= "px-1 md:px-0">
+          {description}
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-8 justify-center">
@@ -59,6 +39,7 @@ const About: React.FC = () => {
         </div>
       </div>
     </div>
+    </MaxWidthWrapper>
   );
 };
 
