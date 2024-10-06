@@ -1,23 +1,27 @@
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import Button from "components/shared/Button";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
-const FeaturedWork: React.FC = () => {
+const FeaturedWork = () => {
   return (
     <div className="bg-darkGray w-full flex flex-col gap-10 py-20">
-      <p className="text-3xl md:text-4xl font-bold mx-auto md:ml-28 text-center ">
-        Explore Our Potential In Our Work
-      </p>
-      <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center justify-between px-5 md:px-28">
-        <p>
-          Explore our diverse portfolio and see how we have developed unique
-          business solutions with our innovative
-          <br /> solutions and agile development process. 
-        </p>
+      <MaxWidthWrapper className="flex justify-between text-left">
+        <div className="flex flex-col gap-2 w-full max-w-[860px] ">
+          <p className="text-3xl md:text-4xl font-bold">
+            Explore Our Potential In Our Work
+          </p>
+          <p>
+            Explore our diverse portfolio and see how we have developed unique
+            business solutions with our innovative solutions and agile
+            development process. 
+          </p>
+        </div>
         <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
           View All Work
         </Button>
-      </div>
+      </MaxWidthWrapper>
+
       <div className="flex flex-col md:flex-row gap-16 md:gap-44 items-center">
         <div className="bg-oliveGreen w-80 md:w-175 h-72 md:h-148 rounded-3xl relative ">
           <img

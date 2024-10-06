@@ -22,6 +22,7 @@ export default function Home() {
       />
       <ServicesRange />
       <FeaturedWork />
+      
       <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border-2 border-primary flex flex-col gap-6">
         <p className="font-semibold md:font-bold text-xl md:text-3xl text-primary text-center md:text-start">
           Forge Your Digital Future

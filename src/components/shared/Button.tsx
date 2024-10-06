@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
 import { ButtonVariant, Colors } from "types/theme.types";
+import { omit } from "lodash";
 
 interface LocalProps {
   variant?: ButtonVariant;
@@ -21,7 +22,7 @@ const Button: React.FC<Props> = ({
   ...buttonProps
 }) => {
   const getButtonClasses = () => {
-    let className = "px-9 py-3 text-center font-semibold items-center gap-2";
+    let className = "px-7 py-3 text-center font-semibold items-center gap-2 h-12";
     const colorClass = htmlColor ? `[${htmlColor}]` : `${color}`;
 
     switch (variant) {
@@ -41,8 +42,12 @@ const Button: React.FC<Props> = ({
 
   return (
     <button
-      className={classNames("rounded-full flex", getButtonClasses())}
-      {...buttonProps}
+      {...omit(buttonProps, "className")}
+      className={classNames(
+        "rounded-full flex",
+        getButtonClasses(),
+        buttonProps.className
+      )}
     >
       {children}
       {endIcon}
