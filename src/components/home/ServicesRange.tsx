@@ -5,6 +5,7 @@ import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import { Service } from "types/models";
 import { services } from "data/services.data";
 import classNames from "classnames";
+import TitleSummary from "components/shared/TitleSummary";
 
 interface ServiceCardProps {
   service: Service;
@@ -64,21 +65,20 @@ const ServicesRange = () => {
   return (
     <MaxWidthWrapper>
       <div className="relative py-10">
-        <p className="pb-3 text-2xl md:text-4xl font-semibold md:font-bold text-secondary">
-          Our Range of Services
-        </p>
-        <div className="pb-14 flex flex-col gap-5 md:gap-0 md:flex-row items-center justify-between">
-          <p className="text-textSecondary w-full max-w-[800px] text-base">
-            Explore our range of end to end digital solutions for business that
+        <TitleSummary
+          title="Our Range of Services"
+          summary="Explore our range of end to end digital solutions for business that
             are truly made to enhance user experience and elevate your digital
             presence
-          </p>
-          <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
-            View All Services
-          </Button>
-        </div>
+          "
+          action={
+            <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+              View All Services
+            </Button>
+          }
+        />
 
-        <div className="grid grid-cols-3 grid-rows-2 h-[420px] gap-4">
+        <div className="grid grid-cols-3 grid-rows-2 h-[420px] gap-4 pt-14">
           {/* mobile app development */}
           <div className="col-start-1 col-end-2 row-start-1 row-end-3">
             <ServiceCardWithIllustration

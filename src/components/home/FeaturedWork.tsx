@@ -1,5 +1,6 @@
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import Button from "components/shared/Button";
+import TitleSummary from "components/shared/TitleSummary";
 import React from "react";
 import { FaLinkedin, FaReact } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -10,19 +11,17 @@ const FeaturedWork = () => {
   return (
     <div className="bg-darkGray w-full flex flex-col gap-10 py-20">
       <MaxWidthWrapper className="flex justify-between text-left">
-        <div className="flex flex-col gap-2 w-full max-w-[860px] ">
-          <p className="text-3xl md:text-4xl font-bold">
-            Explore Our Potential In Our Work
-          </p>
-          <p>
-            Explore our diverse portfolio and see how we have developed unique
+        <TitleSummary
+          title="Explore Our Potential In Our Work"
+          summary=" Explore our diverse portfolio and see how we have developed unique
             business solutions with our innovative solutions and agile
-            development process. 
-          </p>
-        </div>
-        <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
-          View All Work
-        </Button>
+            development process. "
+          action={
+            <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+              View All Work
+            </Button>
+          }
+        />
       </MaxWidthWrapper>
 
       <div className="flex flex-col md:flex-row gap-16 md:gap-44 items-center">

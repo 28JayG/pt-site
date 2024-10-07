@@ -7,13 +7,18 @@ export interface Service {
   color: string;
 }
 
-export interface OurWork {
+export interface Work {
+  id: string;
   title: string;
-  subtitle?: string;
+  subTitle?: string;
   description: string;
-  techUsed: ReactNode;
-  clientele: string;
-  companyExcutiveName: string;
-  companyExcutiveImage?: string;
-  linkedIn?: string;
+  techUsed: string[];
+  image: string;
+  featured: boolean;
+  client: {
+    clientele: string;
+    name: string;
+    title: string;
+    image: string;
+  };
 }
