@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         onset: ["Onset", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         "green-light": "#D6FFE9",
