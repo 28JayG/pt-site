@@ -1,14 +1,14 @@
 import Footer from "components/layouts/Footer";
 import Hero from "components/shared/Hero";
 import Navbar from "components/layouts/Navbar";
-import ExplorePotential from "components/layouts/PotentialClients";
+import ExplorePotential from "components/home/PotentialClients";
 import Button from "components/shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import Testimonial from "components/layouts/Testimonial";
-import PotentialClients from "components/layouts/PotentialClients";
-import About from "components/layouts/About";
-import Explore from "components/layouts/Explore";
-import ContactForm from "components/layouts/ContactForm";
+import Testimonial from "components/home/Testimonial";
+import PotentialClients from "components/home/PotentialClients";
+import About from "components/shared/About";
+import Explore from "components/shared/Explore";
+import ContactForm from "components/ContactForm";
 import FeaturedWork from "components/home/FeaturedWork";
 import PageLayout from "components/layouts/PageLayout";
 import ServicesRange from "components/home/ServicesRange";
@@ -22,7 +22,7 @@ export default function Home() {
       />
       <ServicesRange />
       <FeaturedWork />
-      
+
       <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border-2 border-primary flex flex-col gap-6">
         <p className="font-semibold md:font-bold text-xl md:text-3xl text-primary text-center md:text-start">
           Forge Your Digital Future

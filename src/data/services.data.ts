@@ -1,4 +1,4 @@
-import { Service } from "types/models";
+import { OurWork, Service } from "types/models";
 
 export const services: Record<string, Service> = {
   mobileDev: {
@@ -29,5 +29,28 @@ export const services: Record<string, Service> = {
     description: "",
     illustrationUri: "",
     color: "#E8F9CD",
+  },
+};
+
+export const ourWorks: Record<string, OurWork> = {
+  livLyt: {
+    title: "Livlyt",
+    description:
+      "A cutting-edge web application for renting and subscribing to electronic items monthly. Developed by Propelius Technologies, it features instant search across thousands of products, secure payment methods, and a 99.99% verified user base. This custom e-commerce solution demonstrates our expertise in digital transformation and web application development. LivLyt offers businesses a powerful platform to enter the sharing economy, showcasing our ability to deliver innovative digital solutions that drive growth.",
+    clientele:
+      "Tapping the market with a unique idea was not easy without any front facing platform, Thanks to Propelius Technologies for providing the one as per our needs. Will be happy to work with you in the near future.",
+    techUsed: "",
+    companyExcutiveName: "Arvind Einstein",
+  },
+
+  SquadApp: {
+    title: "Squad App",
+    subtitle: "All the tech your team needs One Place for SaaS, Devices & IT",
+    description:
+      "Squad App is a social wallet to store and share credits for your favorite restaurants, shops, and retail stores. Search and buy packages of credits that can be used at businesses you love. - Simply scan a QR to make payments - Easily share credits with your friends and family - Save money while showing support for your local businesses",
+    clientele:
+      "Tapping the market with a unique idea was not easy without any front facing platform, Thanks to Propelius Technologies for providing the one as per our needs. Will be happy to work with you in the near future.",
+    techUsed: "",
+    companyExcutiveName: "Arvind Einstein",
   },
 };

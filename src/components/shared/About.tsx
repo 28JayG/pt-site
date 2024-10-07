@@ -1,5 +1,5 @@
 import React from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
+import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
 
 interface Props {
   title: string;

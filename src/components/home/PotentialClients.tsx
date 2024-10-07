@@ -1,5 +1,5 @@
 import React from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
+import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
 
 const PotentialClients: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const PotentialClients: React.FC = () => {
       <div className="md:px-20 flex flex-col md:flex-row gap-8 md:gap-20 justify-center">
         <div className="w-80 md:w-160 h-72 md:h-150 bg-skyblue relative rounded-3xl mx-auto md:mx-0">
           <img
-            src="/5d5F6HlTijuCQDB4Q5uGAdloikw (1) 1.png"
+            src="/potential_client.png"
             alt=""
             className="w-72 md:w-145 h-64 md:h-96 absolute right-0 bottom-0"
           />
@@ -22,7 +22,7 @@ const PotentialClients: React.FC = () => {
         <div className="flex flex-col gap-5 items-center">
           <div className="bg-white md:w-165 w-80 h-16 rounded-2xl flex gap-4 md:gap-8 items-center pl-4 md:pl-10">
             <img
-              src="/rqBvoXtL6FsdnNLl6oeY1v69KQw 2.png"
+              src="/startup_and_entrepreneur.svg"
               alt=""
               className="w-8 h-8"
             />
@@ -30,7 +30,7 @@ const PotentialClients: React.FC = () => {
           </div>
           <div className="bg-white md:w-165 w-80 h-16 rounded-2xl flex gap-4 md:gap-8 items-center pl-4 md:pl-10">
             <img
-              src="/xygVgdYalHXrAjEpGtZxWx5fsI 1.png"
+              src="/sme_digital_transformation.svg"
               alt=""
               className="w-8 h-8"
             />
@@ -38,7 +38,7 @@ const PotentialClients: React.FC = () => {
           </div>
           <div className="bg-white md:w-165 w-80 h-16 rounded-2xl flex gap-4 md:gap-8 items-center pl-4 md:pl-10">
             <img
-              src="/blgDT3qsfGMoCPTrzmoSoOgNk 1.png"
+              src="/enterprise_grade_innovation.svg"
               alt=""
               className="w-8 h-8"
             />
@@ -46,7 +46,7 @@ const PotentialClients: React.FC = () => {
           </div>
           <div className="bg-white md:w-165 w-80 h-56 md:h-36 rounded-2xl flex gap-8 pt-5 pl-4 md:pl-10">
             <img
-              src="/ZM0JgLAmJKLTp6ysKW2HDy9rIoE 2.png"
+              src="/industry_specific_solution.svg"
               alt=""
               className="w-8 h-8"
             />
