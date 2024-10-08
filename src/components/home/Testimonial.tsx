@@ -33,7 +33,7 @@ const Testimonial: React.FC = () => {
               recommend!”
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/client_avatar_1.png" alt="" className="w-10 h-10" />
+              <img src="/images/client_avatar_1.png" alt="" className="w-10 h-10" />
               <div>
                 <p className="font-semibold">Ana De Armas</p>
                 <p className="text-gray-500">UI/UX Designer</p>
@@ -55,7 +55,7 @@ const Testimonial: React.FC = () => {
               any team's success.”
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/client_avatar_2.png" alt="" className="w-10 h-10" />
+              <img src="/images/client_avatar_2.png" alt="" className="w-10 h-10" />
               <div>
                 <p className="font-semibold">Leslie Alexander</p>
                 <p className="text-gray-500">UI/UX Designer</p>
@@ -77,7 +77,7 @@ const Testimonial: React.FC = () => {
               been smoother."
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/client_avatar_3.png" alt="" className="w-10 h-10" />
+              <img src="/images/client_avatar_3.png" alt="" className="w-10 h-10" />
               <div>
                 <p className="font-semibold">Guy Hawkings</p>
                 <p className="text-gray-500">UI/UX Designer</p>

@@ -47,6 +47,7 @@ const config: Config = {
       zIndex: {
         appBar: "2000",
       },
+      
     },
   },
   plugins: [],

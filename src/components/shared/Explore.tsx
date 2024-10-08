@@ -31,7 +31,7 @@ const Explore: React.FC<Props> = ({title, subtitle}) => {
             <div className="flex flex-col md:flex-row gap-5 justify-center">
               <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
                 <img
-                  src="/explore_img1.png"
+                  src="/images/explore_img1.png"
                   alt=""
                   className="w-56 h-52 rounded-3xl"
                 />
@@ -53,7 +53,7 @@ const Explore: React.FC<Props> = ({title, subtitle}) => {
               </div>
               <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
                 <img
-                  src="/explore_img3.png"
+                  src="/images/explore_img3.png"
                   alt=""
                   className="w-56 h-52 rounded-3xl"
                 />
@@ -77,7 +77,7 @@ const Explore: React.FC<Props> = ({title, subtitle}) => {
             <div className="flex flex-col md:flex-row gap-5 justify-center">
               <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
                 <img
-                  src="/explore_img4.png"
+                  src="/images/explore_img4.png"
                   alt=""
                   className="w-56 h-52 rounded-3xl"
                 />
@@ -99,7 +99,7 @@ const Explore: React.FC<Props> = ({title, subtitle}) => {
               </div>
               <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
                 <img
-                  src="/explore_img2.png"
+                  src="/images/explore_img2.png"
                   alt=""
                   className="w-56 h-52 rounded-3xl"
                 />

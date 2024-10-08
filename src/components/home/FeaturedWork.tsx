@@ -27,7 +27,7 @@ const FeaturedWork = () => {
       <div className="flex flex-col md:flex-row gap-16 md:gap-44 items-center">
         <div className="bg-oliveGreen w-80 md:w-175 h-72 md:h-148 rounded-3xl relative ">
           <img
-            src="/our_work_img_1.png"
+            src="/images/our_work_img_1.png"
             alt=""
             className="w-72 md:w-150 h-64 md:h-150 absolute right-0 bottom-0"
           />
@@ -73,7 +73,7 @@ const FeaturedWork = () => {
             </span>
           </p>
           <div className="flex gap-10">
-            <img src="/client_avatar_3.png" alt="" className="w-11 h-11" />
+            <img src="/images/client_avatar_3.png" alt="" className="w-11 h-11" />
             <div>
               <div className="flex gap-3 items-center">
                 <p className="font-semibold">Arvind Einstein</p>
@@ -129,7 +129,7 @@ const FeaturedWork = () => {
             </span>
           </p>
           <div className="flex gap-10">
-            <img src="/client_avatar_3.png" alt="" className="w-11 h-11" />
+            <img src="/images/client_avatar_3.png" alt="" className="w-11 h-11" />
             <div>
               <div className="flex gap-3 items-center">
                 <p className="font-semibold">Arvind Einstein</p>
@@ -141,7 +141,7 @@ const FeaturedWork = () => {
         </div>
         <div className="bg-gray-200 w-80 md:w-175 h-72 md:h-148 rounded-3xl relative md:absolute right-0 justify-end mt-10">
           <img
-            src="/our_work_img_2.png"
+            src="/images/our_work_img_2.png"
             alt=""
             className="md:w-150 w-72 h-64 md:h-150 absolute right-0 bottom-0"
           />

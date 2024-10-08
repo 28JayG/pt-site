@@ -11,3 +11,9 @@ body {
 .convex-curve {
   clip-path:  polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
 }
+
+.outline-text {
+  -webkit-text-stroke: 1px #40BA77;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+}

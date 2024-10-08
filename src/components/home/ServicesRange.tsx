@@ -93,7 +93,7 @@ const ServicesRange = () => {
               className="h-full rounded-xl relative flex justify-center items-center"
             >
               <img
-                src="/Frame 20993.png"
+                src="/images/Frame 20993.png"
                 alt=""
                 className="w-20 h-28 absolute left-0 -translate-y-1/2 top-1/2"
               />
@@ -101,7 +101,7 @@ const ServicesRange = () => {
                 {services.saas.title}
               </p>
               <img
-                src="/Frame 20994.png"
+                src="/images/Frame 20994.png"
                 alt=""
                 className="w-20 h-28 absolute -translate-y-1/2 right-0 top-1/2"
               />
@@ -118,7 +118,7 @@ const ServicesRange = () => {
                 {services.eCommerce.title}
               </p>
               <img
-                src="/Frame 20992.png"
+                src="/images/Frame 20992.png"
                 alt=""
                 className="w-32 h-20 absolute -translate-x-1/2 left-1/2 bottom-0"
               />
