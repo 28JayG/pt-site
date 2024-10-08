@@ -1,6 +1,5 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
 
-export interface Tab {
-    name: string;
-    label: string;
-  }
+export interface AppRoute {
+  route: string;
+  label: string;
+}

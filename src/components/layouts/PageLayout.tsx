@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { FC } from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
-const PageLayout = () => {
-  return (
-    <div>PageLayout</div>
-  )
+interface Props {
+  children: React.ReactNode;
 }
 
-export default PageLayout
+const PageLayout: FC<Props> = ({ children }) => {
+  return (
+    // App Wrapper
+    <div
+      className={`w-screen max-w-full min-h-screen relative pb-footerHeight`}
+    >
+      <Navbar />
+      {/** Page Container */}
+      <div> {children}</div> {/** Footer */}
+      <footer className="absolute h-footerHeight bottom-0 w-full">
+        <Footer />
+      </footer>
+    </div>
+  );
+};
+
+export default PageLayout;

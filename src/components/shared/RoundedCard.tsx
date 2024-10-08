@@ -7,11 +7,11 @@ const RoundedCard: React.FC = () => {
         Tailored Digital Solution For Leading Enterprises
       </p>
       <div className="flex justify-around items-center gap-5">
-        <img src="/Group 20847.png" alt="clientImg1" className="w-20 md:w-52 h-12 md:h-28" />
-        <img src="/Group 20848.png" alt="clientImg2" className="w-20 md:w-52 h-12 md:h-28" />
-        <img src="/Group 20849.png" alt="clientImg3" className="w-20 md:w-52 h-12 md:h-28" />
-        <img src="/Group 20850.png" alt="clientImg4" className="w-20 md:w-52 h-12 md:h-28" />
-        <img src="/Group 20851.png" alt="clientImg5" className="w-20 md:w-52 h-12 md:h-28" />
+        <img src="/client_img1.png" alt="clientImg1" className="w-20 md:w-52 h-12 md:h-28" />
+        <img src="/client_img2.png" alt="clientImg2" className="w-20 md:w-52 h-12 md:h-28" />
+        <img src="/client_img3.png" alt="clientImg3" className="w-20 md:w-52 h-12 md:h-28" />
+        <img src="/client_img4.png" alt="clientImg4" className="w-20 md:w-52 h-12 md:h-28" />
+        <img src="/client_img5.png" alt="clientImg5" className="w-20 md:w-52 h-12 md:h-28" />
       </div>
     </div>
   );
