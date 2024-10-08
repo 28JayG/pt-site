@@ -8,6 +8,7 @@ import PageLayout from "components/layouts/PageLayout";
 import TechStack from "components/layouts/TechStack";
 import Hero from "components/shared/Hero";
 import React from "react";
+import { questionsArray1 } from "data/FAQ.data";
 
 const service: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ We work with a mission to offer your organisation more than just implementation.
         title="Explore our Techstack"
         subtitle="Delve into our comprehensive techstack, supporting our full spectrum of digital consulting services."
       />
-      <FrequentlyAskedQues />
+      <FrequentlyAskedQues questions={questionsArray1}/>
       <ContactForm />
     </PageLayout>
   );
