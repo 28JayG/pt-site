@@ -1,4 +1,4 @@
-import Footer from "components/layouts/Footer";
+import Footer from "components/shared/Footer";
 import Hero from "components/shared/Hero";
 import Navbar from "components/layouts/Navbar";
 import ExplorePotential from "components/home/PotentialClients";

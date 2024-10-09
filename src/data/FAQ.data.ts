@@ -79,3 +79,31 @@ export const questionsArrayWebApp = [
     answer: "Answer 5",
   },
 ];
+
+export const questionsArrayEcommerce = [
+  {
+    question:
+      "What types of businesses can benefit from your e-commerce development services?",
+    answer:
+      "Our e-commerce solutions are suitable for businesses of all sizes and industries, from small startups to large enterprises. Whether you're in retail, B2B, or services, we can tailor our solutions to meet your specific needs.",
+  },
+  {
+    question:
+      "How long does it typically take to develop an e-commerce website? ",
+    answer: "Answer 2",
+  },
+  {
+    question:
+      "What e-commerce platforms do you work with? ",
+    answer: "Answer 3",
+  },
+  {
+    question: "How do you approach scalability in e-commerce development?",
+    answer: "Answer 4",
+  },
+  {
+    question:
+      "Can you help with SEO for my e-commerce site?",
+    answer: "Answer 5",
+  },
+];

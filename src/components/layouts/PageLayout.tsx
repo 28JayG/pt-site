@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Footer from "./Footer";
+import Footer from "../shared/Footer";
 import Navbar from "./Navbar";
 
 interface Props {
