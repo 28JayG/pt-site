@@ -12,6 +12,9 @@ import ContactForm from "components/ContactForm";
 import FeaturedWork from "components/home/FeaturedWork";
 import PageLayout from "components/layouts/PageLayout";
 import ServicesRange from "components/home/ServicesRange";
+import RoundedCard from "components/shared/RoundedCard";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
+import TitleSummary from "components/shared/TitleSummary";
 
 export default function Home() {
   return (
@@ -20,10 +23,60 @@ export default function Home() {
         title="Digital solution For Your Business Competitive Edge"
         subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
       />
+      <RoundedCard
+        children={
+          <div>
+            <p className="text-lg md:text-xl font-semibold md:font-bold">
+              Tailored Digital Solution For Leading Enterprises
+            </p>
+            <div className="flex justify-around items-center gap-5">
+              <img
+                src="/images/client_img1.png"
+                alt="clientImg1"
+                className="w-20 md:w-52 h-12 md:h-28"
+              />
+              <img
+                src="/images/client_img2.png"
+                alt="clientImg2"
+                className="w-20 md:w-52 h-12 md:h-28"
+              />
+              <img
+                src="/images/client_img3.png"
+                alt="clientImg3"
+                className="w-20 md:w-52 h-12 md:h-28"
+              />
+              <img
+                src="/images/client_img4.png"
+                alt="clientImg4"
+                className="w-20 md:w-52 h-12 md:h-28"
+              />
+              <img
+                src="/images/client_img5.png"
+                alt="clientImg5"
+                className="w-20 md:w-52 h-12 md:h-28"
+              />
+            </div>
+          </div>
+        }
+      />
       <ServicesRange />
       <FeaturedWork />
-
-      <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border-2 border-primary flex flex-col gap-6">
+      <RoundedCard
+        color="primary"
+        variant="bordered"
+        children={
+          <TitleSummary
+            title="Forge Your Digital Future"
+            summary="Implement Smart Digital Solutions with Propelius - Connect with is for a discovery call"
+            action={
+              <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+                Book A Free Call
+              </Button>
+            }
+          />
+        }
+      />
+      {/* <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border-2 border-primary flex flex-col gap-6">
         <p className="font-semibold md:font-bold text-xl md:text-3xl text-primary text-center md:text-start">
           Forge Your Digital Future
         </p>
@@ -37,7 +90,7 @@ export default function Home() {
             Book A Free Call
           </Button>
         </div>
-      </div>
+      </div> */}
       <Testimonial />
       <PotentialClients />
       <About

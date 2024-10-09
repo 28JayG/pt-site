@@ -14,10 +14,9 @@ import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
 import { questionsArray1, questionsArray2 } from "data/FAQ.data";
 import React from "react";
-import { FaLinkedin, FaReact } from "react-icons/fa";
+import { FaLinkedin, FaReact, FaSkype } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import { RiNextjsFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { LuMail, LuPhone } from "react-icons/lu";
 
 const mobileAppDevelopment: React.FC = () => {
   return (
@@ -27,7 +26,25 @@ const mobileAppDevelopment: React.FC = () => {
           title="Crafting apps that are as dynamic as your business."
           subTitle="At Propelius we offer strategic mobile application development services that turn your business logic into intuitive app interfaces. We craft secure, efficient, and future-proof apps right from concept to deployment for immersive experiences. "
         />
-        <div className="flex justify-between">
+        <RoundedCard
+          children={
+            <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
+              <p className="flex gap-2 items-center">
+                <LuPhone />
+                +91 93161 45852
+              </p>
+              <p className="flex gap-2 items-center">
+                <LuMail />
+                info@propelius.tech
+              </p>
+              <p className="flex gap-2 items-center">
+                <FaSkype />
+                tech.propelius
+              </p>
+            </div>
+          }
+        />
+        <div className="flex justify-between mt-20">
           <p className="w-[400px] font-semibold text-4xl">
             Turn Smartphone Screens into Your Business Frontier.
           </p>
@@ -139,7 +156,7 @@ const mobileAppDevelopment: React.FC = () => {
           title="Explore our digital digest"
           subtitle="Scroll through our blog for expert views on web app development, mobile app, SaaS solutions and other digital transformation stuff."
         />
-        <FrequentlyAskedQues questions={questionsArray2}/>
+        <FrequentlyAskedQues questions={questionsArray2} />
         <ContactForm />
       </MaxWidthWrapper>
     </PageLayout>

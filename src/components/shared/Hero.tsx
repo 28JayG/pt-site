@@ -14,7 +14,7 @@ interface Props {
 
 const Hero: React.FC<Props> = ({ title, subTitle, featuredContent }) => {
   return (
-    <section className="w-full relative py-36">
+    <section className="w-full relative pt-36 pb-20">
       <img src={blurredBg} alt="" className="-top-[200px] w-full absolute" />
       <MaxWidthWrapper className="relative">
         <div className="flex flex-col justify-center items-center text-center gap-6 pb-24">
@@ -41,42 +41,6 @@ const Hero: React.FC<Props> = ({ title, subTitle, featuredContent }) => {
             </div>
           )}
         </div>
-        <RoundedCard
-          children={
-            <div>
-              <p className="text-lg md:text-xl font-semibold md:font-bold">
-                Tailored Digital Solution For Leading Enterprises
-              </p>
-              <div className="flex justify-around items-center gap-5">
-                <img
-                  src="/images/client_img1.png"
-                  alt="clientImg1"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img2.png"
-                  alt="clientImg2"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img3.png"
-                  alt="clientImg3"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img4.png"
-                  alt="clientImg4"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img5.png"
-                  alt="clientImg5"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-              </div>
-            </div>
-          }
-        />
       </MaxWidthWrapper>
     </section>
   );

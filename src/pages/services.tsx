@@ -9,6 +9,9 @@ import TechStack from "components/layouts/TechStack";
 import Hero from "components/shared/Hero";
 import React from "react";
 import { questionsArray1 } from "data/FAQ.data";
+import RoundedCard from "components/shared/RoundedCard";
+import { LuMail, LuPhone } from "react-icons/lu";
+import { FaSkype } from "react-icons/fa";
 
 const service: React.FC = () => {
   return (
@@ -16,6 +19,24 @@ const service: React.FC = () => {
       <Hero
         title="Expand your horizons with integrated digital solutions for business"
         subTitle="We provide a complete ecosystem of solutions designed to enhance efficiency, extend market reach, and sharpen your competitive edge."
+      />
+      <RoundedCard
+        children={
+          <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
+            <p className="flex gap-2 items-center">
+              <LuPhone />
+              +91 93161 45852
+            </p>
+            <p className="flex gap-2 items-center">
+              <LuMail />
+              info@propelius.tech
+            </p>
+            <p className="flex gap-2 items-center">
+              <FaSkype />
+              tech.propelius
+            </p>
+          </div>
+        }
       />
       <About
         title="Digital solutions for business to help you capitalise on opportunities and unlock your business untapped potential with"
@@ -29,7 +50,7 @@ We work with a mission to offer your organisation more than just implementation.
         title="Explore our Techstack"
         subtitle="Delve into our comprehensive techstack, supporting our full spectrum of digital consulting services."
       />
-      <FrequentlyAskedQues questions={questionsArray1}/>
+      <FrequentlyAskedQues questions={questionsArray1} />
       <ContactForm />
     </PageLayout>
   );

@@ -7,12 +7,13 @@ import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
 import { divide } from "lodash";
 import React from "react";
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import { FaChevronCircleLeft, FaChevronCircleRight, FaSkype } from "react-icons/fa";
 import {
   IoArrowForwardCircleOutline,
   IoChevronBack,
   IoChevronForward,
 } from "react-icons/io5";
+import { LuMail, LuPhone } from "react-icons/lu";
 
 const aboutUs: React.FC = () => {
   return (
@@ -32,6 +33,24 @@ const aboutUs: React.FC = () => {
             >
               Watch Portfolio
             </Button>
+          </div>
+        }
+      />
+      <RoundedCard
+        children={
+          <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
+            <p className="flex gap-2 items-center">
+              <LuPhone />
+              +91 93161 45852
+            </p>
+            <p className="flex gap-2 items-center">
+              <LuMail />
+              info@propelius.tech
+            </p>
+            <p className="flex gap-2 items-center">
+              <FaSkype />
+              tech.propelius
+            </p>
           </div>
         }
       />
@@ -90,14 +109,14 @@ const aboutUs: React.FC = () => {
           </div>
           <div className=" ">
             <img
-              src="brand_story_img.png"
+              src="/images/brand_story_img.png"
               alt=""
               className="w-[650px] h-[760px]"
             />
           </div>
         </div>
       </MaxWidthWrapper>
-      <div className="bg-primary h-[612px] w-full relative mb-[205px]">
+      <div className="bg-primary h-[612px] w-full relative mb-[305px] ">
         <MaxWidthWrapper className="">
           <div className="pt-24 flex flex-col gap-3 ">
             <p className="text-white">Our Culture</p>
@@ -123,24 +142,23 @@ const aboutUs: React.FC = () => {
           </div>
           <div className="flex gap-5 absolute right-0 bottom-0 translate-y-1/2">
             <img
-              src="/our_culture_img1.png"
+              src="/images/our_culture_img1.png"
               alt="our_culture_img1"
               className="w-[646px] h-[404px]"
             />
             <img
-              src="/our_culture_img2.png"
+              src="/images/our_culture_img2.png"
               alt="our_culture_img2"
               className="w-[314px] h-[404px]"
             />
             <img
-              src="/our_culture_img3.png"
+              src="/images/our_culture_img3.png"
               alt="our_culture_img3"
               className="w-[498px] h-[404px]"
             />
           </div>
         </MaxWidthWrapper>
       </div>
-      <MaxWidthWrapper className="py-32">
         <RoundedCard
           variant="bordered"
           children={
@@ -162,7 +180,6 @@ const aboutUs: React.FC = () => {
           }
         />
         <ContactForm />
-      </MaxWidthWrapper>
     </PageLayout>
   );
 };
