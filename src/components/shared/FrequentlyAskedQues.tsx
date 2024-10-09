@@ -1,5 +1,5 @@
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import React, { useState } from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 interface Question {

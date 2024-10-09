@@ -2,6 +2,7 @@ import React from 'react'
 import { FaLinkedin, FaReact } from 'react-icons/fa'
 import { RiNextjsFill } from 'react-icons/ri'
 import { SiTypescript } from 'react-icons/si'
+import MaxWidthWrapper from './MaxWidthWrapper'
 
 const SuccessStories: React.FC = () => {
   return (

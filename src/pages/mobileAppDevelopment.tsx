@@ -1,5 +1,4 @@
 import ContactForm from "components/ContactForm";
-import FrequentlyAskedQues from "components/layouts/FrequentlyAskedQues";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import MobileAppDevelopmentServices from "components/layouts/MobileAppDevelopmentServices";
 import PageLayout from "components/layouts/PageLayout";
@@ -9,10 +8,11 @@ import TechStack from "components/layouts/TechStack";
 import About from "components/shared/About";
 import Button from "components/shared/Button";
 import Explore from "components/shared/Explore";
+import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
 import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
-import { questionsArray1, questionsArray2 } from "data/FAQ.data";
+import { questionsArray1, questionsArrayMobileApp } from "data/FAQ.data";
 import React from "react";
 import { FaLinkedin, FaReact, FaSkype } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -113,21 +113,22 @@ const mobileAppDevelopment: React.FC = () => {
       <SuccessStories />
       <MobileAppDevelopmentServices />
       <TechStack />
+      <RoundedCard
+        variant="bordered"
+        children={
+          <TitleSummary
+            title="Ready to Bring Your App Idea to Life?"
+            summary="Innovation is just a conversation away. Reach out and let's
+              discuss your app aspirations"
+            action={
+              <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+                View All Work
+              </Button>
+            }
+          />
+        }
+      />
       <MaxWidthWrapper>
-        <div className="rounded-3xl px-28 py-20 mx-auto text-center bg-white convex-curve border-2 border-primary items-center justify-between flex">
-          <div className="max-w-[640px] flex flex-col gap-5 text-left">
-            <p className="text-primary text-4xl font-semibold ">
-              Ready to Bring Your App Idea to Life?
-            </p>
-            <p>
-              Innovation is just a conversation away. Reach out and let's
-              discuss your app aspirations
-            </p>
-          </div>
-          <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
-            View All Work
-          </Button>
-        </div>
         <div className="flex items-center justify-between py-10">
           <div className="flex flex-col gap-5">
             <p className="text-4xl font-semibold">Why Choose us</p>
@@ -156,7 +157,7 @@ const mobileAppDevelopment: React.FC = () => {
           title="Explore our digital digest"
           subtitle="Scroll through our blog for expert views on web app development, mobile app, SaaS solutions and other digital transformation stuff."
         />
-        <FrequentlyAskedQues questions={questionsArray2} />
+        <FrequentlyAskedQues questions={questionsArrayMobileApp} />
         <ContactForm />
       </MaxWidthWrapper>
     </PageLayout>

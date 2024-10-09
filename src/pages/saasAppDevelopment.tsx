@@ -1,7 +1,9 @@
 import ContactForm from "components/ContactForm";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import PageLayout from "components/layouts/PageLayout";
+import SaaSAppDevelopmentServices from "components/layouts/SaaSAppDevelopmentServices";
 import SuccessStories from "components/layouts/SuccessStories";
+import SuccessStoriesSaaSApp from "components/layouts/SuccessStoriesSaaSApp";
 import TechStack from "components/layouts/TechStack";
 import WebAppDevelopmentServices from "components/layouts/WebAppDevelopmentServices";
 import Button from "components/shared/Button";
@@ -9,18 +11,19 @@ import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
 import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
-import { questionsArray1, questionsArrayWebApp } from "data/FAQ.data";
+import { questionsArrayWebApp } from "data/FAQ.data";
 import React from "react";
 import { FaSkype } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
 
-const webAppDevelopment: React.FC = () => {
+const saasAppDevelopment: React.FC = () => {
   return (
     <PageLayout>
       <Hero
-        title="services for feature rich, no latency & speediest web apps. "
-        subTitle="At Propelius, we latest trends in web application development to develop web apps that are designed to provide interactive, dynamic experiences right in your browser without the need for downloading software. Our apps are ideal for businesses looking to offer services, manage data, or connect with users across any device."
+        title="Your Digital Transformation"
+        subTitle="Discover innovative solutions tailored to your business needs. 
+At Propelius Technologies, we drive success through cutting-edge technology and expert development."
       />
       <RoundedCard
         children={
@@ -107,8 +110,8 @@ const webAppDevelopment: React.FC = () => {
           }
         />
       </MaxWidthWrapper>
-      <SuccessStories />
-      <WebAppDevelopmentServices />
+      <SuccessStoriesSaaSApp />
+      <SaaSAppDevelopmentServices />
       <TechStack />
       <RoundedCard
         variant="bordered"
@@ -131,4 +134,4 @@ const webAppDevelopment: React.FC = () => {
   );
 };
 
-export default webAppDevelopment;
+export default saasAppDevelopment;
