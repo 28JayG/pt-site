@@ -2,9 +2,7 @@ import About from "components/shared/About";
 import ContactForm from "components/ContactForm";
 import Explore from "components/shared/Explore";
 import ImpactServices from "components/layouts/ImpactServices";
-import Navbar from "components/layouts/Navbar";
 import PageLayout from "components/layouts/PageLayout";
-import TechStack from "components/layouts/TechStack";
 import Hero from "components/shared/Hero";
 import React from "react";
 import { questionsArray1 } from "data/FAQ.data";
@@ -12,6 +10,7 @@ import RoundedCard from "components/shared/RoundedCard";
 import { LuMail, LuPhone } from "react-icons/lu";
 import { FaSkype } from "react-icons/fa";
 import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
+import TechStack from "components/shared/TechStack";
 
 const service: React.FC = () => {
   return (

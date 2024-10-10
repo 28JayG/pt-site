@@ -1,9 +1,9 @@
 import React from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import Button from "components/shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { SiTicktick } from "react-icons/si";
 import { blurredBg } from "constants/assets.constants";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 
 const TechStack: React.FC = () => {
   return (
