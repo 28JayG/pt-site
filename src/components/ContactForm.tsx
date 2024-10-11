@@ -7,8 +7,8 @@ import MaxWidthWrapper from "./layouts/MaxWidthWrapper";
 const ContactForm: React.FC = () => {
   return (
     <MaxWidthWrapper className="bg-white p-10  md:p-20 text-center flex flex-col gap-10">
-      <p className="font-bold text-4xl">Get On Touch</p>
-      <p className="text-gray-600">
+      <p className="font-bold text-4xl text-green-dark">Get On Touch</p>
+      <p className="text-textSecondary">
         Let's Innovate Together: Reach out now to discuss your digital
         transformation needs.
         <br />

@@ -22,7 +22,7 @@ const FrequentlyAskedQues: React.FC<Props> = ({ questions }) => {
     <div className="bg-gray-100 py-20">
       <MaxWidthWrapper>
         <div className="">
-          <p className="md:mb-20 font-bold text-4xl text-secondary text-center">
+          <p className="md:mb-20 font-bold text-4xl text-green-dark text-center">
             Frequently Asked Questions
           </p>
           <div className="flex flex-col gap-6 px-60">
@@ -35,13 +35,15 @@ const FrequentlyAskedQues: React.FC<Props> = ({ questions }) => {
                   <div className="rounded-full border-2 border-primary p-2 w-10 h-10 flex items-center justify-center">
                     {index + 1}
                   </div>
-                  <p className="font-semibold text-lg ">{item.question}</p>
+                  <p className="font-semibold text-lg w-[666px] text-green-dark">
+                    {item.question}
+                  </p>
                   <button onClick={() => handleQuestionClick(index)}>
                     {activeQuestion === index ? <FaMinus /> : <FaPlus />}
                   </button>
                 </div>
                 {activeQuestion === index && (
-                  <p className="pl-20 text-sm">{item.answer}</p>
+                  <p className="pl-20 text-sm w-[666px] text-textSecondary">{item.answer}</p>
                 )}
               </div>
             ))}
