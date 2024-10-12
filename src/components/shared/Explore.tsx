@@ -18,8 +18,8 @@ const Explore: React.FC<Props> = ({title, subtitle}) => {
             <p className="font-semibold md:font-bold text-3xl md:text-4xl ">
               {title}
             </p>
-            <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between ">
-              <p>
+            <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between">
+              <p className="w-[870px]">
                 {subtitle}
               </p>
               <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
