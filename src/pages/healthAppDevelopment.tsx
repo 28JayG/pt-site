@@ -1,15 +1,20 @@
 import ContactForm from "components/ContactForm";
+import HealthAppServices from "components/layouts/HealthAppServices";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import ModernHealthcareSoftwareSolution from "components/layouts/ModernHealthcareSoftwareSolution";
 import PageLayout from "components/layouts/PageLayout";
 import StartProjectToday from "components/layouts/StartProjectToday";
+import SuccessStoriesSaaSApp from "components/layouts/SuccessStoriesSaaSApp";
+import Button from "components/shared/Button";
 import Explore from "components/shared/Explore";
 import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
 import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
+import TitleSummary from "components/shared/TitleSummary";
 import { questionsArrayMobileApp } from "data/FAQ.data";
 import React from "react";
 import { FaSkype } from "react-icons/fa";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
 
 const healthAppDevelopment: React.FC = () => {
@@ -62,7 +67,38 @@ Taking your retail business online opens up a world of opportunities."
         </div>
       </MaxWidthWrapper>
       <ModernHealthcareSoftwareSolution />
-      <StartProjectToday />
+      <RoundedCard
+        variant="bordered"
+        children={
+          <TitleSummary
+            title="Ready to Bring Your App Idea to Life?"
+            summary="Innovation is just a conversation away. Reach out and let's
+              discuss your app aspirations"
+            action={
+              <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+                Contact Us
+              </Button>
+            }
+          />
+        }
+      />
+      <HealthAppServices />
+      <SuccessStoriesSaaSApp />
+      <RoundedCard
+        variant="bordered"
+        children={
+          <TitleSummary
+            title="Ready to Bring Your App Idea to Life?"
+            summary="Innovation is just a conversation away. Reach out and let's
+              discuss your app aspirations"
+            action={
+              <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+                Contact Us
+              </Button>
+            }
+          />
+        }
+      />
       <Explore
         title="Explore our digital digest"
         subtitle="Scroll through our blog for expert views on web app development, mobile app, SaaS solutions and other digital transformation stuff. "
