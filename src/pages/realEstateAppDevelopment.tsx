@@ -1,26 +1,26 @@
-import ContactForm from "components/ContactForm";
-import HealthAppServices from "components/layouts/HealthAppServices";
-import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
-import ModernHealthcareSoftwareSolution from "components/layouts/ModernHealthcareSoftwareSolution";
-import PageLayout from "components/layouts/PageLayout";
-import SuccessStoriesSaaSApp from "components/layouts/SuccessStoriesSaaSApp";
-import Button from "components/shared/Button";
-import Explore from "components/shared/Explore";
-import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
-import Hero from "components/shared/Hero";
-import RoundedCard from "components/shared/RoundedCard";
-import TitleSummary from "components/shared/TitleSummary";
-import { questionsArrayMobileApp } from "data/FAQ.data";
-import React from "react";
-import { FaSkype } from "react-icons/fa";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import { LuMail, LuPhone } from "react-icons/lu";
+import ContactForm from 'components/ContactForm'
+import MaxWidthWrapper from 'components/layouts/MaxWidthWrapper'
+import PageLayout from 'components/layouts/PageLayout'
+import RealEstateBusinessSolution from 'components/layouts/realEstateBusinessSolution'
+import RealEstateServices from 'components/layouts/RealEstateServices'
+import SuccessStoriesSaaSApp from 'components/layouts/SuccessStoriesSaaSApp'
+import Button from 'components/shared/Button'
+import Explore from 'components/shared/Explore'
+import FrequentlyAskedQues from 'components/shared/FrequentlyAskedQues'
+import Hero from 'components/shared/Hero'
+import RoundedCard from 'components/shared/RoundedCard'
+import TitleSummary from 'components/shared/TitleSummary'
+import { questionsArrayMobileApp } from 'data/FAQ.data'
+import React from 'react'
+import { FaSkype } from 'react-icons/fa'
+import { IoArrowForwardCircleOutline } from 'react-icons/io5'
+import { LuMail, LuPhone } from 'react-icons/lu'
 
-const healthAppDevelopment: React.FC = () => {
+const realEstateAppDevelopment: React.FC = () => {
   return (
     <PageLayout>
       <Hero
-        title="Healthcare App Development"
+        title="Real Estate App Development"
         subTitle="Go beyond the limitations of physical stores with ecommerce development services.
 Taking your retail business online opens up a world of opportunities."
       />
@@ -45,7 +45,7 @@ Taking your retail business online opens up a world of opportunities."
       <MaxWidthWrapper className="flex gap-6 ">
         <div className="flex flex-col gap-5 w-[644px] ">
           <p className="font-semibold text-4xl text-green-dark">
-            Why Healthcare Businesses Need Digital Transformation
+            Why Real Estate Businesses Need Digital Transformation
           </p>
           <p className="text-textSecondary">
             At CMARIX, our vision is to engineer future-ready capabilities and
@@ -62,10 +62,10 @@ Taking your retail business online opens up a world of opportunities."
           </p>
         </div>
         <div className="w-[646px] h-[429px]">
-          <img src="/images/health_app_img.png" alt="" />
+          <img src="/images/realEstate_app_img.png" alt="" />
         </div>
       </MaxWidthWrapper>
-      <ModernHealthcareSoftwareSolution />
+      <RealEstateBusinessSolution />
       <RoundedCard
         variant="bordered"
         children={
@@ -81,7 +81,7 @@ Taking your retail business online opens up a world of opportunities."
           />
         }
       />
-      <HealthAppServices />
+      <RealEstateServices />
       <SuccessStoriesSaaSApp />
       <RoundedCard
         variant="bordered"
@@ -105,7 +105,7 @@ Taking your retail business online opens up a world of opportunities."
       <FrequentlyAskedQues questions={questionsArrayMobileApp} />
       <ContactForm />
     </PageLayout>
-  );
-};
+  )
+}
 
-export default healthAppDevelopment;
+export default realEstateAppDevelopment
