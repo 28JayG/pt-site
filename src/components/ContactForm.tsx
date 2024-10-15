@@ -2,12 +2,13 @@ import Button from "components/shared/Button";
 import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
+import MaxWidthWrapper from "./layouts/MaxWidthWrapper";
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="bg-white p-10  md:p-20 text-center flex flex-col gap-10">
-      <p className="font-bold text-4xl">Get On Touch</p>
-      <p className="text-gray-600">
+    <MaxWidthWrapper className="bg-white p-10  md:p-20 text-center flex flex-col gap-10">
+      <p className="font-bold text-4xl text-green-dark">Get On Touch</p>
+      <p className="text-textSecondary">
         Let's Innovate Together: Reach out now to discuss your digital
         transformation needs.
         <br />
@@ -114,7 +115,7 @@ const ContactForm: React.FC = () => {
           </div>
         </form>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 };
 

@@ -43,8 +43,8 @@ const ServiceCardWithIllustration: FC<ServiceCardProps> = ({
       )}
     >
       <div className="flex flex-col text-left gap-2">
-        <p className="font-bold text-xl">{title}</p>
-        <p className="text-sm leading-6">{description}</p>
+        <p className="font-semibold text-xl">{title}</p>
+        <p className="text-xs leading-6 text-textSecondary w-87">{description}</p>
       </div>
       <div
         className={classNames(
@@ -64,7 +64,7 @@ const ServiceCardWithIllustration: FC<ServiceCardProps> = ({
 const ServicesRange = () => {
   return (
     <MaxWidthWrapper>
-      <div className="relative py-10">
+      <div className="relative py-20">
         <TitleSummary
           title="Our Range of Services"
           summary="Explore our range of end to end digital solutions for business that
@@ -86,22 +86,22 @@ const ServicesRange = () => {
               illustrationPosition="bottom"
             />
           </div>
-          {/* sass solution */}
+          {/* saas solution */}
           <div className="col-start-2 col-end-3 row-start-1 row-end-2">
             <div
               style={{ backgroundColor: services.saas.color }}
               className="h-full rounded-xl relative flex justify-center items-center"
             >
               <img
-                src="/Frame 20993.png"
+                src="/images/saas_solution_service_img1.png"
                 alt=""
                 className="w-20 h-28 absolute left-0 -translate-y-1/2 top-1/2"
               />
-              <p className="font-bold text-center text-xl">
+              <p className="font-semibold text-center text-xl">
                 {services.saas.title}
               </p>
               <img
-                src="/Frame 20994.png"
+                src="/images/saas_solution_service_img2.png"
                 alt=""
                 className="w-20 h-28 absolute -translate-y-1/2 right-0 top-1/2"
               />
@@ -114,11 +114,11 @@ const ServicesRange = () => {
               className="h-full rounded-xl relative flex justify-center"
               style={{ backgroundColor: services.eCommerce.color }}
             >
-              <p className="text-center font-bold text-xl pt-5">
+              <p className="text-center font-semibold text-xl pt-5">
                 {services.eCommerce.title}
               </p>
               <img
-                src="/Frame 20992.png"
+                src="/images/custome_ecom_service_img.png"
                 alt=""
                 className="w-32 h-20 absolute -translate-x-1/2 left-1/2 bottom-0"
               />
