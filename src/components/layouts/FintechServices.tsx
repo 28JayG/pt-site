@@ -1,9 +1,9 @@
-import React from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import TitleSummary from "components/shared/TitleSummary";
-import Button from "components/shared/Button";
+import React from 'react'
+import MaxWidthWrapper from './MaxWidthWrapper'
+import TitleSummary from 'components/shared/TitleSummary'
+import Button from 'components/shared/Button'
 
-const RealEstateServices: React.FC = () => {
+const FintechServices: React.FC = () => {
   return (
     <div className="bg-gray-100 mt-10">
       <MaxWidthWrapper className="py-20">
@@ -17,7 +17,7 @@ const RealEstateServices: React.FC = () => {
               <div className="bg-gray-100 p-2 w-fit rounded-2xl">
                 <img src="/SVG/hybrid_app.svg" alt="" className="w-10 h-10" />
               </div>
-              <p className="font-semibold text-xl text-green-dark">Real Estate App Development</p>
+              <p className="font-semibold text-xl text-green-dark">Fintech App Development</p>
               <p className="text-textSecondary font-light">
                 Tap into the growing mobile market with responsive and intuitive
                 m-commerce applications. We develop seamless mobile shopping
@@ -33,7 +33,7 @@ const RealEstateServices: React.FC = () => {
                 <img src="/SVG/hybrid_app.svg" alt="" className="w-10 h-10" />
               </div>
               <p className="font-semibold text-xl text-green-dark">
-                Real Estate Web Application Development
+                Fintech Web Application Development
               </p>
               <p className="text-textSecondary font-light">
                 Embrace the future of e-commerce with our headless architecture.
@@ -53,7 +53,7 @@ const RealEstateServices: React.FC = () => {
                 <img src="/SVG/hybrid_app.svg" alt="" className="w-10 h-10" />
               </div>
               <p className="font-semibold text-xl text-green-dark">
-                Enterprise Real Estate Development
+              Customised Fintech Solutions
               </p>
               <p className="text-textSecondary font-light">
                 Your business is one-of-a-kind, and your e-commerce platform
@@ -72,7 +72,7 @@ const RealEstateServices: React.FC = () => {
                 <img src="/SVG/hybrid_app.svg" alt="" className="w-10 h-10" />
               </div>
               <p className="font-semibold text-xl text-green-dark">
-                Need App Consultation for business?
+              Need More Finance Solutions for business?
               </p>
               <p className="text-textSecondary font-light">
                 Your business is one-of-a-kind, and your e-commerce platform
@@ -90,7 +90,7 @@ const RealEstateServices: React.FC = () => {
         </div>
       </MaxWidthWrapper>
     </div>
-  );
-};
+  )
+}
 
-export default RealEstateServices;
+export default FintechServices

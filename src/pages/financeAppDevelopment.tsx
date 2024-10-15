@@ -1,26 +1,28 @@
-import ContactForm from 'components/ContactForm'
-import MaxWidthWrapper from 'components/layouts/MaxWidthWrapper'
-import PageLayout from 'components/layouts/PageLayout'
-import RealEstateBusinessSolution from 'components/layouts/RealEstateBusinessSolution'
-import RealEstateServices from 'components/layouts/RealEstateServices'
-import SuccessStoriesSaaSApp from 'components/layouts/SuccessStoriesSaaSApp'
-import Button from 'components/shared/Button'
-import Explore from 'components/shared/Explore'
-import FrequentlyAskedQues from 'components/shared/FrequentlyAskedQues'
-import Hero from 'components/shared/Hero'
-import RoundedCard from 'components/shared/RoundedCard'
-import TitleSummary from 'components/shared/TitleSummary'
-import { questionsArrayMobileApp } from 'data/FAQ.data'
-import React from 'react'
-import { FaSkype } from 'react-icons/fa'
-import { IoArrowForwardCircleOutline } from 'react-icons/io5'
-import { LuMail, LuPhone } from 'react-icons/lu'
+import ContactForm from "components/ContactForm";
+import FintechAppSolution from "components/layouts/FintechAppSolution";
+import FintechServices from "components/layouts/FintechServices";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
+import PageLayout from "components/layouts/PageLayout";
+import RealEstateBusinessSolution from "components/layouts/RealEstateBusinessSolution";
+import RealEstateServices from "components/layouts/RealEstateServices";
+import SuccessStoriesSaaSApp from "components/layouts/SuccessStoriesSaaSApp";
+import Button from "components/shared/Button";
+import Explore from "components/shared/Explore";
+import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
+import Hero from "components/shared/Hero";
+import RoundedCard from "components/shared/RoundedCard";
+import TitleSummary from "components/shared/TitleSummary";
+import { questionsArrayMobileApp } from "data/FAQ.data";
+import React from "react";
+import { FaSkype } from "react-icons/fa";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { LuMail, LuPhone } from "react-icons/lu";
 
-const realEstateAppDevelopment: React.FC = () => {
+const financeAppDevelopment: React.FC = () => {
   return (
     <PageLayout>
       <Hero
-        title="Real Estate App Development"
+        title="Finance App Development"
         subTitle="Go beyond the limitations of physical stores with ecommerce development services.
 Taking your retail business online opens up a world of opportunities."
       />
@@ -45,7 +47,7 @@ Taking your retail business online opens up a world of opportunities."
       <MaxWidthWrapper className="flex gap-6 ">
         <div className="flex flex-col gap-5 w-[644px] ">
           <p className="font-semibold text-4xl text-green-dark">
-            Why Real Estate Businesses Need Digital Transformation
+            Why Fintech Businesses Need Digital Transformation
           </p>
           <p className="text-textSecondary">
             At CMARIX, our vision is to engineer future-ready capabilities and
@@ -62,10 +64,10 @@ Taking your retail business online opens up a world of opportunities."
           </p>
         </div>
         <div className="w-[646px] h-[429px]">
-          <img src="/images/realEstate_app_img.png" alt="" />
+          <img src="/images/fintech_app_img.png" alt="" />
         </div>
       </MaxWidthWrapper>
-      <RealEstateBusinessSolution />
+      <FintechAppSolution />
       <RoundedCard
         variant="bordered"
         children={
@@ -81,18 +83,18 @@ Taking your retail business online opens up a world of opportunities."
           />
         }
       />
-      <RealEstateServices />
+      <FintechServices />
       <SuccessStoriesSaaSApp />
       <RoundedCard
         variant="bordered"
         children={
           <TitleSummary
-            title="Ready to Bring Your App Idea to Life?"
+            title="Planning a Digital Transformation in Healthcare, worried about the budget?"
             summary="Innovation is just a conversation away. Reach out and let's
               discuss your app aspirations"
             action={
               <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
-                Contact Us
+                Get Your App Cost Now
               </Button>
             }
           />
@@ -105,7 +107,7 @@ Taking your retail business online opens up a world of opportunities."
       <FrequentlyAskedQues questions={questionsArrayMobileApp} />
       <ContactForm />
     </PageLayout>
-  )
-}
+  );
+};
 
-export default realEstateAppDevelopment
+export default financeAppDevelopment;

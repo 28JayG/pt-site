@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import { realEstateSolutions } from "data/solutions.data";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { fintechSolutions } from "data/solutions.data";
 
-interface RealEstateSolution {
+interface FintechSolution {
   question: string;
   answer: string;
 }
 
-const RealEstateBusinessSolution: React.FC = () => {
+const FintechAppSolution: React.FC = () => {
   const [expanded, setExpanded] = useState<{ [index: number]: boolean }>({});
 
   const handleToggle = (index: number) => {
@@ -21,10 +21,10 @@ const RealEstateBusinessSolution: React.FC = () => {
     <MaxWidthWrapper className="py-20">
       <p className="text-textSecondary mb-3">Software Solutions</p>
       <p className="text-4xl font-semibold text-green-dark w-[785px] mb-14">
-        Solutions We Develop for Real Estate Business
+        Fintech  Solutions We Develop for business
       </p>
       <div className="flex flex-wrap justify-between">
-        {realEstateSolutions.map((item: RealEstateSolution, index: number) => (
+        {fintechSolutions.map((item: FintechSolution, index: number) => (
           <div key={index} className="w-1/2 p-3">
             <div className="bg-gray-100 rounded-2xl px-3 py-6 flex items-start justify-between">
               <div className="p-4 w-5 h-5 flex items-center justify-center border-2 border-primary text-primary rounded-full font-semibold">
@@ -56,19 +56,15 @@ const RealEstateBusinessSolution: React.FC = () => {
         </div>
         <div className="w-90 md:w-105 h-52 bg-mellowYellow rounded-3xl flex flex-col gap-2 pt-10 pl-10">
           <p className="font-semibold text-12.5 text-green-dark">45+</p>
-          <p className="text-xl text-textSecondary">
-            Team of Tech Experts
-          </p>
+          <p className="text-xl text-textSecondary">Team of Tech Experts</p>
         </div>
         <div className="w-90 md:w-105 h-52 bg-purple rounded-3xl flex flex-col gap-2 pt-10 pl-10">
           <p className="font-semibold text-12.5 text-green-dark">150+</p>
-          <p className="text-xl text-textSecondary">
-            Project Delivered
-          </p>
+          <p className="text-xl text-textSecondary">Project Delivered</p>
         </div>
       </div>
     </MaxWidthWrapper>
   );
 };
 
-export default RealEstateBusinessSolution;
+export default FintechAppSolution;
