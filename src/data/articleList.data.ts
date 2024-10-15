@@ -42,3 +42,48 @@ export const articleListArray = [
         buttonText: "View Resources"
     },
 ]
+
+export const portfolioList = [
+    {
+        image: "/images/explore_img1.png",
+        preTitle: "Healthcare",
+        title: "Crush(Stryker)",
+        description: "Discover how strategic digital enhancements propelled revenue in online retail.",
+        buttonText: "View Article"
+    },
+    {
+        image: "/images/explore_img2.png",
+        preTitle: "Healthcare",
+        title: "Crush(Stryker)",
+        description: "Discover how strategic digital enhancements propelled revenue in online retail.",
+        buttonText: "View Article"
+    },
+    {
+        image: "/images/explore_img3.png",
+        preTitle: "Healthcare",
+        title: "Crush(Stryker)",
+        description: "Discover how strategic digital enhancements propelled revenue in online retail.",
+        buttonText: "View Article"
+    },
+    {
+        image: "/images/explore_img4.png",
+        preTitle: "Healthcare",
+        title: "Crush(Stryker)",
+        description: "Discover how strategic digital enhancements propelled revenue in online retail.",
+        buttonText: "View Article"
+    },
+    {
+        image: "/images/explore_img1.png",
+        preTitle: "Healthcare",
+        title: "Crush(Stryker)",
+        description: "Discover how strategic digital enhancements propelled revenue in online retail.",
+        buttonText: "View Article"
+    },
+    {
+        image: "/images/explore_img2.png",
+        preTitle: "Healthcare",
+        title: "Crush(Stryker)",
+        description: "Discover how strategic digital enhancements propelled revenue in online retail.",
+        buttonText: "View Article"
+    },
+]
