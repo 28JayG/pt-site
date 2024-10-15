@@ -8,10 +8,10 @@ const Testimonial: React.FC = () => {
     <MaxWidthWrapper>
       <div className="flex flex-col gap-10 py-10">
         <div className="flex flex-col gap-6">
-          <p className="text-2xl md:text-4xl font-semibold md:font-bold text-center">
+          <p className="text-2xl md:text-titleSummaryTitle font-semibold text-center text-green-dark">
             Hear From our Clients
           </p>
-          <p className="text-gray-500 text-center">
+          <p className="text-textSecondary text-center font-light">
             Check on some unfiltered feedback of the clients who have
             collaborated with us - Explore what they have got
             <br /> to say for us.
@@ -27,16 +27,20 @@ const Testimonial: React.FC = () => {
               <IoMdStar size={25} className="text-yellow-400" />
               <p className="font-semibold">4.5</p>
             </div>
-            <p className="text-lg">
+            <p className="text-lg text-textSecondary">
               “Game-changer! Simplified processes, intuitive interface.
               Increased productivity significantly. Worth every penny. Highly
               recommend!”
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/images/client_avatar_1.png" alt="" className="w-10 h-10" />
+              <img
+                src="/images/client_avatar_1.png"
+                alt=""
+                className="w-10 h-10"
+              />
               <div>
-                <p className="font-semibold">Ana De Armas</p>
-                <p className="text-gray-500">UI/UX Designer</p>
+                <p className="font-medium text-darkBlue ">Ana De Armas</p>
+                <p className="text-textSecondary text-sm">UI/UX Designer</p>
               </div>
             </div>
           </div>
@@ -49,16 +53,20 @@ const Testimonial: React.FC = () => {
               <IoMdStar size={25} className="text-yellow-400" />
               <p className="font-semibold">4.5</p>
             </div>
-            <p className="text-lg">
+            <p className="text-lg text-textSecondary">
               “Incredible efficiency boost! Seamless integration, outstanding
               support. A game- changer for productivity. Highly recommend for
               any team's success.”
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/images/client_avatar_2.png" alt="" className="w-10 h-10" />
+              <img
+                src="/images/client_avatar_2.png"
+                alt=""
+                className="w-10 h-10"
+              />
               <div>
-                <p className="font-semibold">Leslie Alexander</p>
-                <p className="text-gray-500">UI/UX Designer</p>
+                <p className="font-medium text-darkBlue">Leslie Alexander</p>
+                <p className="text-textSecondary text-sm">UI/UX Designer</p>
               </div>
             </div>
           </div>
@@ -71,22 +79,26 @@ const Testimonial: React.FC = () => {
               <IoMdStar size={25} className="text-yellow-400" />
               <p className="font-semibold">4.5</p>
             </div>
-            <p className="text-lg">
+            <p className="text-lg text-textSecondary">
               "Simplified processes, intuitive interface. Worth every penny.
               Exceptional service. Insightful analytics. Our workflow has never
               been smoother."
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/images/client_avatar_3.png" alt="" className="w-10 h-10" />
+              <img
+                src="/images/client_avatar_3.png"
+                alt=""
+                className="w-10 h-10"
+              />
               <div>
-                <p className="font-semibold">Guy Hawkings</p>
-                <p className="text-gray-500">UI/UX Designer</p>
+                <p className="font-medium text-darkBlue">Guy Hawkings</p>
+                <p className="text-textSecondary text-sm">UI/UX Designer</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="px-9 py-3 border-2 border-black font-semibold flex gap-2 items-center rounded-full cursor-pointer w-fit mx-auto">
+        <div className="px-9 py-3 border-2 border-green-dark text-green-dark font-semibold flex gap-2 items-center rounded-full cursor-pointer w-fit mx-auto">
           See All Reviews
           <IoArrowForwardCircleOutline size={25} />
         </div>

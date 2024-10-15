@@ -1,7 +1,4 @@
-import Footer from "components/shared/Footer";
 import Hero from "components/shared/Hero";
-import Navbar from "components/layouts/Navbar";
-import ExplorePotential from "components/home/PotentialClients";
 import Button from "components/shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Testimonial from "components/home/Testimonial";
@@ -13,7 +10,6 @@ import FeaturedWork from "components/home/FeaturedWork";
 import PageLayout from "components/layouts/PageLayout";
 import ServicesRange from "components/home/ServicesRange";
 import RoundedCard from "components/shared/RoundedCard";
-import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import TitleSummary from "components/shared/TitleSummary";
 
 export default function Home() {
@@ -26,7 +22,7 @@ export default function Home() {
       <RoundedCard
         children={
           <div>
-            <p className="text-lg md:text-xl font-semibold md:font-bold">
+            <p className="font-semibold text-green-dark text-base">
               Tailored Digital Solution For Leading Enterprises
             </p>
             <div className="flex justify-around items-center gap-5">
@@ -76,21 +72,6 @@ export default function Home() {
           />
         }
       />
-      {/* <div className="rounded-2xl px-4 md:px-40 py-16 mx-1 md:mx-20 text-center bg-white convex-curve mt-10 border-2 border-primary flex flex-col gap-6">
-        <p className="font-semibold md:font-bold text-xl md:text-3xl text-primary text-center md:text-start">
-          Forge Your Digital Future
-        </p>
-        <div className="flex flex-col md:flex-row justify-between ">
-          <p className="text-center md:text-start text-sm md:text-base">
-            Implement Smart Digital Solutions with Propelius - Connect with is
-            for
-            <br /> a discovery call
-          </p>
-          <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
-            Book A Free Call
-          </Button>
-        </div>
-      </div> */}
       <Testimonial />
       <PotentialClients />
       <About

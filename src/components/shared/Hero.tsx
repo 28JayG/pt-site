@@ -3,8 +3,6 @@ import { blurredBg } from "constants/assets.constants";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Button from "./Button";
-import RoundedCard from "./RoundedCard";
-import { divide } from "lodash";
 
 interface Props {
   title: string;
@@ -14,15 +12,15 @@ interface Props {
 
 const Hero: React.FC<Props> = ({ title, subTitle, featuredContent }) => {
   return (
-    <section className="w-full relative pt-36 pb-20">
+    <section className="w-full relative pt-36">
       <img src={blurredBg} alt="" className="-top-[200px] w-full absolute" />
       <MaxWidthWrapper className="relative">
         <div className="flex flex-col justify-center items-center text-center gap-6 pb-24">
           <div className="w-[940px] flex flex-col gap-6">
-            <h2 className="text-green-dark md:text-6xl font-bold text-3xl">
+            <h2 className="text-green-dark md:text-heroTitle font-semibold text-3xl md:leading-heroTitle">
               {title}
             </h2>
-            <p className="text-xl text-textSecondary">{subTitle}</p>
+            <p className="text-heroSubtitle text-textSecondary leading-heroSubtitle">{subTitle}</p>
           </div>
           {featuredContent ? (
             featuredContent

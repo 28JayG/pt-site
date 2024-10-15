@@ -26,8 +26,10 @@ const config: Config = {
         darkGray: "#F6F7F9",
         oliveGreen: "#E1F5F0",
         textSecondary: "#484A61",
+        darkBlue: "#161C52"
       },
       width: {
+        "87": "348px",
         "175": "580px",
         "150": "485px",
         "160": "505px",
@@ -47,7 +49,20 @@ const config: Config = {
       zIndex: {
         appBar: "2000",
       },
-      
+      lineHeight: {
+        "heroTitle" : "74px",
+        "heroSubtitle": "27px",
+        "12.5": "50px",
+        "15": "60px",
+        "7.5": "30px"
+      },
+      fontSize: {
+        "heroTitle" : "64px",
+        "heroSubtitle": "18px",
+        "titleSummaryTitle" : "40px",
+        "12.5": "54px",
+        
+      }
     },
   },
   plugins: [],
