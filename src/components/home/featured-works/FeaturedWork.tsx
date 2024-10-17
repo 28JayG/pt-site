@@ -12,18 +12,18 @@ const FeaturedWork: FC<Props> = ({ work }) => {
   return (
     <div className="flex flex-col md:flex-row gap-16 md:gap-44 items-center md:odd:flex-row-reverse">
       <div className="bg-oliveGreen w-80 md:w-175 h-72 md:h-148 rounded-3xl">
-        <img
-          src={work.image}
-          alt=""
-          className="w-72 md:w-150 h-64 md:h-150"
-        />
+        <img src={work.image} alt="" className="w-72 md:w-150 h-64 md:h-150" />
       </div>
 
-
       <div className="flex flex-col gap-6 pl-2 md:pl-0">
-        <p className="font-semibold text-titleSummaryTitle text-primary">{work.title}</p>
+        <p className="font-semibold text-titleSummaryTitle text-primary">
+          {work.title}
+        </p>
+        <p className="font-semibold text-2xl md:text-titleSummaryTitle leading-12.5">
+          {work.subTitle}
+        </p>
         <p className="text-textSecondary text-base font-light">
-         {work.description}
+          {work.description}
         </p>
         <div className="border border-gray-300 w-full"></div>
         <p className="font-semibold text-lg">Tech used</p>
