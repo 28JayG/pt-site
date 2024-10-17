@@ -1,16 +1,16 @@
-import Hero from "components/shared/Hero";
-import Button from "components/shared/Button";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import Testimonial from "components/home/Testimonial";
-import PotentialClients from "components/home/PotentialClients";
-import About from "components/shared/About";
-import Explore from "components/shared/Explore";
 import ContactForm from "components/ContactForm";
-import FeaturedWork from "components/home/FeaturedWork";
-import PageLayout from "components/layouts/PageLayout";
+import FeaturedWorks from "components/home/featured-works/FeaturedWorks";
+import PotentialClients from "components/home/PotentialClients";
 import ServicesRange from "components/home/ServicesRange";
+import Testimonial from "components/home/Testimonial";
+import PageLayout from "components/layouts/PageLayout";
+import About from "components/shared/About";
+import Button from "components/shared/Button";
+import Explore from "components/shared/Explore";
+import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 export default function Home() {
   return (
@@ -56,7 +56,8 @@ export default function Home() {
         }
       />
       <ServicesRange />
-      <FeaturedWork />
+      <FeaturedWorks />
+
       <RoundedCard
         color="primary"
         variant="bordered"
