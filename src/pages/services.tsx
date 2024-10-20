@@ -1,7 +1,7 @@
 import About from "components/shared/About";
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import Explore from "components/shared/Explore";
-import ImpactServices from "components/layouts/ImpactServices";
+import ImpactServices from "components/services/ImpactServices";
 import PageLayout from "components/layouts/PageLayout";
 import Hero from "components/shared/Hero";
 import React from "react";
@@ -22,10 +22,14 @@ import {
 const Service: React.FC = () => {
   return (
     <PageLayout>
-      <Hero title={serviceHeroTitle} subTitle={serviceHeroSubtitle} />
+      <Hero
+        headerClassName="w-full"
+        title={serviceHeroTitle}
+        subTitle={serviceHeroSubtitle}
+      />
       <RoundedCard
         children={
-          <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
+          <div className="flex gap-8 items-center justify-center text-green-dark font-semibold text-2xl">
             <p className="flex gap-2 items-center">
               <LuPhone />
               +91 93161 45852

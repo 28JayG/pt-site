@@ -13,9 +13,9 @@ interface Props {
 const About: React.FC<Props> = ({ title, description, highlights }) => {
   return (
     <MaxWidthWrapper>
-      <div className="bg-white py-20 flex flex-col gap-14">
-        <div className="flex md:flex-row flex-col gap-8 md:gap-0 justify-around ">
-          <p className="font-semibold md:text-titleSummaryTitle leading-15 text-2xl text-center md:text-left text-green-dark flex-1">
+      <div className="py-20 flex flex-col gap-14 relative">
+        <div className="flex md:flex-row flex-col gap-5 justify-around">
+          <p className="font-semibold md:text-3.5xl leading-15 text-2xl text-center md:text-left text-green-dark flex-1">
             {title}
           </p>
           <Markdown className="px-1 md:px-0 flex-1 text-textSecondary font-light">

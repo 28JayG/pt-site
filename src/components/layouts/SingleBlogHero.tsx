@@ -6,7 +6,7 @@ const SingleBlogHero: React.FC = () => {
   return (
     <MaxWidthWrapper>
         <div className="flex justify-between items-center py-10">
-          <p className="text-5xl font-semibold">
+          <p className="text-4xl font-semibold">
             From Idea to Market Leader:
             <br /> A Startup's Journey to Success
           </p>

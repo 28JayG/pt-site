@@ -1,9 +1,36 @@
-import React from "react";
+import React, { FC } from "react";
 import Button from "components/shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { SiTicktick } from "react-icons/si";
 import { blurredBg } from "constants/assets.constants";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
+import { TechCategory as TechCategoryI } from "types/models";
+import { techCategories } from "data/services.data";
+
+interface TechCategoryProps {
+  techCategory: TechCategoryI;
+}
+
+const TechCategory: FC<TechCategoryProps> = ({ techCategory }) => {
+  return (
+    <div className="bg-white rounded-3xl p-10 flex items-center text-center">
+      <p className="text-xl font-semibold flex-1 text-start">
+        {techCategory.title}
+      </p>
+      <div className="flex gap-4 flex-1 justify-start flex-wrap">
+        {techCategory.techFrameworks.map((category) => (
+          <div
+            key={category.id}
+            className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1"
+          >
+            <SiTicktick className="text-primary" />
+            <p>{category.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const TechStack: React.FC = () => {
   return (
@@ -21,130 +48,9 @@ const TechStack: React.FC = () => {
               Get Started Today
             </Button>
           </div>
-          <div className="bg-white rounded-3xl p-10 flex items-center text-center">
-            <p className="text-xl font-semibold flex-1 text-start">Frontend Development</p>
-            <div className="flex gap-4 flex-1 justify-start flex-wrap">
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>React</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Next JS</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>HTML</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>CSS, Bootstrap</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Hooks</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Redux-Saga</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Styled Component</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>JQuery</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Bootstrap</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Material-UI</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Socket.io</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Tailwind CSS</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Shadcn/UI</p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white rounded-3xl p-10 flex items-center text-center">
-            <p className="text-xl font-semibold flex-1 text-start">Backend Development</p>
-            <div className="flex gap-4 flex-1 justify-start flex-wrap">
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Node.js</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Nest</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Express</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>MVC</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>MVVM</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Supabase</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Mongo DB</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>MySQL</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Firebase</p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white rounded-3xl p-10 flex items-center text-center">
-            <p className="text-xl font-semibold flex-1 text-start">Database</p>
-            <div className="flex gap-4 flex-1 justify-start flex-wrap">
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Mongo DB</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>PostgreSQL - CMS: Strapi</p>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white rounded-3xl p-10 flex items-center text-center">
-            <p className="text-xl font-semibold flex-1 text-start">CMS</p>
-            <div className="flex gap-4 flex-1 justify-start flex-wrap">
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Strapi</p>
-              </div>
-              <div className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1">
-                <SiTicktick />
-                <p>Webiny</p>
-              </div>
-            </div>
-          </div>
+          {techCategories.map((category) => (
+            <TechCategory key={category.id} techCategory={category} />
+          ))}
         </div>
       </MaxWidthWrapper>
     </div>

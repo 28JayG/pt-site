@@ -39,7 +39,7 @@ const Testimonial: React.FC = () => {
     <MaxWidthWrapper>
       <div className="flex flex-col gap-10 py-10 relative">
         <div className="flex flex-col gap-6">
-          <p className="text-2xl md:text-5xl font-semibold text-center text-green-dark">
+          <p className="text-2xl md:text-4xl font-semibold text-center text-green-dark">
             Hear From our Clients
           </p>
           <p className="text-textSecondary text-base text-center font-light">

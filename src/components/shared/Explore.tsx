@@ -12,8 +12,9 @@ interface Props {
 }
 
 const Explore: React.FC<Props> = ({ title, subtitle }) => {
+
   return (
-    <div className="bg-gray-100">
+    <div className="bg-white">
       <MaxWidthWrapper>
         <div className=" py-20 px-4 ">
           <TitleSummary
@@ -28,7 +29,7 @@ const Explore: React.FC<Props> = ({ title, subtitle }) => {
 
           <div className="grid grid-cols-2 gap-x-12 gap-y-8 mt-14">
             {homeExplore.map((item) => (
-              <div className="bg-white md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
+              <div className="bg-gray-100 md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
                 <img
                   src={item.image}
                   alt=""
