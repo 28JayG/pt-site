@@ -22,3 +22,15 @@ export interface Work {
     image: string;
   };
 }
+
+export interface Review {
+  id: string;
+  featured: boolean;
+  rating: number;
+  review: string;
+  client: {
+    name: string;
+    title: string;
+    image: string;
+  };
+}

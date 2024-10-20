@@ -17,10 +17,10 @@ const Hero: React.FC<Props> = ({ title, subTitle, featuredContent }) => {
       <MaxWidthWrapper className="relative">
         <div className="flex flex-col justify-center items-center text-center gap-6 pb-24">
           <div className="w-[940px] flex flex-col gap-6">
-            <h2 className="text-green-dark md:text-heroTitle font-semibold text-3xl md:leading-heroTitle">
+            <h2 className="text-green-dark md:text-6xl font-semibold text-3xl md:leading-6xl">
               {title}
             </h2>
-            <p className="text-heroSubtitle text-textSecondary leading-heroSubtitle">{subTitle}</p>
+            <p className="text-lg text-textSecondary leading-heroSubtitle">{subTitle}</p>
           </div>
           {featuredContent ? (
             featuredContent

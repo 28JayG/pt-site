@@ -14,19 +14,20 @@ const config: Config = {
       },
       colors: {
         "green-light": "#D6FFE9",
-        "green-medium": "#40BA77",
         "green-dark": "#012D13",
+        grey: {
+
+        },
         primary: "#40BA77",
         secondary: "#000",
         footerBg: "#E5F4EB",
         skyblue: "#D6DFFF",
-        leafGreen: "#D6FFE9",
         mellowYellow: "#E8F9CD",
         purple: "#E5D6FF",
         darkGray: "#F6F7F9",
         oliveGreen: "#E1F5F0",
         textSecondary: "#484A61",
-        darkBlue: "#161C52"
+        darkBlue: "#161C52",
       },
       width: {
         "87": "348px",
@@ -50,19 +51,26 @@ const config: Config = {
         appBar: "2000",
       },
       lineHeight: {
-        "heroTitle" : "74px",
-        "heroSubtitle": "27px",
+        heroTitle: "74px",
+        heroSubtitle: "27px",
         "12.5": "50px",
         "15": "60px",
         "7.5": "30px"
       },
       fontSize: {
-        "heroTitle" : "64px",
-        "heroSubtitle": "18px",
-        "titleSummaryTitle" : "40px",
         "12.5": "54px",
-        
-      }
+
+        xs: "0.75rem",
+        sm: "0.875rem", //14px
+        base: "1rem", //16px
+        lg: "1.125rem", //18px 
+        xl: "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "2.5rem",
+        "6xl": "4rem",
+      },
     },
   },
   plugins: [],

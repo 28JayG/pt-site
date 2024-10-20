@@ -1,4 +1,4 @@
-export const potentialClient = [
+export const potentialClients = [
   {
     image: "/SVG/startup_and_entrepreneur.svg",
     title: "Startups & Entrepreneurs",

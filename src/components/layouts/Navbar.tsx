@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           {Object.values(appRoutes).map((tab) => (
             <li
               key={tab.route}
-              className={`flex gap-4 items-center cursor-pointer ${
+              className={`flex text-sm gap-4 items-center cursor-pointer ${
                 isActive(tab.route) ? "text-primary font-semibold" : ""
               }`}
             >

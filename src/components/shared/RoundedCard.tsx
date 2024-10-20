@@ -7,8 +7,12 @@ interface Props {
   color?: string;
 }
 
-const RoundedCard: React.FC<Props> = ({ children, color, variant = "normal" }) => {
-  const className = `rounded-3xl px-28 pt-16 pb-28 my-20 mx-auto text-center bg-white convex-curve text-${color} ${
+const RoundedCard: React.FC<Props> = ({
+  children,
+  color,
+  variant = "normal",
+}) => {
+  const className = `rounded-3xl px-28 pt-16 pb-28 my-20 mx-auto text-base text-center bg-white convex-curve text-${color} ${
     variant === "bordered" ? "border-2 border-primary" : ""
   }`;
 

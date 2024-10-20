@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
-import { potentialClient } from "data/potentialClients.data";
+import { potentialClients } from "data/potentialClients.data";
+import { blurredBg } from "constants/assets.constants";
 
 const PotentialClients: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <div className="bg-gray-100">
+    <div
+      className="bg-gray-100"
+      style={{ backgroundImage: `url(${blurredBg})`, backgroundSize: "cover", backgroundPosition: '30%' }}
+    >
       <MaxWidthWrapper>
         <div className="text-center flex flex-col gap-8 py-10 ">
           <p className="text-3xl md:text-titleSummaryTitle font-semibold text-green-dark">
@@ -23,8 +28,9 @@ const PotentialClients: React.FC = () => {
                 className="w-72 md:w-145 h-64 md:h-96 absolute right-0 bottom-0"
               />
             </div>
+
             <div className="flex flex-col gap-5 items-center">
-              {potentialClient.map((item, index) => (
+              {potentialClients.map((item, index) => (
                 <div
                   className="bg-white md:w-165 w-80 rounded-2xl flex gap-8 py-5 pl-4 md:pl-10"
                   style={{
