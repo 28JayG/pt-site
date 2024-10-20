@@ -22,11 +22,11 @@ const FeaturedWorks = () => {
         />
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper>
+      <div className="flex flex-col gap-10 md:gap-20">
         {workData.map((work) => (
           <FeaturedWork key={work.id} work={work} />
         ))}
-      </MaxWidthWrapper>
+      </div>
     </div>
   );
 };
