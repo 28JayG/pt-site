@@ -39,6 +39,9 @@ const config: Config = {
         "105": "424px",
         "185": "650px",
       },
+      padding: {
+        'max-width-single-spacing': 'calc((100vw - 1312px) / 2)'
+      },
       spacing: {
         footerHeight: "710px",
       },
