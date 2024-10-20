@@ -2,7 +2,6 @@ import { FC } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { colors } from "styles/colors";
 import { Work } from "types/models";
-import { getSpacingBeyondMaxWidthWrapper } from "utils/screen.utils";
 import { getTechStackIcons } from "utils/works.utils";
 
 interface Props {
