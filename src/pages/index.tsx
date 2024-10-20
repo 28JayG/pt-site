@@ -12,6 +12,11 @@ import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
 import { blurredBg } from "constants/assets.constants";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import {
+  homepageAboutDescription,
+  homepageAboutTitle,
+  homepageHighLights,
+} from "constants/homepage.constants";
 
 export default function Home() {
   return (
@@ -72,7 +77,8 @@ export default function Home() {
           variant="bordered"
           children={
             <TitleSummary
-              summaryClassName="max-w-[557px]"
+              summaryClassName="!max-w-[557px]"
+              titleClassName="!text-primary"
               title="Forge Your Digital Future"
               summary="Implement Smart Digital Solutions with Propelius - Connect with is for a discovery call"
               action={
@@ -86,12 +92,13 @@ export default function Home() {
       </section>
 
       <Testimonial />
-      
+
       <PotentialClients />
 
       <About
-        title="Know More About Propelius Technologies"
-        description="At Propelius, we dive deeper into the world of tech and work on our approach on how we're reshaping the digital landscape. Our team of seasoned experts brings a wealth of experience across various industries, ensuring that we understand your unique challenges and opportunities. We believe in the power of technology to transform businesses, and our track record speaks for itself. From advanced mobile apps to robust SaaS solutions, we've helped countless organisations achieve their digital goals. Connect with us to explore more about our case studies, and learn about our innovative approach to tech development. Our holistic approach to digital transformation encompasses everything from initial strategy to ongoing support. We're committed to transparency, keeping you involved and informed throughout the development process. "
+        title={homepageAboutTitle}
+        description={homepageAboutDescription}
+        highlights={homepageHighLights}
       />
       <Explore
         title="Explore our digital digest"
