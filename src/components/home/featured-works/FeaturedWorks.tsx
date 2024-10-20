@@ -7,7 +7,7 @@ import FeaturedWork from "./FeaturedWork";
 
 const FeaturedWorks = () => {
   return (
-    <div className="bg-gradient-to-b from-[#F6F7F9] w-full flex flex-col gap-10 py-20">
+    <div className="z-[2] relative bg-gradient-to-b from-[#F6F7F9] w-full flex flex-col gap-10 py-20">
       <MaxWidthWrapper className="flex justify-between text-left">
         <TitleSummary
           title="Explore Our Potential In Our Work"

@@ -10,7 +10,7 @@ interface Props {
 
 const FeaturedWork: FC<Props> = ({ work }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-16 md:gap-44 items-center md:odd:flex-row-reverse">
+    <div className="relative flex flex-col md:flex-row gap-16 md:gap-44 items-center md:odd:flex-row-reverse">
       <div className="bg-oliveGreen w-80 md:w-175 h-72 md:h-148 rounded-3xl">
         <img src={work.image} alt="" className="w-72 md:w-150 h-64 md:h-150" />
       </div>

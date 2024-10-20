@@ -44,7 +44,7 @@ const Button: React.FC<Props> = ({
     <button
       {...omit(buttonProps, "className")}
       className={classNames(
-        "rounded-full flex",
+        "rounded-full flex text-sm",
         getButtonClasses(),
         buttonProps.className
       )}
