@@ -1,4 +1,4 @@
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import FeaturedWorks from "components/home/featured-works/FeaturedWorks";
 import PotentialClients from "components/home/PotentialClients";
 import ServicesRange from "components/home/ServicesRange";

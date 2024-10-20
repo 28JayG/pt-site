@@ -1,4 +1,4 @@
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import FintechAppSolution from "components/layouts/FintechAppSolution";
 import FintechServices from "components/layouts/FintechServices";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";

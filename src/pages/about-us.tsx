@@ -1,4 +1,4 @@
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import PageLayout from "components/layouts/PageLayout";
 import Button from "components/shared/Button";
@@ -54,6 +54,7 @@ const aboutUs: React.FC = () => {
           </div>
         }
       />
+      
       <MaxWidthWrapper>
         <div className="flex space-between mb-28">
           <p className="text-4xl font-semibold text-secondary flex-1">

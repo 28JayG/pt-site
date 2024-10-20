@@ -1,4 +1,4 @@
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import HealthAppServices from "components/layouts/HealthAppServices";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import ModernHealthcareSoftwareSolution from "components/layouts/ModernHealthcareSoftwareSolution";

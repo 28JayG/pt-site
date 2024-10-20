@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 export interface Service {
+  id: string;
   title: string;
   description: string;
   illustrationUri: string;
@@ -33,4 +34,10 @@ export interface Review {
     title: string;
     image: string;
   };
+}
+
+export interface TechCategory {
+  id: string;
+  title: string;
+  techFrameworks: { title: string; id: string }[];
 }

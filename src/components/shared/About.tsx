@@ -1,5 +1,6 @@
 import React from "react";
 import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
+import Markdown from "react-markdown";
 
 interface Props {
   title: string;
@@ -9,15 +10,16 @@ interface Props {
 const About: React.FC<Props> = ({ title, description }) => {
   return (
     <MaxWidthWrapper>
-      <div className="bg-white py-20 flex flex-col gap-14">
-        <div className="flex md:flex-row flex-col gap-8 md:gap-0 justify-around ">
-          <p className="font-semibold md:text-titleSummaryTitle leading-15 text-2xl text-center md:text-left text-green-dark flex-1">
+      <div className="py-20 flex flex-col gap-14 relative">
+        <div className="flex md:flex-row flex-col gap-5 justify-around">
+          <p className="font-semibold md:text-3.5xl leading-15 text-2xl text-center md:text-left text-green-dark flex-1">
             {title}
           </p>
-          <div className="px-1 md:px-0 flex-1 text-textSecondary font-light">
+          <Markdown className="px-1 md:px-0 flex-1 text-textSecondary font-light">
             {description}
-          </div>
+          </Markdown>
         </div>
+
         <div className="flex flex-col md:flex-row gap-8 justify-center">
           <div className="w-90 md:w-105 h-52 bg-skyblue rounded-3xl flex flex-col gap-2 pt-10 pl-10">
             <p className="font-semibold text-12.5 leading-heroTitle text-green-dark">
