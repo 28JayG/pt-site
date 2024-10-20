@@ -17,10 +17,10 @@ const FeaturedWork: FC<Props> = ({ work }) => {
       </div>
 
       <div className="flex flex-col gap-6 pl-2 md:pl-0">
-        <p className="font-semibold text-5xl text-primary">
+        <p className="font-semibold text-4xl text-primary">
           {work.title}
         </p>
-        <p className="font-semibold text-2xl md:text-5xl leading-12.5">
+        <p className="font-semibold text-2xl md:text-4xl leading-12.5">
           {work.subTitle}
         </p>
         <p className="text-textSecondary text-base font-light">

@@ -15,7 +15,7 @@ const LatestArticleBlog: React.FC = () => {
         <MaxWidthWrapper>
           <div className="flex justify-between py-20">
             <div className="max-w-[640px] flex flex-col gap-5 text-left">
-              <p className="text-5xl font-semibold">Our Latest Articles</p>
+              <p className="text-4xl font-semibold">Our Latest Articles</p>
               <p>
                 Dive into our blog for industry insights, tips, and news. Stay
                 informed and inspired with our latest articles and updates.

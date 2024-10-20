@@ -1,4 +1,4 @@
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import PageLayout from "components/layouts/PageLayout";
 import SingleBlogFullArticle from "components/layouts/SingleBlogFullArticle";
 import SingleBlogHero from "components/layouts/SingleBlogHero";

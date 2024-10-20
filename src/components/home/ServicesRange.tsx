@@ -3,7 +3,7 @@ import Button from "../shared/Button";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import { Service } from "types/models";
-import { services } from "data/services.data";
+import { featuredServices } from "data/services.data";
 import classNames from "classnames";
 import TitleSummary from "components/shared/TitleSummary";
 
@@ -82,14 +82,14 @@ const ServicesRange = () => {
           {/* mobile app development */}
           <div className="col-start-1 col-end-2 row-start-1 row-end-3">
             <ServiceCardWithIllustration
-              service={services.mobileDev}
+              service={featuredServices.mobileDev}
               illustrationPosition="bottom"
             />
           </div>
           {/* saas solution */}
           <div className="col-start-2 col-end-3 row-start-1 row-end-2">
             <div
-              style={{ backgroundColor: services.saas.color }}
+              style={{ backgroundColor: featuredServices.saas.color }}
               className="h-full rounded-xl relative flex justify-center items-center"
             >
               <img
@@ -98,7 +98,7 @@ const ServicesRange = () => {
                 className="w-20 h-28 absolute left-0 -translate-y-1/2 top-1/2"
               />
               <p className="font-semibold text-center text-xl">
-                {services.saas.title}
+                {featuredServices.saas.title}
               </p>
               <img
                 src="/images/saas_solution_service_img2.png"
@@ -112,10 +112,10 @@ const ServicesRange = () => {
           <div className="col-start-2 col-end-3 row-start-2 row-end-3">
             <div
               className="h-full rounded-xl relative flex justify-center"
-              style={{ backgroundColor: services.eCommerce.color }}
+              style={{ backgroundColor: featuredServices.eCommerce.color }}
             >
               <p className="text-center font-semibold text-xl pt-5">
-                {services.eCommerce.title}
+                {featuredServices.eCommerce.title}
               </p>
               <img
                 src="/images/custome_ecom_service_img.png"
@@ -127,7 +127,7 @@ const ServicesRange = () => {
 
           <div className="col-start-3 col-end-4 row-start-1 row-end-3">
             <ServiceCardWithIllustration
-              service={services.webDev}
+              service={featuredServices.webDev}
               illustrationPosition="top"
             />
           </div>

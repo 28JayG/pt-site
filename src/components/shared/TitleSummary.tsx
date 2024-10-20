@@ -16,7 +16,7 @@ const TitleSummary: FC<Props> = ({
 }) => {
   return (
     <div className="w-full justify-between text-left">
-      <p className="text-3xl md:text-5xl font-semibold w-full max-w-[860px] mb-3 py-2 text-green-dark">
+      <p className="text-3xl md:text-4xl font-semibold w-full max-w-[860px] mb-3 py-2 text-green-dark">
         {title}
       </p>
       <div className="flex justify-between">

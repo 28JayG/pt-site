@@ -2,7 +2,7 @@ import Button from "components/shared/Button";
 import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
-import MaxWidthWrapper from "./layouts/MaxWidthWrapper";
+import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
 
 const ContactForm: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-import ContactForm from "components/ContactForm";
+import ContactForm from "components/shared/ContactForm";
 import EcommerceDevelopmentServices from "components/layouts/EcommerceDevelopmentServices";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import PageLayout from "components/layouts/PageLayout";
