@@ -61,7 +61,6 @@ export default function Home() {
 
       <FeaturedWorks />
 
-      {/* // rounded card section start */}
       <section className="w-full relative">
         <img
           src={blurredBg}
@@ -85,15 +84,14 @@ export default function Home() {
           }
         />
       </section>
-      {/* // rounded card section end */}
 
       <Testimonial />
+      
       <PotentialClients />
+
       <About
         title="Know More About Propelius Technologies"
-        description="At Propelius, we dive deeper into the world of tech and work on our approach on how we're reshaping the digital landscape. Our team of seasoned experts brings a wealth of experience across various industries, ensuring that we understand your unique challenges and opportunities.
-
-   We believe in the power of technology to transform businesses, and our track record speaks for itself. From advanced mobile apps to robust SaaS solutions, we've helped countless organisations achieve their digital goals. Connect with us to explore more about our case studies, and learn about our innovative approach to tech development. Our holistic approach to digital transformation encompasses everything from initial strategy to ongoing support. We're committed to transparency, keeping you involved and informed throughout the development process. "
+        description="At Propelius, we dive deeper into the world of tech and work on our approach on how we're reshaping the digital landscape. Our team of seasoned experts brings a wealth of experience across various industries, ensuring that we understand your unique challenges and opportunities. We believe in the power of technology to transform businesses, and our track record speaks for itself. From advanced mobile apps to robust SaaS solutions, we've helped countless organisations achieve their digital goals. Connect with us to explore more about our case studies, and learn about our innovative approach to tech development. Our holistic approach to digital transformation encompasses everything from initial strategy to ongoing support. We're committed to transparency, keeping you involved and informed throughout the development process. "
       />
       <Explore
         title="Explore our digital digest"
