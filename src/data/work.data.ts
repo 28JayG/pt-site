@@ -7,7 +7,7 @@ const workData: Work[] = [
     description:
       "A cutting-edge web application for renting and subscribing to electronic items monthly. Developed by Propelius Technologies, it features instant search across thousands of products, secure payment methods, and a 99.99% verified user base. This custom e-commerce solution demonstrates our expertise in digital transformation and web application development. LivLyt offers businesses a powerful platform to enter the sharing economy, showcasing our ability to deliver innovative digital solutions that drive growth.",
     techUsed: ["react", "TypeScript", "next"],
-    image: "https://example.com/livl yt.jpg", // Replace with the actual image URL
+    image: "/images/our_work_img_1.png",
     featured: true,
     client: {
       clientele:

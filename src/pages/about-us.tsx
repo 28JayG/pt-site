@@ -14,6 +14,8 @@ import {
   IoChevronForward,
 } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
+import About from "components/shared/About";
+import { aboutUsDescription, aboutUsTitle } from "constants/aboutus.constants";
 
 const aboutUs: React.FC = () => {
   return (
@@ -56,27 +58,10 @@ const aboutUs: React.FC = () => {
       />
       
       <MaxWidthWrapper>
-        <div className="flex space-between mb-28">
-          <p className="text-4xl font-semibold text-secondary flex-1">
-            Who We Are?
-          </p>
-          <p className="flex-1">
-            Propelius Technologies is a forward-thinking company at the
-            forefront of technological innovation. Specialising in cutting-edge
-            solutions, we strive to revolutionise industries through our
-            expertise in areas such as mobile app / web app development / custom
-            ecommerce and software development and other digital solutions.
-            <br />
-            Our comprehensive approach to digital transformation services has
-            everything from strategy development to implementation and ongoing
-            support. We work closely with you to identify key areas for
-            improvement and leverage cutting-edge technologies to streamline
-            your operations, enhance customer experiences, and drive growth.
-          </p>
-        </div>
+        <About title={aboutUsTitle} description={aboutUsDescription} />
         <div className="flex justify-center items-center">
           <p className="text-[260px] outline-text">We</p>
-          <ul className="font-semibold text-4xl p-2 space-y-3">
+          <ul className="font-semibold text-4xl p-2 space-y-3 text-green-dark">
             <li>Drive Innovation.</li>
             <li>Deliver Results.</li>
             <li>Transform Ideas.</li>
@@ -85,9 +70,9 @@ const aboutUs: React.FC = () => {
         </div>
         <div className="py-24 flex justify-center gap-32">
           <div className="flex flex-col max-w-[530px] gap-3">
-            <p>Propelius: Propelling you into the digital age </p>
-            <p className="font-semibold text-4xl">Explore our brand story</p>
-            <p className="leading-relaxed">
+            <p className="font-light text-textSecondary">Propelius: Propelling you into the digital age </p>
+            <p className="font-semibold text-4xl text-green-dark">Explore our brand story</p>
+            <p className="leading-relaxed font-light text-textSecondary">
               In the ever-evolving world of technology, Propelius Technologies
               was born to bridge the gap between tech and real-world business
               needs. Our journey began when passionate tech enthusiasts and
@@ -120,7 +105,7 @@ const aboutUs: React.FC = () => {
       <div className="bg-primary h-[612px] w-full relative mb-[305px] ">
         <MaxWidthWrapper className="">
           <div className="pt-24 flex flex-col gap-3 ">
-            <p className="text-white">Our Culture</p>
+            <p className="text-white font-light">Our Culture</p>
             <div className="flex justify-between items-center">
               <p className="font-semibold text-4xl text-white leading-relaxed">
                 A Glimpse into Our Culture
@@ -134,7 +119,7 @@ const aboutUs: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className="text-white">
+            <p className="text-white font-light">
               At Propelius, our team thrives on creativity, embraces diversity,
               and celebrates each other's successes. We're not just colleagues;
               we're a family of tech enthusiasts working together to shape the

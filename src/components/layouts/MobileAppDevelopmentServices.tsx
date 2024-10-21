@@ -16,10 +16,10 @@ const MobileAppDevelopmentServices: React.FC = () => {
             <div className="bg-gray-100 p-2 w-fit rounded-2xl">
               <img src="/SVG/hybrid_app.svg" alt="" className="w-10 h-10" />
             </div>
-            <p className="font-bold text-2xl">
+            <p className="font-semibold text-xl text-green-dark">
               Cross Platform mobile apps development
             </p>
-            <p className="text-gray-600">
+            <p className="text-textSecondary font-light">
               Maximise your reach with a single codebase. Our cross-platform
               solutions ensure seamless performance across iOS and Android,
               reducing development time and costs. 
@@ -32,8 +32,8 @@ const MobileAppDevelopmentServices: React.FC = () => {
             <div className="bg-gray-100 p-2 w-fit rounded-2xl">
               <img src="/SVG/hybrid_app.svg" alt="" className="w-10 h-10" />
             </div>
-            <p className="font-bold text-2xl">Native mobile apps development</p>
-            <p className="text-gray-600">
+            <p className="font-semibold text-xl text-green-dark">Native mobile apps development</p>
+            <p className="text-textSecondary font-light">
               Unleash full power of device-specific features. Our native app
               development services for iOS and Android, ensures the highest
               level of app functionality and user satisfaction. 
