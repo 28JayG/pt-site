@@ -11,7 +11,7 @@ interface TechCategoryProps {
   techCategory: TechCategoryI;
 }
 
-const TechCategory: FC<TechCategoryProps> = ({ techCategory }) => {
+export const TechCategory: FC<TechCategoryProps> = ({ techCategory }) => {
   return (
     <div className="bg-white rounded-3xl p-10 flex items-center text-center">
       <p className="text-2xl text-green-dark font-medium flex-1 text-start">
