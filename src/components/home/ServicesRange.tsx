@@ -64,7 +64,7 @@ const ServiceCardWithIllustration: FC<ServiceCardProps> = ({
 const ServicesRange = () => {
   return (
     <MaxWidthWrapper>
-      <div className="relative py-20">
+      <div className="relative py-20 text-center lg:text-left">
         <TitleSummary
           title="Our Range of Services"
           summary="Explore our range of end to end digital solutions for business that

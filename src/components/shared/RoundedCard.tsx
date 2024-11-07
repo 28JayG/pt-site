@@ -12,7 +12,7 @@ const RoundedCard: React.FC<Props> = ({
   color,
   variant = "normal",
 }) => {
-  const className = `relative lg:px-28 pt-16 pb-16 lg:pb-32 mx-auto rounded-t-3xl rounded-br-[55%] rounded-bl-[55%] text-center bg-red-300 overflow-hidden text-${color} ${
+  const className = `relative lg:px-28 pt-16 pb-16 lg:pb-32 mx-auto rounded-t-3xl rounded-br-[55%] rounded-bl-[55%] text-center bg-white overflow-hidden text-${color} ${
     variant === "bordered" ? "border-2 border-primary" : ""
   }`;
 

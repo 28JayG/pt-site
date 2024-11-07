@@ -62,7 +62,7 @@ export default function Home() {
         }
       />
 
-      {/* <ServicesRange /> */}
+      <ServicesRange />
 
       {/* <FeaturedWorks /> */}
 
