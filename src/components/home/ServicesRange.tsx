@@ -44,7 +44,7 @@ const ServiceCardWithIllustration: FC<ServiceCardProps> = ({
     >
       <div className="flex flex-col text-left gap-2">
         <p className="font-semibold text-xl">{title}</p>
-        <p className="text-xs leading-6 text-textSecondary w-87">{description}</p>
+        <p className="text-xs leading-6 text-textSecondary w-full lg:w-87">{description}</p>
       </div>
       <div
         className={classNames(

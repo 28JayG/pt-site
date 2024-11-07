@@ -64,7 +64,7 @@ export default function Home() {
 
       <ServicesRange />
 
-      {/* <FeaturedWorks /> */}
+      <FeaturedWorks />
 
       {/* <section className="w-full relative">
         <img
