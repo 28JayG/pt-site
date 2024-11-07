@@ -38,7 +38,7 @@ const ServiceCardWithIllustration: FC<ServiceCardProps> = ({
     <div
       style={{ backgroundColor: color }}
       className={classNames(
-        "flex items-center justify-between w-full h-full rounded-xl p-5 relative",
+        "flex gap-8 lg:gap-0 items-center justify-between w-full h-full rounded-xl p-5 relative",
         getIllustrationClasses().cardClass
       )}
     >
@@ -78,16 +78,16 @@ const ServicesRange = () => {
           }
         />
 
-        <div className="grid grid-cols-3 grid-rows-2 h-[420px] gap-4 pt-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 lg:h-[420px] gap-4 pt-14">
           {/* mobile app development */}
-          <div className="col-start-1 col-end-2 row-start-1 row-end-3">
+          <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3">
             <ServiceCardWithIllustration
               service={featuredServices.mobileDev}
               illustrationPosition="bottom"
             />
           </div>
           {/* saas solution */}
-          <div className="col-start-2 col-end-3 row-start-1 row-end-2">
+          <div className="h-48 lg:h-auto lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
             <div
               style={{ backgroundColor: featuredServices.saas.color }}
               className="h-full rounded-xl relative flex justify-center items-center"
@@ -109,7 +109,7 @@ const ServicesRange = () => {
           </div>
 
           {/* custom e-commerce */}
-          <div className="col-start-2 col-end-3 row-start-2 row-end-3">
+          <div className="h-48 lg:h-auto lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3">
             <div
               className="h-full rounded-xl relative flex justify-center"
               style={{ backgroundColor: featuredServices.eCommerce.color }}
@@ -125,7 +125,7 @@ const ServicesRange = () => {
             </div>
           </div>
 
-          <div className="col-start-3 col-end-4 row-start-1 row-end-3">
+          <div className="lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3">
             <ServiceCardWithIllustration
               service={featuredServices.webDev}
               illustrationPosition="top"
