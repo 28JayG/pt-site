@@ -9,17 +9,14 @@ interface Props {
 }
 
 const FeaturedWork: FC<Props> = ({ work }) => {
-
   return (
-    <div className={`relative flex flex-col md:flex-row gap-16 md:gap-44 items-start md:odd:flex-row-reverse md:odd:pl-max-width-single-spacing md:even:pr-max-width-single-spacing`}>
-      <div className="bg-oliveGreen w-80 md:w-175 h-72 md:h-148 rounded-3xl"> 
-        <img src={work.image} alt="" className="w-72 md:w-150 h-64 md:h-150" />
+    <div className="relative flex flex-col lg:flex-row gap-16 lg:gap-28 items-start lg:even:flex-row-reverse lg:even:pl-max-width-single-spacing lg:odd:pr-max-width-single-spacing">
+      <div className="bg-green-50 shrink-0 w-80 md:w-175 h-72 md:h-148 rounded-3xl">
+        <img src={work.image} alt="" className="w-full h-full" />
       </div>
 
       <div className="flex flex-col gap-6 pl-2 md:pl-0">
-        <p className="font-semibold text-4xl text-primary">
-          {work.title}
-        </p>
+        <p className="font-semibold text-4xl text-primary">{work.title}</p>
         <p className="font-semibold text-2xl md:text-4xl leading-12.5">
           {work.subTitle}
         </p>

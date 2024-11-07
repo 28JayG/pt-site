@@ -7,7 +7,7 @@ interface Props {
 }
 
 const MaxWidthWrapper: FC<Props> = ({ children, className }) => {
-  return <div className={classNames('w-full max-w-[1312px] mx-auto', className)}>{children}</div>;
+  return <div className={classNames('p-5 lg:p-0 w-full max-w-[1312px] mx-auto', className)}>{children}</div>;
 };
 
 export default MaxWidthWrapper

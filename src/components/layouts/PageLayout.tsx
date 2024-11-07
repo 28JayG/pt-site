@@ -12,12 +12,12 @@ const PageLayout: FC<Props> = ({ children }) => {
     <div
       className={`w-screen max-w-full min-h-screen relative pb-footerHeight`}
     >
-      <Navbar />
+      {/* <Navbar /> */}
       {/** Page Container */}
       <div> {children}</div> {/** Footer */}
-      <footer className="absolute h-footerHeight bottom-0 w-full">
+      {/* <footer className="absolute h-footerHeight bottom-0 w-full">
         <Footer />
-      </footer>
+      </footer> */}
     </div>
   );
 };

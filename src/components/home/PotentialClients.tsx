@@ -13,7 +13,7 @@ const PotentialClients: React.FC = () => {
     >
       <MaxWidthWrapper>
         <div className="text-center flex flex-col gap-8 py-10 ">
-          <p className="text-3xl md:text-titleSummaryTitle font-semibold text-green-dark">
+          <p className="text-3xl md:text-titleSummaryTitle font-semibold text-green-900 pb-0">
             Who We Help
           </p>
           <p className="text-textSecondary font-light">

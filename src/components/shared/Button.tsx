@@ -23,11 +23,11 @@ const Button: React.FC<Props> = ({
 }) => {
   const getButtonClasses = () => {
     let className = "px-7 py-3 text-center font-semibold items-center gap-2 h-12";
-    const colorClass = htmlColor ? `[${htmlColor}]` : `${color}`;
+    const colorClass = htmlColor ? `[${htmlColor}]` : color;
 
     switch (variant) {
       case "outlined":
-        className += ` border border-${colorClass} text-${colorClass}`;
+        className += ` border border-current text-${colorClass}`;
         break;
       case "text":
         className += ` text-${colorClass}`;
@@ -44,7 +44,7 @@ const Button: React.FC<Props> = ({
     <button
       {...omit(buttonProps, "className")}
       className={classNames(
-        "rounded-full flex text-sm",
+        "rounded-full flex justify-center text-sm",
         getButtonClasses(),
         buttonProps.className
       )}
