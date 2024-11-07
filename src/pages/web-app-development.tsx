@@ -9,13 +9,14 @@ import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
 import TechStack from "components/shared/TechStack";
 import TitleSummary from "components/shared/TitleSummary";
-import { questionsArray1, questionsArrayWebApp } from "data/FAQ.data";
+import { questionsArrayWebApp } from "data/FAQ.data";
 import React from "react";
 import { FaSkype } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
+import { COMPANY_PHONE_1 } from "constants/company.constants";
 
-const webAppDevelopment: React.FC = () => {
+const WebAppDevelopment: React.FC = () => {
   return (
     <PageLayout>
       <Hero
@@ -27,7 +28,7 @@ const webAppDevelopment: React.FC = () => {
           <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
             <p className="flex gap-2 items-center">
               <LuPhone />
-              +91 93161 45852
+              {COMPANY_PHONE_1}
             </p>
             <p className="flex gap-2 items-center">
               <LuMail />
@@ -131,4 +132,4 @@ const webAppDevelopment: React.FC = () => {
   );
 };
 
-export default webAppDevelopment;
+export default WebAppDevelopment;

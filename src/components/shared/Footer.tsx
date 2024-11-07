@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { LuMail, LuPhone } from "react-icons/lu";
+import { COMPANY_PHONE_1 } from "constants/company.constants";
 
 const Footer: React.FC = () => {
   return (
@@ -28,7 +29,9 @@ const Footer: React.FC = () => {
         <div className="border-white border mb-10"></div>
         <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-start md:justify-evenly md:text-sm ">
           <div className="flex flex-col gap-4">
-            <p className="text-gray-400 text-base font-bold md:font-normal">Company</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">
+              Company
+            </p>
             <p>Home</p>
             <p>About Us</p>
             <p>Blog</p>
@@ -36,14 +39,18 @@ const Footer: React.FC = () => {
             <p>Contact Us</p>
           </div>
           <div className="flex flex-col gap-4 ">
-            <p className="text-gray-400 text-base font-bold md:font-normal">Services</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">
+              Services
+            </p>
             <p>Mobile App Development</p>
             <p>Web App Development</p>
             <p>SAAS Solution</p>
             <p>Custome E-Commerce Solution</p>
           </div>
           <div className="flex flex-col gap-4 ">
-            <p className="text-gray-400 text-base font-bold md:font-normal">Technologies</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">
+              Technologies
+            </p>
             <p>Tech Expertise</p>
             <p>AI Development</p>
             <p>Database Management</p>
@@ -51,7 +58,9 @@ const Footer: React.FC = () => {
             <p>Digitl Marketing</p>
           </div>
           <div className="flex flex-col gap-4 ">
-            <p className="text-gray-400 text-base font-bold md:font-normal">Other Links</p>
+            <p className="text-gray-400 text-base font-bold md:font-normal">
+              Other Links
+            </p>
             <p>Privacy Policy</p>
             <p>Terms And Conditions</p>
             <p>Security</p>
@@ -75,17 +84,19 @@ const Footer: React.FC = () => {
         <div>
           <img src={footerImgUri} alt="" className="w-52 h-20" />
           <div className="flex gap-2 justify-center">
-            <FaFacebook size={40}/>
-            <FaInstagramSquare size={40}/>
-            <FaLinkedin size={40}/>
-            <FaPinterest size={40}/>
+            <FaFacebook size={40} />
+            <FaInstagramSquare size={40} />
+            <FaLinkedin size={40} />
+            <FaPinterest size={40} />
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-gray-400 text-base font-bold md:font-normal">Business Enquiries</p>
+          <p className="text-gray-400 text-base font-bold md:font-normal">
+            Business Enquiries
+          </p>
           <p className="flex gap-2 items-center">
             <LuPhone />
-            +91 999 999 9999
+            {COMPANY_PHONE_1}
           </p>
           <p className="flex gap-2 items-center">
             <LuMail />
@@ -97,10 +108,12 @@ const Footer: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-gray-400 text-base font-bold md:font-normal">Career Enquiries</p>
+          <p className="text-gray-400 text-base font-bold md:font-normal">
+            Career Enquiries
+          </p>
           <p className="flex gap-2 items-center">
             <LuPhone />
-            +91 999 999 9999
+            {COMPANY_PHONE_1}
           </p>
           <p className="flex gap-2 items-center">
             <LuMail />
@@ -123,7 +136,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="bg-primary text-center py-6">
-        Copyright © 2024. All Rights Reserved by <span className="font-bold">Propelius Technologies.</span>
+        Copyright © 2024. All Rights Reserved by{" "}
+        <span className="font-bold">Propelius Technologies.</span>
       </div>
     </div>
   );

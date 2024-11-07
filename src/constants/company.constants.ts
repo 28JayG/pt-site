@@ -1,0 +1,2 @@
+export const COMPANY_PHONE_1= '+91 93161 45852'
+export const COMPANY_PHONE_2= '+91 93161 98765'

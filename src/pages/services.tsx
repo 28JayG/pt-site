@@ -18,6 +18,7 @@ import {
   serviceHeroTitle,
   serviceHighLights,
 } from "constants/service.constants";
+import { COMPANY_PHONE_1 } from "constants/company.constants";
 
 const Service: React.FC = () => {
   return (
@@ -32,7 +33,7 @@ const Service: React.FC = () => {
           <div className="flex gap-8 items-center justify-center text-green-dark font-semibold text-2xl">
             <p className="flex gap-2 items-center">
               <LuPhone />
-              +91 93161 45852
+              {COMPANY_PHONE_1}
             </p>
             <p className="flex gap-2 items-center">
               <LuMail />

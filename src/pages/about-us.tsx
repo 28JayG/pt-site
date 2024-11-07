@@ -7,7 +7,11 @@ import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
 import { divide } from "lodash";
 import React from "react";
-import { FaChevronCircleLeft, FaChevronCircleRight, FaSkype } from "react-icons/fa";
+import {
+  FaChevronCircleLeft,
+  FaChevronCircleRight,
+  FaSkype,
+} from "react-icons/fa";
 import {
   IoArrowForwardCircleOutline,
   IoChevronBack,
@@ -15,7 +19,8 @@ import {
 } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
 import About from "components/shared/About";
-import { aboutUsDescription, aboutUsTitle } from "constants/aboutus.constants";
+import { aboutUsDescription, aboutUsTitle } from "constants/about.constants";
+import { COMPANY_PHONE_1 } from "constants/company.constants";
 
 const aboutUs: React.FC = () => {
   return (
@@ -43,7 +48,7 @@ const aboutUs: React.FC = () => {
           <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
             <p className="flex gap-2 items-center">
               <LuPhone />
-              +91 93161 45852
+              {COMPANY_PHONE_1}
             </p>
             <p className="flex gap-2 items-center">
               <LuMail />
@@ -56,7 +61,7 @@ const aboutUs: React.FC = () => {
           </div>
         }
       />
-      
+
       <MaxWidthWrapper>
         <About title={aboutUsTitle} description={aboutUsDescription} />
         <div className="flex justify-center items-center">
@@ -70,8 +75,12 @@ const aboutUs: React.FC = () => {
         </div>
         <div className="py-24 flex justify-center gap-32">
           <div className="flex flex-col max-w-[530px] gap-3">
-            <p className="font-light text-textSecondary">Propelius: Propelling you into the digital age </p>
-            <p className="font-semibold text-4xl text-green-dark">Explore our brand story</p>
+            <p className="font-light text-textSecondary">
+              Propelius: Propelling you into the digital age{" "}
+            </p>
+            <p className="font-semibold text-4xl text-green-dark">
+              Explore our brand story
+            </p>
             <p className="leading-relaxed font-light text-textSecondary">
               In the ever-evolving world of technology, Propelius Technologies
               was born to bridge the gap between tech and real-world business
@@ -145,27 +154,27 @@ const aboutUs: React.FC = () => {
           </div>
         </MaxWidthWrapper>
       </div>
-        <RoundedCard
-          variant="bordered"
-          children={
-            <div className="flex flex-col gap-5">
-              <div className="flex justify-between">
-                <p className="max-w-[635px] text-primary text-4xl font-semibold text-left">
-                  Fuel Your Business with Propelius' Tech Expertise - Book a
-                  free 30 mins discovery call
-                </p>
-                <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
-                  Book A Free Call
-                </Button>
-              </div>
-              <p className="max-w-[600px] text-left">
-                Mould the perfect digital solution for your business with our
-                expert team - start shaping your online identity
+      <RoundedCard
+        variant="bordered"
+        children={
+          <div className="flex flex-col gap-5">
+            <div className="flex justify-between">
+              <p className="max-w-[635px] text-primary text-4xl font-semibold text-left">
+                Fuel Your Business with Propelius' Tech Expertise - Book a free
+                30 mins discovery call
               </p>
+              <Button endIcon={<IoArrowForwardCircleOutline size={25} />}>
+                Book A Free Call
+              </Button>
             </div>
-          }
-        />
-        <ContactForm />
+            <p className="max-w-[600px] text-left">
+              Mould the perfect digital solution for your business with our
+              expert team - start shaping your online identity
+            </p>
+          </div>
+        }
+      />
+      <ContactForm />
     </PageLayout>
   );
 };

@@ -3,6 +3,7 @@ import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
 import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
+import { COMPANY_PHONE_1, COMPANY_PHONE_2 } from "constants/company.constants";
 
 const ContactForm: React.FC = () => {
   return (
@@ -29,8 +30,8 @@ const ContactForm: React.FC = () => {
               <LuPhone size={30} />
               <p className="font-semibold text-xl">Phone no.</p>
             </div>
-            <p className="text-gray-500 pl-7">+91 93161 45852</p>
-            <p className="text-gray-500 pl-7">+91 93161 98765</p>
+            <p className="text-gray-500 pl-7">{COMPANY_PHONE_1}</p>
+            <p className="text-gray-500 pl-7">{COMPANY_PHONE_2}</p>
           </div>
           <div className="border border-gray-300 w-60 ml-16"></div>
           <div className="p-5 w-80 mt-8">

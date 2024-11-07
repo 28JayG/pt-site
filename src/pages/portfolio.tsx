@@ -7,6 +7,7 @@ import RoundedCard from "components/shared/RoundedCard";
 import React from "react";
 import { FaSkype } from "react-icons/fa";
 import { LuMail, LuPhone } from "react-icons/lu";
+import { COMPANY_PHONE_1 } from "constants/company.constants";
 
 const portfolio: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const portfolio: React.FC = () => {
           <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
             <p className="flex gap-2 items-center">
               <LuPhone />
-              +91 93161 45852
+              {COMPANY_PHONE_1}
             </p>
             <p className="flex gap-2 items-center">
               <LuMail />
