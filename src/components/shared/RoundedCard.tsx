@@ -12,11 +12,15 @@ const RoundedCard: React.FC<Props> = ({
   color,
   variant = "normal",
 }) => {
-  const className = `relative px-28 pt-16 pb-32 mx-auto rounded-t-3xl rounded-br-[55%] rounded-bl-[55%] text-center bg-white text-${color} ${
+  const className = `relative lg:px-28 pt-16 pb-16 lg:pb-32 mx-auto rounded-t-3xl rounded-br-[55%] rounded-bl-[55%] text-center bg-red-300 overflow-hidden text-${color} ${
     variant === "bordered" ? "border-2 border-primary" : ""
   }`;
 
-  return <MaxWidthWrapper className={className}>{children}</MaxWidthWrapper>;
+  return (
+    <MaxWidthWrapper>
+      <div className={className}>{children}</div>
+    </MaxWidthWrapper>
+  );
 };
 
 export default RoundedCard;

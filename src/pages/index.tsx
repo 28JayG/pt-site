@@ -25,42 +25,42 @@ export default function Home() {
         title="Digital solution For Your Business Competitive Edge"
         subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
       />
-      {/* <RoundedCard
+      <RoundedCard
         children={
           <div>
-            <p className="font-semibold text-green-dark text-base">
+            <p className="font-semibold text-green-900 text-base">
               Tailored Digital Solution For Leading Enterprises
             </p>
             <div className="flex justify-around items-center gap-5">
               <img
                 src="/images/client_img1.png"
                 alt="clientImg1"
-                className="w-20 md:w-52 h-12 md:h-28"
-              />
+                className="w-52 h-28"
+                />
               <img
                 src="/images/client_img2.png"
                 alt="clientImg2"
-                className="w-20 md:w-52 h-12 md:h-28"
-              />
+                className="w-52 h-28"
+                />
               <img
                 src="/images/client_img3.png"
                 alt="clientImg3"
-                className="w-20 md:w-52 h-12 md:h-28"
-              />
+                className="w-52 h-28"
+                />
               <img
                 src="/images/client_img4.png"
                 alt="clientImg4"
-                className="w-20 md:w-52 h-12 md:h-28"
-              />
+                className="w-52 h-28"
+                />
               <img
                 src="/images/client_img5.png"
                 alt="clientImg5"
-                className="w-20 md:w-52 h-12 md:h-28"
+                className="w-52 h-28"
               />
             </div>
           </div>
         }
-      /> */}
+      />
 
       {/* <ServicesRange /> */}
 
