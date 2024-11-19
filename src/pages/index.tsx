@@ -66,7 +66,7 @@ export default function Home() {
 
       <FeaturedWorks />
 
-      {/* <section className="w-full relative">
+      <section className="w-full relative">
         <img
           src={blurredBg}
           alt=""
@@ -89,7 +89,7 @@ export default function Home() {
             />
           }
         />
-      </section> */}
+      </section>
 
       {/* <Testimonial /> */}
 
