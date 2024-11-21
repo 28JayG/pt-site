@@ -13,7 +13,7 @@ interface Props {
 const TestimonialCard: FC<Props> = ({ review }) => {
   const { client, review: reviewText, rating } = review;
   return (
-    <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-80 md:w-96">
+    <div className="flex flex-col gap-8 border-2 border-gray-300 p-5 rounded-xl w-full">
       <div className="flex gap-2 items-center">
         <IoMdStar size={25} className="text-yellow-400" />
         <IoMdStar size={25} className="text-yellow-400" />
@@ -34,12 +34,12 @@ const TestimonialCard: FC<Props> = ({ review }) => {
   );
 };
 
-const Testimonial: React.FC = () => {
+const Testimonial = () => {
   return (
     <MaxWidthWrapper>
-      <div className="flex flex-col gap-10 py-10 relative">
-        <div className="flex flex-col gap-6">
-          <p className="text-2xl md:text-4xl font-semibold text-center text-green-dark">
+      <div className="flex flex-col gap-7 lg:gap-12 py-12 lg:py-16 relative">
+        <div className="flex flex-col gap-3 lg:gap-2">
+          <p className="text-3xl md:text-4xl font-semibold text-center text-green-900">
             Hear From our Clients
           </p>
           <p className="text-textSecondary text-base text-center font-light">
@@ -48,7 +48,7 @@ const Testimonial: React.FC = () => {
             <br /> to say for us.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 px-3 justify-between items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-3 justify-between items-center">
           {reviews
             .filter((review) => review.featured)
             .slice(0, 3)
@@ -63,7 +63,7 @@ const Testimonial: React.FC = () => {
           className="w-min mx-auto"
           endIcon={<IoArrowForwardCircleOutline size={25} />}
         >
-          <p className="whitespace-nowrap" >See All Reviews</p>
+          <p className="whitespace-nowrap">See All Reviews</p>
         </Button>
       </div>
     </MaxWidthWrapper>
