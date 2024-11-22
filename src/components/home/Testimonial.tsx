@@ -22,12 +22,12 @@ const TestimonialCard: FC<Props> = ({ review }) => {
         <IoMdStar size={25} className="text-yellow-400" />
         <p className="font-semibold">{rating}</p>
       </div>
-      <p className="text-lg text-textSecondary">{reviewText}</p>
+      <p className="text-lg text-grey-700">{reviewText}</p>
       <div className="flex gap-4 items-center">
         <img src="/images/client_avatar_1.png" alt="" className="w-10 h-10" />
         <div>
           <p className="font-medium text-darkBlue ">{client.name}</p>
-          <p className="text-textSecondary text-sm">{client.title}</p>
+          <p className="text-grey-700 text-sm">{client.title}</p>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ const Testimonial = () => {
           <p className="text-3xl md:text-4xl font-semibold text-center text-green-900">
             Hear From our Clients
           </p>
-          <p className="text-textSecondary text-base text-center font-light">
+          <p className="text-grey-700 text-base text-center font-light">
             Check on some unfiltered feedback of the clients who have
             collaborated with us - Explore what they have got
             <br /> to say for us.

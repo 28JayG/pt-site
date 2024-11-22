@@ -93,7 +93,7 @@ export default function Home() {
 
       <Testimonial />
 
-      {/* <PotentialClients /> */}
+      <PotentialClients />
 
       {/* <About
         title={homepageAboutTitle}

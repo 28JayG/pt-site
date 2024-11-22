@@ -9,38 +9,42 @@ const PotentialClients: React.FC = () => {
   return (
     <div
       className="bg-gray-100"
-      style={{ backgroundImage: `url(${blurredBg})`, backgroundSize: "cover", backgroundPosition: '30%' }}
+      style={{
+        backgroundImage: `url(${blurredBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "30%",
+      }}
     >
       <MaxWidthWrapper>
-        <div className="text-center flex flex-col gap-8 py-10 ">
-          <p className="text-3xl md:text-titleSummaryTitle font-semibold text-green-900 pb-0">
+        <div className="text-center flex flex-col gap-8 lg:gap-20 py-12 lg:py-16">
+          <p className="text-3xl lg:text-4xl md:text-titleSummaryTitle font-semibold text-green-900 pb-0">
             Who We Help
           </p>
-          <p className="text-textSecondary font-light">
+          <p className="text-grey-700 font-light">
             Scaling Success: Helping businesses of all sizes achieve their
             digital potential.
           </p>
-          <div className="md:px-20 flex flex-col md:flex-row gap-8 md:gap-20 justify-center">
-            <div className="w-80 md:w-160 h-72 md:h-150 bg-skyblue relative rounded-3xl mx-auto md:mx-0">
+          <div className="md:px-20 flex flex-col md:flex-row gap-8 justify-center">
+            <div className="w-full lg:w-160 pl-9 pt-7 overflow-hidden h-72 md:h-150 bg-blue-200 relative rounded-3xl mx-auto lg:mx-0">
               <img
                 src="/images/potential_client.png"
                 alt=""
-                className="w-72 md:w-145 h-64 md:h-96 absolute right-0 bottom-0"
+                className="w-full h-full"
               />
             </div>
 
-            <div className="flex flex-col gap-5 items-center">
+            <div className="flex flex-col gap-5 lg:justify-between items-center w-full lg:w-165">
               {potentialClients.map((item, index) => (
                 <div
-                  className="bg-white md:w-165 w-80 rounded-2xl flex gap-8 py-5 pl-4 md:pl-10"
+                  className="w-full bg-white rounded-2xl flex gap-2 lg:gap-8 py-4 px-5"
                   style={{
                     height: activeIndex === index ? "auto" : "fit-content",
                   }}
                 >
                   <img src={item.image} alt="" className="w-8 h-8" />
-                  <div className="flex flex-col gap-4 text-left">
+                  <div className="flex flex-col gap-2 lg:gap-4 text-left">
                     <p
-                      className="font-medium text-green-dark text-xl cursor-pointer"
+                      className="font-medium text-green-900 text-lg lg:text-xl cursor-pointer"
                       onClick={() =>
                         setActiveIndex(activeIndex === index ? -1 : index)
                       }
@@ -48,7 +52,7 @@ const PotentialClients: React.FC = () => {
                       {item.title}
                     </p>
                     {activeIndex === index && (
-                      <p className="text-textSecondary font-light text-sm w-[412px]">
+                      <p className="text-grey-700 font-light text-xs lg:text-sm">
                         {item.description}
                       </p>
                     )}
