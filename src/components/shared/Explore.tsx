@@ -12,9 +12,8 @@ interface Props {
 }
 
 const Explore: React.FC<Props> = ({ title, subtitle }) => {
-
   return (
-    <div className="bg-white">
+    <div className="bg-grey-100">
       <MaxWidthWrapper>
         <div className=" py-20 px-4 ">
           <TitleSummary
@@ -27,20 +26,20 @@ const Explore: React.FC<Props> = ({ title, subtitle }) => {
             }
           />
 
-          <div className="grid grid-cols-2 gap-x-12 gap-y-8 mt-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-7 mt-14">
             {homeExplore.map((item) => (
-              <div className="bg-gray-100 md:w-185 h-fit md:h-68 rounded-3xl flex flex-col md:flex-row py-5 md:py-0 px-6 gap-10 items-center">
+              <div className="bg-white w-full h-fit md:h-68 rounded-3xl flex flex-col lg:flex-row p-5 lg:p-7 gap-5 lg:gap-7 items-center">
                 <img
                   src={item.image}
                   alt=""
-                  className="w-56 h-52 rounded-3xl"
+                  className="w-full lg:w-56 lg:h-52 rounded-3xl"
                 />
                 <div className="flex flex-col gap-4">
                   <p className="font-semibold text-xl leading-7.5 text-green-dark">
                     {item.title}
                   </p>
-                  <p className="text-textSecondary text-sm">{item.subTitle}</p>
-                  <div className="flex gap-10 items-center text-primary">
+                  <p className="text-grey-700 text-sm">{item.subTitle}</p>
+                  <div className="flex gap-10 items-center text-green-500">
                     <p className="font-semibold">{item.buttonText}</p>
                     <FaArrowRight />
                   </div>

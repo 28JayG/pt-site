@@ -21,6 +21,7 @@ const config: Config = {
         },
         "green-light": "#D6FFE9",
         grey: {
+          100: '#F6F7F9',
           700: "#484A61",
         },
         blue: {

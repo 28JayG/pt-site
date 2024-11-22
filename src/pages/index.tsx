@@ -95,15 +95,15 @@ export default function Home() {
 
       <PotentialClients />
 
-      {/* <About
+      <About
         title={homepageAboutTitle}
         description={homepageAboutDescription}
         highlights={homepageHighLights}
-      /> */}
-      {/* <Explore
+      />
+      <Explore
         title="Explore our digital digest"
         subtitle="Scroll through our blog for expert views on web app development, mobile app, SaaS solutions and other digital transformation stuff."
-      /> */}
+      />
       {/* <ContactForm /> */}
     </PageLayout>
   );
