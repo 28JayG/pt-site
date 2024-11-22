@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         green: {
           50: "#E1F5F0",
+          100:"#E5F4EB",
           200: "#D6FFE9",
           500: "#40BA77",
           900: "#012D13",
@@ -30,7 +31,6 @@ const config: Config = {
         },
         primary: "#40BA77",
         secondary: "#000",
-        footerBg: "#E5F4EB",
         mellowYellow: "#E8F9CD",
         purple: "#E5D6FF",
         darkGray: "#F6F7F9",
