@@ -104,7 +104,7 @@ export default function Home() {
         title="Explore our digital digest"
         subtitle="Scroll through our blog for expert views on web app development, mobile app, SaaS solutions and other digital transformation stuff."
       />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </PageLayout>
   );
 }

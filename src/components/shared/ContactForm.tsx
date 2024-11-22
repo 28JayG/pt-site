@@ -7,18 +7,18 @@ import { COMPANY_PHONE_1, COMPANY_PHONE_2 } from "constants/company.constants";
 
 const ContactForm: React.FC = () => {
   return (
-    <MaxWidthWrapper className="bg-white p-10  md:p-20 text-center flex flex-col gap-10">
-      <p className="font-bold text-4xl text-green-dark">Get On Touch</p>
-      <p className="text-textSecondary">
+    <MaxWidthWrapper className="bg-white py-10 lg:py-24 text-center flex flex-col gap-10">
+      <p className="font-bold text-4xl text-green-900">Get On Touch</p>
+      <p className="text-grey-700">
         Let's Innovate Together: Reach out now to discuss your digital
         transformation needs.
         <br />
         Fill the form below to get in touch for personalised digital guidance.
       </p>
       <div className="flex flex-col md:flex-row gap-16 md:gap-32 justify-center">
-        <div>
+        <div className="hidden lg:block">
           <div className="p-5 w-60">
-            <div className="flex gap-6 text-primary items-center">
+            <div className="flex gap-6 text-green-500 items-center">
               <LuMail size={30} />
               <p className="font-semibold text-xl">Email Us</p>
             </div>
@@ -26,7 +26,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div className="border border-gray-300 w-60 ml-16"></div>
           <div className="p-5 w-60 mt-8">
-            <div className="flex gap-6 text-primary items-center">
+            <div className="flex gap-6 text-green-500 items-center">
               <LuPhone size={30} />
               <p className="font-semibold text-xl">Phone no.</p>
             </div>
@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div className="border border-gray-300 w-60 ml-16"></div>
           <div className="p-5 w-80 mt-8">
-            <div className="flex gap-6 text-primary items-center">
+            <div className="flex gap-6 text-green-500 items-center">
               <IoLocationOutline size={30} />
               <p className="font-semibold text-xl">Headquaters</p>
             </div>
@@ -48,6 +48,7 @@ const ContactForm: React.FC = () => {
             <p className="text-gray-500 pl-12 text-left">Gujarat 395007</p>
           </div>
         </div>
+
         <form>
           <div className="flex flex-wrap -mx-3 ">
             <div className="w-full px-3 mb-6 flex">
