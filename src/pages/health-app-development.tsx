@@ -3,7 +3,7 @@ import HealthAppServices from "components/layouts/HealthAppServices";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import ModernHealthcareSoftwareSolution from "components/layouts/ModernHealthcareSoftwareSolution";
 import PageLayout from "components/layouts/PageLayout";
-import SuccessStoriesSaaSApp from "components/layouts/SuccessStoriesSaaSApp";
+import SuccessStoriesSaaSApp from "components/saas/SuccessStoriesSaaSApp";
 import Button from "components/shared/Button";
 import Explore from "components/shared/explore/Explore";
 import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";

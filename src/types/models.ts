@@ -14,10 +14,10 @@ export interface Work {
   subTitle?: string;
   description: string;
   techUsed: string[];
-  type: "mobile" | "web";
+  type: "mobile" | "web" | "saas";
   image: string;
   featured: boolean;
-  client: {
+  client?: {
     clientele: string;
     name: string;
     title: string;

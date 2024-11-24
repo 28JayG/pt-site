@@ -39,7 +39,7 @@ const FeaturedWork: FC<Props> = ({ work }) => {
         </div>
         <p className="font-semibold text-base lg:text-lg">Clientele</p>
         <p className="text-textSecondary text-sm lg:text-lg">
-          {work.client.clientele}
+          {work.client?.clientele}
           <span className="underline text-primary font-semibold">
             Read More
           </span>
@@ -48,10 +48,10 @@ const FeaturedWork: FC<Props> = ({ work }) => {
           <img src="/client_avatar_3.png" alt="" className="w-11 h-11" />
           <div>
             <div className="flex gap-2 items-center">
-              <p className="font-semibold">{work.client.name}</p>
+              <p className="font-semibold">{work.client?.name}</p>
               <FaLinkedin color={colors.linkedinBlue} />
             </div>
-            <p className="text-gray-500">{work.client.title}</p>
+            <p className="text-gray-500">{work.client?.title}</p>
           </div>
         </div>
       </div>

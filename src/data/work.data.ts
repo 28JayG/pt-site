@@ -40,7 +40,6 @@ const workData: Work[] = [
     id: "lappe",
     type: "mobile",
     title: "Lappe",
-    subTitle: "All the tech your team needs One Place for SaaS, Devices & IT",
     description: ` A web app tailored for a business offering cloth patch repair
             services, making it easier than ever for customers to restore their
             favourite garments. With a user-friendly interface, customers can
@@ -61,7 +60,6 @@ const workData: Work[] = [
     id: "c-o-t",
     type: "mobile",
     title: "Circle of Trust",
-    subTitle: "All the tech your team needs One Place for SaaS, Devices & IT",
     description: `The Circle of Trust is a digital word-of-mouth app It instantly
             connects individuals who are actively seeking trusted
             recommendations with businesses who are looking for new customers.
@@ -77,6 +75,25 @@ const workData: Work[] = [
       title: "CEO",
       image: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
     },
+  },
+  {
+    id: "gleans",
+    type: "saas",
+    title: "Gleans",
+    description: `Users find it difficult to organize and share their favorite online content across multiple platforms, leading to inefficiency and fragmentation.
+Gleans simplifies this by providing a social media-like platform where users can share, organize, and curate their favorite songs, videos, and articles. With AI-powered content scraping, users can easily create "gleans" and group them into "collections," making content discovery and sharing fun and efficient.`,
+    techUsed: ["react", "TypeScript", "next"],
+    image: "/images/success_story_img.png", // Replace with the actual image URL
+    featured: false,
+  },
+  {
+    id: "eatvisor",
+    type: "saas",
+    title: "Eatvisor",
+    description: `The owner, a nutritionist with a 100+ client base, struggled to manage clients on paper, ensuring they didn't miss appointments and achieved desired results. Eatvisor" streamlines client management by offering history tracking, appointment reminders, and digital plan management. It also allows admins to save recipes and supplements for clients.`,
+    techUsed: ["react"],
+    image: "/images/success_story_img.png", // Replace with the actual image URL
+    featured: false,
   },
 ];
 

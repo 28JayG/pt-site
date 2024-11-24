@@ -4,7 +4,7 @@ import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import PageLayout from "components/layouts/PageLayout";
 import StartProjectToday from "components/layouts/StartProjectToday";
 import SuccessStoriesEcommerce from "components/layouts/SuccessStoriesEcommerce";
-import SuccessStoriesSaaSApp from "components/layouts/SuccessStoriesSaaSApp";
+import SuccessStoriesSaaSApp from "components/saas/SuccessStoriesSaaSApp";
 import SupabaseDevelopmentServices from "components/layouts/SupabaseDevelopmentServices";
 import About from "components/shared/About";
 import Button from "components/shared/Button";
