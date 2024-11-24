@@ -1,15 +1,11 @@
+import PageLayout from "components/layouts/PageLayout";
+import ImpactServices from "components/services/ImpactServices";
 import About from "components/shared/About";
+import CompanyContactCard from "components/shared/Cards/CompanyContactCard";
 import ContactForm from "components/shared/ContactForm";
 import Explore from "components/shared/explore/Explore";
-import ImpactServices from "components/services/ImpactServices";
-import PageLayout from "components/layouts/PageLayout";
-import Hero from "components/shared/Hero";
-import React from "react";
-import { questionsArray1 } from "data/FAQ.data";
-import RoundedCard from "components/shared/RoundedCard";
-import { LuMail, LuPhone } from "react-icons/lu";
-import { FaSkype } from "react-icons/fa";
 import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
+import Hero from "components/shared/Hero";
 import TechStack from "components/shared/TechStack";
 import {
   serviceAboutDescription,
@@ -18,7 +14,8 @@ import {
   serviceHeroTitle,
   serviceHighLights,
 } from "constants/service.constants";
-import { COMPANY_PHONE_1 } from "constants/company.constants";
+import { questionsArray1 } from "data/FAQ.data";
+import React from "react";
 
 const Service: React.FC = () => {
   return (
@@ -28,24 +25,7 @@ const Service: React.FC = () => {
         title={serviceHeroTitle}
         subTitle={serviceHeroSubtitle}
       />
-      <RoundedCard
-        children={
-          <div className="flex gap-8 items-center justify-center text-green-900 font-semibold text-2xl">
-            <p className="flex gap-2 items-center">
-              <LuPhone />
-              <p className="hidden lg:block">{COMPANY_PHONE_1}</p>
-            </p>
-            <p className="flex gap-2 items-center">
-              <LuMail />
-              <p className="hidden lg:block">info@propelius.tech</p>
-            </p>
-            <p className="flex gap-2 items-center">
-              <FaSkype />
-              <p className="hidden lg:block">tech.propelius</p>
-            </p>
-          </div>
-        }
-      />
+      <CompanyContactCard />
       <About
         highlights={serviceHighLights}
         title={serviceAboutTitle}

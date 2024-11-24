@@ -23,9 +23,11 @@ const FeaturedWorks = () => {
       </MaxWidthWrapper>
 
       <div className="flex flex-col gap-10 md:gap-20">
-        {workData.map((work) => (
-          <FeaturedWork key={work.id} work={work} />
-        ))}
+        {workData
+          .filter((work) => work.featured)
+          .map((work) => (
+            <FeaturedWork key={work.id} work={work} />
+          ))}
       </div>
     </div>
   );

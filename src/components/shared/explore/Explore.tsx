@@ -6,9 +6,8 @@ import MaxWidthWrapper from "../../layouts/MaxWidthWrapper";
 import TitleSummary from "../TitleSummary";
 import BlogCard from "./BlogCard";
 import { BlogPreview } from "types/models";
-import { IoChevronBack } from "react-icons/io5";
-import { IoChevronForward } from "react-icons/io5";
 import { NextButton, PrevButton } from "../CarouseButtons";
+import useItemSelector from "hooks/useItemSelector";
 
 interface Props {
   title: string;
@@ -16,24 +15,8 @@ interface Props {
 }
 
 const Explore: React.FC<Props> = ({ title, subtitle }) => {
-  const [selectedItem, setSelectedItem] = useState<BlogPreview>(homeExplore[0]);
-
-  const handleNext = () => {
-    const currentIndex = homeExplore.findIndex(
-      (item) => item.id === selectedItem.id
-    );
-    const nextIndex = (currentIndex + 1) % homeExplore.length; // Wrap around to the start
-    setSelectedItem(homeExplore[nextIndex]);
-  };
-
-  const handlePrev = () => {
-    const currentIndex = homeExplore.findIndex(
-      (item) => item.id === selectedItem.id
-    );
-    const prevIndex =
-      (currentIndex - 1 + homeExplore.length) % homeExplore.length; // Wrap around to the end
-    setSelectedItem(homeExplore[prevIndex]);
-  };
+  const { selectedItem, handleNext, handlePrev } =
+    useItemSelector<BlogPreview>(homeExplore);
 
   return (
     <div className="bg-grey-100">

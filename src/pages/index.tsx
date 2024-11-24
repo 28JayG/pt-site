@@ -17,6 +17,7 @@ import {
   homepageAboutTitle,
   homepageHighLights,
 } from "constants/homepage.constants";
+import TopClientsCard from "components/shared/Cards/TopClientsCard";
 
 export default function Home() {
   return (
@@ -25,45 +26,8 @@ export default function Home() {
         title="Digital solution For Your Business Competitive Edge"
         subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
       />
-      <RoundedCard
-        children={
-          <div>
-            <p className="font-semibold text-green-900 text-base">
-              Tailored Digital Solution For Leading Enterprises
-            </p>
-            <div className="flex justify-around items-center gap-5">
-              <img
-                src="/images/client_img1.png"
-                alt="clientImg1"
-                className="w-52 h-28"
-                />
-              <img
-                src="/images/client_img2.png"
-                alt="clientImg2"
-                className="w-52 h-28"
-                />
-              <img
-                src="/images/client_img3.png"
-                alt="clientImg3"
-                className="w-52 h-28"
-                />
-              <img
-                src="/images/client_img4.png"
-                alt="clientImg4"
-                className="w-52 h-28"
-                />
-              <img
-                src="/images/client_img5.png"
-                alt="clientImg5"
-                className="w-52 h-28"
-              />
-            </div>
-          </div>
-        }
-      />
-
+      <TopClientsCard />
       <ServicesRange />
-
       <FeaturedWorks />
 
       <section className="w-full relative">
@@ -92,9 +56,7 @@ export default function Home() {
       </section>
 
       <Testimonial />
-
       <PotentialClients />
-
       <About
         title={homepageAboutTitle}
         description={homepageAboutDescription}

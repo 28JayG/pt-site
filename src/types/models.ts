@@ -14,6 +14,7 @@ export interface Work {
   subTitle?: string;
   description: string;
   techUsed: string[];
+  type: "mobile" | "web";
   image: string;
   featured: boolean;
   client: {

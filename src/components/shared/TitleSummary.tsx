@@ -29,7 +29,7 @@ const TitleSummary: FC<Props> = ({
       <div className="flex justify-center gap-7 lg:justify-between flex-wrap">
         <p
           className={classNames(
-            "text-base font-light w-full max-w-[860px] text-textSecondary",
+            "text-base font-light w-full max-w-[860px] text-grey-700",
             summaryClassName
           )}
         >
