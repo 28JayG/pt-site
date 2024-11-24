@@ -1,7 +1,13 @@
+import { FC } from "react";
 import RoundedCard from "../RoundedCard";
 
-const TopClientsCard = () => (
+interface Props {
+  color?: string;
+}
+
+const TopClientsCard: FC<Props> = ({ color }) => (
   <RoundedCard
+    color={color}
     children={
       <div>
         <p className="font-semibold text-green-900 text-base">
