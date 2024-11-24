@@ -15,7 +15,7 @@ interface Props {
 const Hero: React.FC<Props> = ({ title, subTitle, featuredContent, headerClassName }) => {
   return (
     <section className="w-full relative pt-28 lg:pt-36">
-      <img src={blurredBg} alt="" className="-translate-y-1/2 top-1/2 w-full absolute" />
+      <img src={blurredBg} alt="" className="-translate-y-1/2 top-1/2 h-full w-full absolute" />
       <MaxWidthWrapper className="relative">
         <div className="flex flex-col justify-center items-center text-center gap-12 lg:gap-6 pb-12 lg:pb-24">
           <div className={classNames('w-full max-w-[940px] flex flex-col gap-6', headerClassName)}>

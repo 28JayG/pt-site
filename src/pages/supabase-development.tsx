@@ -1,30 +1,25 @@
-import ContactForm from "components/shared/ContactForm";
-import EcommerceDevelopmentServices from "components/layouts/EcommerceDevelopmentServices";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import PageLayout from "components/layouts/PageLayout";
 import StartProjectToday from "components/layouts/StartProjectToday";
-import SuccessStoriesEcommerce from "components/layouts/SuccessStoriesEcommerce";
+import SupabaseDevelopmentServices from "components/supabase-development/SupabaseDevelopmentServices";
 import SuccessStoriesSaaSApp from "components/saas/SuccessStoriesSaaSApp";
-import SupabaseDevelopmentServices from "components/layouts/SupabaseDevelopmentServices";
 import About from "components/shared/About";
 import Button from "components/shared/Button";
+import CompanyContactCard from "components/shared/Cards/CompanyContactCard";
+import TopClientsCard from "components/shared/Cards/TopClientsCard";
+import ContactForm from "components/shared/ContactForm";
 import Explore from "components/shared/explore/Explore";
 import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
 import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
 import TechStack from "components/shared/TechStack";
 import TitleSummary from "components/shared/TitleSummary";
-import {
-  questionsArrayEcommerce,
-  questionsArrayMobileApp,
-} from "data/FAQ.data";
+import { questionsArrayMobileApp } from "data/FAQ.data";
 import React from "react";
-import { FaSkype } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import { LuMail, LuPhone } from "react-icons/lu";
-import { COMPANY_PHONE_1 } from "constants/company.constants";
+import WhyChooseUs from "components/shared/WhyChooseUs";
 
-const supabaseDevelopment: React.FC = () => {
+const SupabaseDevelopment: React.FC = () => {
   return (
     <PageLayout>
       <Hero
@@ -33,78 +28,26 @@ const supabaseDevelopment: React.FC = () => {
         subTitle="Discover innovative solutions tailored to your business needs. 
 At Propelius Technologies, we drive success through cutting-edge technology and expert development."
       />
-      <RoundedCard
-        children={
-          <div className="flex gap-8 items-center justify-center font-semibold text-3xl">
-            <p className="flex gap-2 items-center">
-              <LuPhone />
-              {COMPANY_PHONE_1}
-            </p>
-            <p className="flex gap-2 items-center">
-              <LuMail />
-              info@propelius.tech
-            </p>
-            <p className="flex gap-2 items-center">
-              <FaSkype />
-              tech.propelius
-            </p>
-          </div>
-        }
-      />
-      <MaxWidthWrapper>
-        <div className="flex justify-between mt-20">
-          <p className="w-[400px] font-semibold text-4xl">
-            Operate more efficiently and reach their audience wherever they are.
-          </p>
-          <p className="leading-relaxed w-[620px]">
+      <MaxWidthWrapper className="my-20">
+        <CompanyContactCard />
+      </MaxWidthWrapper>
+
+      <div className="mt-20">
+        <About
+          title="Operate more efficiently and reach their audience wherever they are."
+          description="
             With the vast majority of consumers spending significant time on
             their smartphones, a web app puts your business directly into their
             hands, offering convenience and accessibility like never before.
-            <br /> We are  one of the best web application development companies
+            We are  one of the best web application development companies
             in India. Our apps offer valuable data insights, helping you
             understand user behaviour and refine your offerings. They also
             create new revenue streams through in-app purchases or ads. 
-          </p>
-        </div>
-      </MaxWidthWrapper>
-      <div className="my-20">
-        <RoundedCard
-          variant="bordered"
-          children={
-            <div>
-              <p className="text-lg md:text-xl font-semibold md:font-bold">
-                Tailored Digital Solution For Leading Enterprises
-              </p>
-              <div className="flex justify-around items-center gap-5">
-                <img
-                  src="/images/client_img1.png"
-                  alt="clientImg1"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img2.png"
-                  alt="clientImg2"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img3.png"
-                  alt="clientImg3"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img4.png"
-                  alt="clientImg4"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-                <img
-                  src="/images/client_img5.png"
-                  alt="clientImg5"
-                  className="w-20 md:w-52 h-12 md:h-28"
-                />
-              </div>
-            </div>
-          }
+          "
         />
+      </div>
+      <div className="my-20">
+        <TopClientsCard color='grey-100' />
       </div>
       <MaxWidthWrapper className="mb-20">
         <TitleSummary
@@ -135,23 +78,7 @@ At Propelius Technologies, we drive success through cutting-edge technology and 
           />
         }
       />
-      <MaxWidthWrapper>
-        <div className="flex items-center justify-between py-10">
-          <div className="flex flex-col gap-5">
-            <p className="text-4xl font-semibold">Why Choose us</p>
-            <p className="max-w-[540px]">
-              At Propelius Technologies, we don't just build apps; we craft
-              digital experiences. Our client-centric approach, coupled with our
-              technical excellence, ensures your app is tailored to your unique
-              needs and user expectations. Choose us for a partnership that
-              values your success as our own.
-            </p>
-          </div>
-          <div className="w-[707px] h-[340px]">
-            <img src="/images/why_choose_us_img.png" alt="" />
-          </div>
-        </div>
-      </MaxWidthWrapper>
+      <WhyChooseUs />
       <About
         title="Know More About
    Propelius Technologies
@@ -171,4 +98,4 @@ At Propelius Technologies, we drive success through cutting-edge technology and 
   );
 };
 
-export default supabaseDevelopment;
+export default SupabaseDevelopment;

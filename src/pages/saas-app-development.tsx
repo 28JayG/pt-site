@@ -40,7 +40,7 @@ At Propelius Technologies, we drive success through cutting-edge technology and 
         />
       </div>
       <MaxWidthWrapper className="my-20">
-        <TopClientsCard />
+        <TopClientsCard color='grey-100' />
         <div className="mb-20">
           <TitleSummary
             title="Our Success Stories"

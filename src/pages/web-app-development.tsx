@@ -40,7 +40,7 @@ const WebAppDevelopment: React.FC = () => {
       </div>
       <MaxWidthWrapper className="mb-20">
         <div className="my-20">
-          <TopClientsCard />
+          <TopClientsCard color='grey-100' />
         </div>
         <TitleSummary
           title="Our Success Stories"
