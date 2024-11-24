@@ -27,31 +27,35 @@ const FrequentlyAskedQues: React.FC<Props> = ({ questions }) => {
           <p className="md:mb-20 font-semibold text-4xl text-green-dark text-center">
             Frequently Asked Questions
           </p>
-          <div className="flex flex-col gap-6 px-60">
+          <div className="flex flex-col gap-6 w-full max-w-[600px] mx-auto">
             {questions.map((item, index) => (
               <div
                 key={index}
-                className="bg-white flex flex-col gap-4 rounded-2xl p-4 justify-between "
+                className="bg-white flex justify-between items-start gap-4 rounded-2xl p-4"
               >
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => handleQuestionClick(index)}
-                >
-                  <div className="rounded-full border-2 border-primary p-2 w-10 h-10 flex items-center justify-center">
+                <div className="flex gap-4">
+                  <div className="rounded-full border-2 border-green-500 p-2 w-10 h-10 flex shrink-0 items-center justify-center">
                     {index + 1}
                   </div>
-                  <p className="font-medium text-xl w-[666px] text-green-dark">
-                    {item.question}
-                  </p>
-                  <button>
-                    {activeQuestion === index ? <FaMinus /> : <FaPlus />}
-                  </button>
+
+                  <div
+                    className="flex flex-col gap-2 cursor-pointer"
+                    onClick={() => handleQuestionClick(index)}
+                  >
+                    <p className="font-medium text-sm lg:text-xl w-full text-green-dark">
+                      {item.question}
+                    </p>
+
+                    {activeQuestion === index && (
+                      <p className="text-xs lg:text-sm w-full text-grey-700 text-opacity-80">
+                        {item.answer}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                {activeQuestion === index && (
-                  <p className="pl-20 text-sm w-[666px] text-textSecondary">
-                    {item.answer}
-                  </p>
-                )}
+                <button className="pt-2 text-green-900">
+                  {activeQuestion === index ? <FaMinus className="text-green-500" /> : <FaPlus />}
+                </button>
               </div>
             ))}
           </div>

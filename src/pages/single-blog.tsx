@@ -2,7 +2,7 @@ import ContactForm from "components/shared/ContactForm";
 import PageLayout from "components/layouts/PageLayout";
 import SingleBlogFullArticle from "components/layouts/SingleBlogFullArticle";
 import SingleBlogHero from "components/layouts/SingleBlogHero";
-import Explore from "components/shared/Explore";
+import Explore from "components/shared/explore/Explore";
 import React from "react";
 
 const singleBlog: React.FC = () => {

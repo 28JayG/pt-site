@@ -41,3 +41,11 @@ export interface TechCategory {
   title: string;
   techFrameworks: { title: string; id: string }[];
 }
+
+export interface BlogPreview {
+  id: string;
+  image: string;
+  title: string;
+  subTitle: string;
+  buttonText: string;
+}

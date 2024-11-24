@@ -5,7 +5,7 @@ import RealEstateBusinessSolution from 'components/layouts/RealEstateBusinessSol
 import RealEstateServices from 'components/layouts/RealEstateServices'
 import SuccessStoriesSaaSApp from 'components/layouts/SuccessStoriesSaaSApp'
 import Button from 'components/shared/Button'
-import Explore from 'components/shared/Explore'
+import Explore from 'components/shared/explore/Explore'
 import FrequentlyAskedQues from 'components/shared/FrequentlyAskedQues'
 import Hero from 'components/shared/Hero'
 import RoundedCard from 'components/shared/RoundedCard'

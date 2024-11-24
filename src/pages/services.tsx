@@ -1,6 +1,6 @@
 import About from "components/shared/About";
 import ContactForm from "components/shared/ContactForm";
-import Explore from "components/shared/Explore";
+import Explore from "components/shared/explore/Explore";
 import ImpactServices from "components/services/ImpactServices";
 import PageLayout from "components/layouts/PageLayout";
 import Hero from "components/shared/Hero";
@@ -30,18 +30,18 @@ const Service: React.FC = () => {
       />
       <RoundedCard
         children={
-          <div className="flex gap-8 items-center justify-center text-green-dark font-semibold text-2xl">
+          <div className="flex gap-8 items-center justify-center text-green-900 font-semibold text-2xl">
             <p className="flex gap-2 items-center">
               <LuPhone />
-              {COMPANY_PHONE_1}
+              <p className="hidden lg:block">{COMPANY_PHONE_1}</p>
             </p>
             <p className="flex gap-2 items-center">
               <LuMail />
-              info@propelius.tech
+              <p className="hidden lg:block">info@propelius.tech</p>
             </p>
             <p className="flex gap-2 items-center">
               <FaSkype />
-              tech.propelius
+              <p className="hidden lg:block">tech.propelius</p>
             </p>
           </div>
         }

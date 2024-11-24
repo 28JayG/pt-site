@@ -6,7 +6,7 @@ import Testimonial from "components/home/Testimonial";
 import PageLayout from "components/layouts/PageLayout";
 import About from "components/shared/About";
 import Button from "components/shared/Button";
-import Explore from "components/shared/Explore";
+import Explore from "components/shared/explore/Explore";
 import Hero from "components/shared/Hero";
 import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
