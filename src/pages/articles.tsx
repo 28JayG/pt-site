@@ -1,15 +1,15 @@
 import ContactForm from "components/shared/ContactForm";
-import ArticleListBlog from "components/layouts/ArticleListBlog";
-import LatestArticleBlog from "components/layouts/LatestArticleBlog";
 import PageLayout from "components/layouts/PageLayout";
 import React from "react";
+import LatestArticleBlog from "components/articles/LatestArticleBlog";
+import ArticleListBlog from "components/articles/ArticleListBlog";
 
 const blog: React.FC = () => {
   return (
     <PageLayout>
-        <LatestArticleBlog />
-        <ArticleListBlog />
-        <ContactForm />
+      <LatestArticleBlog />
+      <ArticleListBlog />
+      <ContactForm />
     </PageLayout>
   );
 };

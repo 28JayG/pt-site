@@ -67,7 +67,7 @@ const enquiries: { title: string; links: FooterLink[] }[] = [
         icon: "email",
       },
       {
-        text: COMPANY_PHONE_2,
+        text: COMPANY_PHONE_2 || '',
         href: `tel:${COMPANY_PHONE_2}`,
         icon: "whatsapp",
       },
@@ -83,7 +83,7 @@ const enquiries: { title: string; links: FooterLink[] }[] = [
         icon: "email",
       },
       {
-        text: COMPANY_PHONE_2,
+        text: COMPANY_PHONE_2||'',
         href: `tel:${COMPANY_PHONE_2}`,
         icon: "whatsapp",
       },

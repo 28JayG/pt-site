@@ -1,8 +1,8 @@
 import { blurredBg } from 'constants/assets.constants'
 import React from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
 import Button from 'components/shared/Button'
 import { IoArrowForwardCircleOutline } from 'react-icons/io5'
+import MaxWidthWrapper from 'components/layouts/MaxWidthWrapper'
 
 const LatestArticleBlog: React.FC = () => {
   return (

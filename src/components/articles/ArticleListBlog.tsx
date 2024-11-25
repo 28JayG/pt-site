@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import {
   IoArrowBackCircleOutline,
@@ -8,6 +7,7 @@ import {
 } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { articleListArray } from "data/articleList.data";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 
 const ArticleListBlog: React.FC = () => {
   const [selected, setSelected] = useState<number>(1);
