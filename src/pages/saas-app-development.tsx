@@ -15,10 +15,12 @@ import TitleSummary from "components/shared/TitleSummary";
 import { questionsArrayWebApp } from "data/FAQ.data";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
-const saasAppDevelopment: React.FC = () => {
+const saasAppDevelopment: React.FC<PageProps> = ({ footer }) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer}>
       <Hero
         title="Your Digital Transformation"
         subTitle="Discover innovative solutions tailored to your business needs. 
@@ -40,7 +42,7 @@ At Propelius Technologies, we drive success through cutting-edge technology and 
         />
       </div>
       <MaxWidthWrapper className="my-20">
-        <TopClientsCard color='grey-100' />
+        <TopClientsCard color="grey-100" />
         <div className="mb-20">
           <TitleSummary
             title="Our Success Stories"
@@ -78,3 +80,17 @@ At Propelius Technologies, we drive success through cutting-edge technology and 
 };
 
 export default saasAppDevelopment;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

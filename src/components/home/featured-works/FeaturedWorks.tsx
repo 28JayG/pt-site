@@ -4,8 +4,13 @@ import TitleSummary from "components/shared/TitleSummary";
 import workData from "data/work.data";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import FeaturedWork from "./FeaturedWork";
+import { Work } from "types/models";
 
-const FeaturedWorks = () => {
+interface Props {
+  works: Work[];
+}
+
+const FeaturedWorks: React.FC<Props> = ({ works }) => {
   return (
     <div className="z-[2] relative bg-gradient-to-b from-[#F6F7F9] w-full flex flex-col gap-10 py-20">
       <MaxWidthWrapper className="flex justify-between text-left">
@@ -23,8 +28,7 @@ const FeaturedWorks = () => {
       </MaxWidthWrapper>
 
       <div className="flex flex-col gap-10 md:gap-20">
-        {workData
-          .filter((work) => work.featured)
+        {works?.filter((work) => work.featured)
           .map((work) => (
             <FeaturedWork key={work.id} work={work} />
           ))}

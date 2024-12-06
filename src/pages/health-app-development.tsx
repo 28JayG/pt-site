@@ -16,10 +16,12 @@ import { FaSkype } from "react-icons/fa";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
 import { COMPANY_PHONE_1 } from "constants/company.constants";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
-const healthAppDevelopment: React.FC = () => {
+const healthAppDevelopment: React.FC<PageProps> = ({ footer }) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer}>
       <Hero
         title="Healthcare App Development"
         subTitle="Go beyond the limitations of physical stores with ecommerce development services.
@@ -110,3 +112,17 @@ Taking your retail business online opens up a world of opportunities."
 };
 
 export default healthAppDevelopment;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

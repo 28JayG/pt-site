@@ -23,10 +23,12 @@ import {
 import { questionsArrayMobileApp } from "data/FAQ.data";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
-const MobileAppDevelopment: React.FC = () => {
+const MobileAppDevelopment: React.FC<PageProps> = ({footer}) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer} >
       <Hero
         title="Crafting apps that are as dynamic as your business."
         subTitle="At Propelius we offer strategic mobile application development services that turn your business logic into intuitive app interfaces. We craft secure, efficient, and future-proof apps right from concept to deployment for immersive experiences. "
@@ -98,3 +100,17 @@ const MobileAppDevelopment: React.FC = () => {
 };
 
 export default MobileAppDevelopment;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

@@ -15,81 +15,7 @@ import Button from "./Button";
 import { FooterLink } from "types/footer.types";
 import Link from "next/link";
 import Icons from "components/Icons";
-
-const sections: { title: string; links: FooterLink[] }[] = [
-  {
-    title: "Company",
-    links: [
-      { text: "Home", href: "/home" },
-      { text: "About Us", href: "/about" },
-      { text: "Blog", href: "/blog" },
-      { text: "Careers", href: "/careers" },
-      { text: "Contact Us", href: "/contact" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { text: "Mobile App Development", href: "/mobile-app" },
-      { text: "Web App Development", href: "/web-app" },
-      { text: "SaaS Solution", href: "/saas" },
-      { text: "Custom e-commerce solution", href: "/ecommerce" },
-    ],
-  },
-  {
-    title: "Technologies",
-    links: [
-      { text: "Tech Expertise", href: "/tech-expertise" },
-      { text: "AI Development", href: "/ai-development" },
-      { text: "Database Management", href: "/database" },
-      { text: "Cloud Computing", href: "/cloud-computing" },
-      { text: "Digital Marketing", href: "/digital-marketing" },
-    ],
-  },
-  {
-    title: "Others Link",
-    links: [
-      { text: "Privacy Policy", href: "/privacy-policy" },
-      { text: "Terms and Conditions", href: "/terms-and-conditions" },
-      { text: "Security", href: "/security" },
-    ],
-  },
-];
-
-const enquiries: { title: string; links: FooterLink[] }[] = [
-  {
-    title: "Business Enquiries",
-    links: [
-      { text: "+91 999 999 9999", href: "tel:+91 999 999 9999", icon: "phone" },
-      {
-        text: "info@propelius.tech",
-        href: "mailto:info@propelius.tech",
-        icon: "email",
-      },
-      {
-        text: COMPANY_PHONE_2 || '',
-        href: `tel:${COMPANY_PHONE_2}`,
-        icon: "whatsapp",
-      },
-    ],
-  },
-  {
-    title: "Career Enquiries",
-    links: [
-      { text: "+91 999 999 9999", href: "tel:+91 999 999 9999", icon: "phone" },
-      {
-        text: "info@propelius.tech",
-        href: "mailto:info@propelius.tech",
-        icon: "email",
-      },
-      {
-        text: COMPANY_PHONE_2||'',
-        href: `tel:${COMPANY_PHONE_2}`,
-        icon: "whatsapp",
-      },
-    ],
-  },
-];
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
 
 interface FooterLinkGroupProps {
   title: string;
@@ -102,9 +28,9 @@ const FooterLinkGroup: FC<FooterLinkGroupProps> = ({ title, links }) => {
       <p className="text-grey-700 text-opacity-50 text-base">{title}</p>
       <ul className="flex flex-col gap-3 text-sm text-grey-700">
         {links.map((link) => (
-          <li className="flex gap-2 items-center">
+          <li key={link.id} className="flex gap-2 items-center">
             {link.icon && <Icons icon={link.icon} />}
-            <Link href={link.href}>{link.text}</Link>
+            <Link href={link.href}>{link.title}</Link>
           </li>
         ))}
       </ul>
@@ -112,7 +38,12 @@ const FooterLinkGroup: FC<FooterLinkGroupProps> = ({ title, links }) => {
   );
 };
 
-const Footer = () => {
+interface FooterProps {
+  sections: { title: string; links: FooterLink[] }[];
+  enquiries: { title: string; links: FooterLink[] }[];
+}
+
+const Footer: FC<FooterProps> = ({ sections, enquiries }) => {
   return (
     <div>
       <div className="bg-green-100 py-14">
@@ -129,7 +60,7 @@ const Footer = () => {
           </div>
           <div className="border-white border hidden lg:block"></div>
           <div className="mt-10 flex flex-col lg:flex-row gap-5 md:gap-0 justify-start lg:justify-evenly lg:text-sm ">
-            {sections.map((section) => (
+            {sections?.map((section) => (
               <FooterLinkGroup key={section.title} {...section} />
             ))}
             <div className="flex flex-col gap-4">
@@ -156,7 +87,7 @@ const Footer = () => {
             <FaPinterest size={40} />
           </div>
         </div>
-        {enquiries.map((section) => (
+        {enquiries?.map((section) => (
           <FooterLinkGroup key={section.title} {...section} />
         ))}
 

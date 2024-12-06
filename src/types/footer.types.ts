@@ -1,5 +1,11 @@
+export interface FooterLinkGroup {
+  title: string;
+  links: FooterLink[];
+}
+
 export interface FooterLink {
-  text: string;
+  id: number;
+  title: string;
   href: string;
   icon?: string;
 }

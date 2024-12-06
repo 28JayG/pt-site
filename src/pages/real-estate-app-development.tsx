@@ -1,25 +1,27 @@
-import ContactForm from 'components/shared/ContactForm'
-import MaxWidthWrapper from 'components/layouts/MaxWidthWrapper'
-import PageLayout from 'components/layouts/PageLayout'
-import RealEstateBusinessSolution from 'components/layouts/RealEstateBusinessSolution'
-import RealEstateServices from 'components/layouts/RealEstateServices'
-import SuccessStoriesSaaSApp from 'components/saas/SuccessStoriesSaaSApp'
-import Button from 'components/shared/Button'
-import Explore from 'components/shared/explore/Explore'
-import FrequentlyAskedQues from 'components/shared/FrequentlyAskedQues'
-import Hero from 'components/shared/Hero'
-import RoundedCard from 'components/shared/RoundedCard'
-import TitleSummary from 'components/shared/TitleSummary'
-import { questionsArrayMobileApp } from 'data/FAQ.data'
-import React from 'react'
-import { FaSkype } from 'react-icons/fa'
-import { IoArrowForwardCircleOutline } from 'react-icons/io5'
-import { LuMail, LuPhone } from 'react-icons/lu'
-import { COMPANY_PHONE_1 } from 'constants/company.constants'
+import ContactForm from "components/shared/ContactForm";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
+import PageLayout from "components/layouts/PageLayout";
+import RealEstateBusinessSolution from "components/layouts/RealEstateBusinessSolution";
+import RealEstateServices from "components/layouts/RealEstateServices";
+import SuccessStoriesSaaSApp from "components/saas/SuccessStoriesSaaSApp";
+import Button from "components/shared/Button";
+import Explore from "components/shared/explore/Explore";
+import FrequentlyAskedQues from "components/shared/FrequentlyAskedQues";
+import Hero from "components/shared/Hero";
+import RoundedCard from "components/shared/RoundedCard";
+import TitleSummary from "components/shared/TitleSummary";
+import { questionsArrayMobileApp } from "data/FAQ.data";
+import React from "react";
+import { FaSkype } from "react-icons/fa";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { LuMail, LuPhone } from "react-icons/lu";
+import { COMPANY_PHONE_1 } from "constants/company.constants";
+import { PageProps } from "types/page.types";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
 
-const realEstateAppDevelopment: React.FC = () => {
+const RealEstateAppDevelopment: React.FC<PageProps> = ({ footer }) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer}>
       <Hero
         title="Real Estate App Development"
         subTitle="Go beyond the limitations of physical stores with ecommerce development services.
@@ -106,7 +108,21 @@ Taking your retail business online opens up a world of opportunities."
       <FrequentlyAskedQues questions={questionsArrayMobileApp} />
       <ContactForm />
     </PageLayout>
-  )
-}
+  );
+};
 
-export default realEstateAppDevelopment
+export default RealEstateAppDevelopment;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

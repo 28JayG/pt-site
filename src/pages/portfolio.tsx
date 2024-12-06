@@ -8,10 +8,11 @@ import React from "react";
 import { FaSkype } from "react-icons/fa";
 import { LuMail, LuPhone } from "react-icons/lu";
 import { COMPANY_PHONE_1 } from "constants/company.constants";
+import { PageProps } from "types/page.types";
 
-const portfolio: React.FC = () => {
+const Portfolio: React.FC<PageProps> = ({footer}) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer} >
       <Hero
         title="Our (Beautiful) Work"
         subTitle="Dive into our blog for industry insights, tips, and news. Stay informed and inspired with our latest articles and updates."
@@ -40,4 +41,4 @@ const portfolio: React.FC = () => {
   );
 };
 
-export default portfolio;
+export default Portfolio;

@@ -22,6 +22,8 @@ import About from "components/shared/About";
 import { aboutUsDescription, aboutUsTitle } from "constants/about.constants";
 import { COMPANY_PHONE_1 } from "constants/company.constants";
 import { NextButton, PrevButton } from "components/shared/CarouseButtons";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
 const cultureGlipmseImages = [
   "/images/our_culture_img1.png",
@@ -29,7 +31,7 @@ const cultureGlipmseImages = [
   "/images/our_culture_img3.png",
 ];
 
-const AboutUs: React.FC = () => {
+const AboutUs: React.FC<PageProps> = ({ footer }) => {
   const [selectedImage, setSelectedImage] = useState<string>(
     cultureGlipmseImages[0]
   );
@@ -53,7 +55,7 @@ const AboutUs: React.FC = () => {
   };
 
   return (
-    <PageLayout>
+    <PageLayout footer={footer}>
       <Hero
         title="Your partner in digital solutions for business success"
         subTitle="Partnering with you to create robust digital ecosystems that adapt and thrive"
@@ -202,8 +204,11 @@ const AboutUs: React.FC = () => {
                 expert team - start shaping your online identity
               </p>
             </div>
-            <div className="w-64 mx-auto" >
-              <Button className="w-full" endIcon={<IoArrowForwardCircleOutline size={25} />}>
+            <div className="w-64 mx-auto">
+              <Button
+                className="w-full"
+                endIcon={<IoArrowForwardCircleOutline size={25} />}
+              >
                 Book A Free Call
               </Button>
             </div>
@@ -216,3 +221,17 @@ const AboutUs: React.FC = () => {
 };
 
 export default AboutUs;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

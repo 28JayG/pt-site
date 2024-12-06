@@ -27,7 +27,7 @@ const FeaturedWork: FC<Props> = ({ work }) => {
         </p>
         <div className="border border-gray-300 w-full"></div>
         <p className="font-semibold text-base lg:text-lg">Tech used</p>
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           {getTechStackIcons(work.techUsed).map((tech) => (
             <div
               className="bg-gray-200 p-3 rounded-full"
@@ -36,7 +36,7 @@ const FeaturedWork: FC<Props> = ({ work }) => {
               {tech}
             </div>
           ))}
-        </div>
+        </div> */}
         <p className="font-semibold text-base lg:text-lg">Clientele</p>
         <p className="text-textSecondary text-sm lg:text-lg">
           {work.client?.clientele}

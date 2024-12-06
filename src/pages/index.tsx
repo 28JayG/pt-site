@@ -18,17 +18,25 @@ import {
   homepageHighLights,
 } from "constants/homepage.constants";
 import TopClientsCard from "components/shared/Cards/TopClientsCard";
+import { PageProps } from "types/page.types";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { fetchFeaturedWorks } from "services/works.services";
+import { Work } from "types/models";
 
-export default function Home() {
+interface LocalProps extends PageProps {
+  featuredWorks: Work[];
+}
+
+export default function Home({ footer, featuredWorks }: LocalProps) {
   return (
-    <PageLayout>
+    <PageLayout footer={footer}>
       <Hero
         title="Digital solution For Your Business Competitive Edge"
         subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
       />
       <TopClientsCard />
       <ServicesRange />
-      <FeaturedWorks />
+      <FeaturedWorks works={featuredWorks} />
 
       <section className="w-full relative">
         <img
@@ -69,4 +77,20 @@ export default function Home() {
       <ContactForm />
     </PageLayout>
   );
+}
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+  const featuredWorks = await fetchFeaturedWorks();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+      featuredWorks: featuredWorks.data || [],
+    },
+  };
 }

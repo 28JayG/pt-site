@@ -15,10 +15,12 @@ import TitleSummary from "components/shared/TitleSummary";
 import { questionsArrayWebApp } from "data/FAQ.data";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
-const WebAppDevelopment: React.FC = () => {
+const WebAppDevelopment: React.FC<PageProps> = ({ footer }) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer}>
       <Hero
         title="services for feature rich, no latency & speediest web apps."
         subTitle="At Propelius, we latest trends in web application development to develop web apps that are designed to provide interactive, dynamic experiences right in your browser without the need for downloading software. Our apps are ideal for businesses looking to offer services, manage data, or connect with users across any device."
@@ -40,7 +42,7 @@ const WebAppDevelopment: React.FC = () => {
       </div>
       <MaxWidthWrapper className="mb-20">
         <div className="my-20">
-          <TopClientsCard color='grey-100' />
+          <TopClientsCard color="grey-100" />
         </div>
         <TitleSummary
           title="Our Success Stories"
@@ -79,3 +81,17 @@ const WebAppDevelopment: React.FC = () => {
 };
 
 export default WebAppDevelopment;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

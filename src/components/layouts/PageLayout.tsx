@@ -1,12 +1,14 @@
 import React, { FC } from "react";
 import Footer from "../shared/Footer";
 import Navbar from "./Navbar";
+import { PageProps } from "types/page.types";
 
 interface Props {
   children: React.ReactNode;
+  footer: PageProps["footer"];
 }
 
-const PageLayout: FC<Props> = ({ children }) => {
+const PageLayout: FC<Props> = ({ children, footer }) => {
   return (
     // App Wrapper
     <div
@@ -16,7 +18,7 @@ const PageLayout: FC<Props> = ({ children }) => {
       {/** Page Container */}
       <div> {children}</div> {/** Footer */}
       <footer className="absolute h-footerHeight bottom-0 w-full">
-        <Footer />
+        <Footer {...footer} />
       </footer>
     </div>
   );

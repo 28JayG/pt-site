@@ -18,10 +18,12 @@ import { questionsArrayMobileApp } from "data/FAQ.data";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import WhyChooseUs from "components/shared/WhyChooseUs";
+import { PageProps } from "types/page.types";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
 
-const SupabaseDevelopment: React.FC = () => {
+const SupabaseDevelopment: React.FC<PageProps> = ({footer}) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer} >
       <Hero
         title="Supabase development
  Your Digital Transformation"
@@ -99,3 +101,17 @@ At Propelius Technologies, we drive success through cutting-edge technology and 
 };
 
 export default SupabaseDevelopment;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

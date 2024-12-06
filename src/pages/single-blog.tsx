@@ -4,10 +4,12 @@ import SingleBlogFullArticle from "components/layouts/SingleBlogFullArticle";
 import SingleBlogHero from "components/layouts/SingleBlogHero";
 import Explore from "components/shared/explore/Explore";
 import React from "react";
+import { PageProps } from "types/page.types";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
 
-const singleBlog: React.FC = () => {
+const SingleBlog: React.FC<PageProps> = ({footer}) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer} >
       <SingleBlogHero />
       <SingleBlogFullArticle />
       <Explore
@@ -19,4 +21,18 @@ const singleBlog: React.FC = () => {
   );
 };
 
-export default singleBlog;
+export default SingleBlog;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

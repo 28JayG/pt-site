@@ -15,10 +15,12 @@ import { blurredBg } from "constants/assets.constants";
 import { questionsArrayEcommerce } from "data/FAQ.data";
 import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
-const ecommerce: React.FC = () => {
+const ecommerce: React.FC<PageProps> = ({footer}) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer} >
       <Hero
         title="Custom ecommerce development services"
         subTitle="Go beyond the limitations of physical stores with ecommerce development services. Taking your retail business online opens up a world of opportunities."
@@ -88,3 +90,18 @@ const ecommerce: React.FC = () => {
 };
 
 export default ecommerce;
+
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}

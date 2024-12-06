@@ -16,10 +16,12 @@ import {
 } from "constants/service.constants";
 import { questionsArray1 } from "data/FAQ.data";
 import React from "react";
+import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
+import { PageProps } from "types/page.types";
 
-const Service: React.FC = () => {
+const Service: React.FC<PageProps> = ({footer}) => {
   return (
-    <PageLayout>
+    <PageLayout footer={footer} >
       <Hero
         headerClassName="w-full"
         title={serviceHeroTitle}
@@ -44,3 +46,17 @@ const Service: React.FC = () => {
 };
 
 export default Service;
+
+export async function getStaticProps() {
+  const sections = await fetchFooterSections();
+  const enquiries = await fetchEnquiries();
+
+  return {
+    props: {
+      footer: {
+        sections: sections.data || [],
+        enquiries: enquiries.data || [],
+      },
+    },
+  };
+}
