@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { StrapiImage } from "./api.types";
 
 export interface Service {
   id: string;
@@ -8,6 +8,21 @@ export interface Service {
   color: string;
 }
 
+export interface Company {
+  id: number;
+  name: string;
+  logo: StrapiImage;
+  featured: string;
+}
+
+export interface Client {
+  clientele: string;
+  name: string;
+  role: string;
+  avatar: StrapiImage;
+  company: Company;
+}
+
 export interface Work {
   id: string;
   title: string;
@@ -15,26 +30,17 @@ export interface Work {
   description: string;
   techUsed: string[];
   type: "mobile" | "web" | "saas";
-  image: string;
+  image: StrapiImage;
   featured: boolean;
-  client?: {
-    clientele: string;
-    name: string;
-    title: string;
-    image: string;
-  };
+  client?: Client;
 }
 
 export interface Review {
   id: string;
   featured: boolean;
   rating: number;
-  review: string;
-  client: {
-    name: string;
-    title: string;
-    image: string;
-  };
+  text: string;
+  client: Client;
 }
 
 export interface TechCategory {
@@ -43,10 +49,16 @@ export interface TechCategory {
   techFrameworks: { title: string; id: string }[];
 }
 
-export interface BlogPreview {
-  id: string;
-  image: string;
+export interface BlogContent {
   title: string;
-  subTitle: string;
-  buttonText: string;
+  description: string;
+}
+
+export interface BlogPost {
+  id: number;
+  bannerImage: StrapiImage;
+  thumbnail: StrapiImage;
+  title: string;
+  summary: string;
+  content: BlogContent[];
 }

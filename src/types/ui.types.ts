@@ -5,6 +5,7 @@ export interface AppRoute {
 }
 
 export interface CompanyHighlight {
+  id: number;
   color?: string;
   highlight: string;
   title: string;

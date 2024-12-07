@@ -1,11 +1,14 @@
 import { FC } from "react";
 import RoundedCard from "../RoundedCard";
+import { Company } from "types/models";
+import { API_BASE_URL } from "constants/environment.constants";
 
 interface Props {
   color?: string;
+  companies: Company[];
 }
 
-const TopClientsCard: FC<Props> = ({ color }) => (
+const TopClientsCard: FC<Props> = ({ color, companies }) => (
   <RoundedCard
     color={color}
     children={
@@ -13,32 +16,16 @@ const TopClientsCard: FC<Props> = ({ color }) => (
         <p className="font-semibold text-green-900 text-base">
           Tailored Digital Solution For Leading Enterprises
         </p>
-        <div className="flex justify-around items-center gap-5">
-          <img
-            src="/images/client_img1.png"
-            alt="clientImg1"
-            className="w-52 h-28"
-          />
-          <img
-            src="/images/client_img2.png"
-            alt="clientImg2"
-            className="w-52 h-28"
-          />
-          <img
-            src="/images/client_img3.png"
-            alt="clientImg3"
-            className="w-52 h-28"
-          />
-          <img
-            src="/images/client_img4.png"
-            alt="clientImg4"
-            className="w-52 h-28"
-          />
-          <img
-            src="/images/client_img5.png"
-            alt="clientImg5"
-            className="w-52 h-28"
-          />
+        <div className="flex justify-around items-center gap-5 overflow-auto no-scrollbar">
+          {companies?.map((company) => (
+            <img
+              key={company.id}
+              //TODO: remove API BASE URL
+              src={`${API_BASE_URL?.replace("api", "")}${company.logo.url}`}
+              alt="clientImg1"
+              className="w-52 h-28"
+            />
+          ))}
         </div>
       </div>
     }

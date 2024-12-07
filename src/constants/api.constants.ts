@@ -3,5 +3,12 @@ export const ENDPOINTS = {
     enquiries: "/footer-enquiries",
     sections: "/footer-sections",
   },
-  works: '/works'
+  works: "/works",
+  clients: "/clients",
+  companies: "/companies",
+  reviews: "/reviews",
+  blogs: "/blog-posts",
+  company: {
+    knowYourCompany: "/know-your-company",
+  },
 };

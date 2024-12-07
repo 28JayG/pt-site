@@ -2,7 +2,7 @@ import { FC } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { colors } from "styles/colors";
 import { Work } from "types/models";
-import { getTechStackIcons } from "utils/works.utils";
+import { getImageString } from "utils/strings.utils";
 
 interface Props {
   work: Work;
@@ -12,11 +12,17 @@ const FeaturedWork: FC<Props> = ({ work }) => {
   return (
     <div className="relative flex flex-col lg:flex-row gap-7 lg:gap-28 items-start px-5 lg:px-0 lg:even:flex-row-reverse lg:even:pl-max-width-single-spacing lg:odd:pr-max-width-single-spacing">
       <div className="bg-green-50 shrink-0 w-full lg:w-175 aspect-square rounded-3xl">
-        <img src={work.image} alt="" className="w-full h-full" />
+        <img
+          src={getImageString(work.image?.url)}
+          alt=""
+          className="w-full h-full"
+        />
       </div>
 
       <div className="flex flex-col gap-4 lg:gap-6 lg:pl-0">
-        <p className="font-semibold text-3xl lg:text-4xl text-primary">{work.title}</p>
+        <p className="font-semibold text-3xl lg:text-4xl text-primary">
+          {work.title}
+        </p>
         {work.subTitle && (
           <p className="font-semibold text-3xl lg:text-4xl leading-12.5">
             {work.subTitle}
@@ -51,7 +57,7 @@ const FeaturedWork: FC<Props> = ({ work }) => {
               <p className="font-semibold">{work.client?.name}</p>
               <FaLinkedin color={colors.linkedinBlue} />
             </div>
-            <p className="text-gray-500">{work.client?.title}</p>
+            <p className="text-gray-500">{work.client?.role}</p>
           </div>
         </div>
       </div>

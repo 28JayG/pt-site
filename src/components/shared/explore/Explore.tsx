@@ -1,22 +1,23 @@
 import Button from "components/shared/Button";
 import { homeExplore } from "data/explore.data";
-import React, { useState } from "react";
+import useItemSelector from "hooks/useItemSelector";
+import React from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { BlogPost } from "types/models";
 import MaxWidthWrapper from "../../layouts/MaxWidthWrapper";
+import { NextButton, PrevButton } from "../CarouseButtons";
 import TitleSummary from "../TitleSummary";
 import BlogCard from "./BlogCard";
-import { BlogPreview } from "types/models";
-import { NextButton, PrevButton } from "../CarouseButtons";
-import useItemSelector from "hooks/useItemSelector";
 
 interface Props {
   title: string;
   subtitle: string;
+  blogs: BlogPost[];
 }
 
-const Explore: React.FC<Props> = ({ title, subtitle }) => {
+const Explore: React.FC<Props> = ({ title, subtitle, blogs }) => {
   const { selectedItem, handleNext, handlePrev } =
-    useItemSelector<BlogPreview>(homeExplore);
+    useItemSelector<BlogPost>(homeExplore);
 
   return (
     <div className="bg-grey-100">
@@ -35,13 +36,13 @@ const Explore: React.FC<Props> = ({ title, subtitle }) => {
           />
 
           <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-7 mt-14">
-            {homeExplore.map((item) => (
-              <BlogCard key={item.id} {...item} />
+            {blogs?.slice(0, 4).map((item) => (
+              <BlogCard key={item.id} blog={item} />
             ))}
           </div>
 
           <div className="flex flex-col gap-7 lg:hidden mt-12">
-            <BlogCard {...selectedItem} />
+            <BlogCard blog={selectedItem} />
             <div className="flex justify-end gap-3">
               <PrevButton onClick={handlePrev} />
               <NextButton onClick={handleNext} />

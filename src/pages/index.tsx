@@ -12,29 +12,50 @@ import RoundedCard from "components/shared/RoundedCard";
 import TitleSummary from "components/shared/TitleSummary";
 import { blurredBg } from "constants/assets.constants";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import {
-  homepageAboutDescription,
-  homepageAboutTitle,
-  homepageHighLights,
-} from "constants/homepage.constants";
+
 import TopClientsCard from "components/shared/Cards/TopClientsCard";
 import { PageProps } from "types/page.types";
 import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
 import { fetchFeaturedWorks } from "services/works.services";
-import { Work } from "types/models";
+import { BlogPost, Company, Review, Work } from "types/models";
+import { fetchTopCompanies } from "services/clients.services";
+import { fetchTopReviews } from "services/reviews.services";
+import { getKnowYourCompany } from "services/company.services";
+import { KnowYourCompany } from "types/company.types";
+import { fetchFeaturedBlogs } from "services/blog.services";
 
 interface LocalProps extends PageProps {
   featuredWorks: Work[];
+  topCompanies: Company[];
+  reviews: Review[];
+  knowYourCompany: KnowYourCompany | undefined;
+  blogs: BlogPost[];
 }
 
-export default function Home({ footer, featuredWorks }: LocalProps) {
+export default function Home({
+  footer,
+  featuredWorks,
+  topCompanies,
+  reviews,
+  knowYourCompany,
+  blogs,
+}: LocalProps) {
   return (
     <PageLayout footer={footer}>
-      <Hero
-        title="Digital solution For Your Business Competitive Edge"
-        subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
-      />
-      <TopClientsCard />
+      <div className="relative">
+        <img
+          src={blurredBg}
+          alt=""
+          className="-translate-y-1/2 top-1/2 h-full w-full absolute"
+        />
+        <Hero
+          title="Digital solution For Your Business Competitive Edge"
+          subTitle="Propelius technologies delivers custom built mobile apps, web apps, e-commerce and SaaS solutions for overall digital success. "
+          hideBackground
+        />
+        <TopClientsCard companies={topCompanies} />
+      </div>
+
       <ServicesRange />
       <FeaturedWorks works={featuredWorks} />
 
@@ -63,14 +84,15 @@ export default function Home({ footer, featuredWorks }: LocalProps) {
         />
       </section>
 
-      <Testimonial />
+      <Testimonial reviews={reviews} />
       <PotentialClients />
       <About
-        title={homepageAboutTitle}
-        description={homepageAboutDescription}
-        highlights={homepageHighLights}
+        title={knowYourCompany?.title || ""}
+        description={knowYourCompany?.about || ""}
+        highlights={knowYourCompany?.highlights || []}
       />
       <Explore
+        blogs={blogs}
         title="Explore our digital digest"
         subtitle="Scroll through our blog for expert views on web app development, mobile app, SaaS solutions and other digital transformation stuff."
       />
@@ -83,6 +105,10 @@ export async function getStaticProps() {
   const sections = await fetchFooterSections();
   const enquiries = await fetchEnquiries();
   const featuredWorks = await fetchFeaturedWorks();
+  const topCompanies = await fetchTopCompanies();
+  const reviews = await fetchTopReviews();
+  const knowYourCompany = await getKnowYourCompany();
+  const blogPosts = await fetchFeaturedBlogs();
 
   return {
     props: {
@@ -91,6 +117,10 @@ export async function getStaticProps() {
         enquiries: enquiries.data || [],
       },
       featuredWorks: featuredWorks.data || [],
+      topCompanies: topCompanies.data || [],
+      reviews: reviews.data || [],
+      knowYourCompany: knowYourCompany.data,
+      blogs: blogPosts.data || [],
     },
   };
 }

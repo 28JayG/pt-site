@@ -5,16 +5,20 @@ interface Props {
   children: ReactNode;
   variant?: "normal" | "bordered";
   color?: string;
+  bgColor?: string;
 }
 
 const RoundedCard: React.FC<Props> = ({
   children,
   color,
+  bgColor,
   variant = "normal",
 }) => {
   const className = `relative lg:px-28 pt-16 pb-16 lg:pb-32 mx-auto rounded-t-3xl rounded-br-[55%] rounded-bl-[55%] text-center overflow-hidden bg-${
-    color || "white"
-  } ${variant === "bordered" ? "border-2 border-primary" : ""}`;
+    bgColor || "white"
+  } text-${color || "white"} ${
+    variant === "bordered" ? "border-2 border-primary" : ""
+  }`;
 
   return (
     <MaxWidthWrapper>

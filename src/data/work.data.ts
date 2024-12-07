@@ -13,8 +13,8 @@ const workData: Work[] = [
       clientele:
         "Tapping the market with a unique idea was not easy without any front facing platform, Thanks to Propelius Technologies for providing the one as per our needs. Will be happy to work with you in the near future.",
       name: "Arvind Einstein",
-      title: "CEO",
-      image: "/images/client_avatar_3.png", // Replace with the actual image URL
+      role: "CEO",
+      avatar: "/images/client_avatar_3.png", // Replace with the actual image URL
     },
     type: "web",
   },
@@ -32,8 +32,8 @@ const workData: Work[] = [
       clientele:
         "Tapping the market with a unique idea was not easy without any front facing platform, Thanks to Propelius Technologies for providing the one as per our needs. Will be happy to work with you in the near future.",
       name: "Arvind Einstein",
-      title: "CEO",
-      image: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
+      role: "CEO",
+      avatar: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
     },
   },
   {
@@ -52,8 +52,8 @@ const workData: Work[] = [
       clientele:
         "Tapping the market with a unique idea was not easy without any front facing platform, Thanks to Propelius Technologies for providing the one as per our needs. Will be happy to work with you in the near future.",
       name: "Arvind Einstein",
-      title: "CEO",
-      image: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
+      role: "CEO",
+      avatar: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
     },
   },
   {
@@ -72,8 +72,8 @@ const workData: Work[] = [
       clientele:
         "Tapping the market with a unique idea was not easy without any front facing platform, Thanks to Propelius Technologies for providing the one as per our needs. Will be happy to work with you in the near future.",
       name: "Arvind Einstein",
-      title: "CEO",
-      image: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
+      role: "CEO",
+      avatar: "https://example.com/arvind-einstein.jpg", // Replace with the actual image URL
     },
   },
   {
