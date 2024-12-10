@@ -1,4 +1,5 @@
-import LatestArticle from "components/articles/LatestArticleBlog";
+import AllBlogs from "components/articles/ArticleListBlog";
+import LatestBlog from "components/articles/LatestArticleBlog";
 import PageLayout from "components/layouts/PageLayout";
 import ContactForm from "components/shared/ContactForm";
 import React from "react";
@@ -14,8 +15,8 @@ interface Props extends PageProps {
 const Blogs: React.FC<Props> = ({ footer, blogs }) => {
   return (
     <PageLayout footer={footer}>
-      <LatestArticle blog={blogs?.[0]} />
-      {/* <ArticleListBlog /> */}
+      <LatestBlog blog={blogs?.[0]} />
+      <AllBlogs blogs={blogs} />
       <ContactForm />
     </PageLayout>
   );

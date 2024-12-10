@@ -12,7 +12,7 @@ interface Props {
   blog: BlogPost;
 }
 
-const LatestArticle: React.FC<Props> = ({ blog }) => {
+const LatestBlog: React.FC<Props> = ({ blog }) => {
   return (
     <div className="w-full relative pt-28 lg:pt-52 pb-20">
       <img
@@ -62,4 +62,4 @@ const LatestArticle: React.FC<Props> = ({ blog }) => {
   );
 };
 
-export default LatestArticle;
+export default LatestBlog;
