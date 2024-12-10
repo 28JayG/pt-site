@@ -4,7 +4,7 @@ import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
 import { IoMdStar } from "react-icons/io";
 import { Review } from "types/models";
 import Button from "components/shared/Button";
-import { getImageString } from "utils/strings.utils";
+import { getImageUrl } from "utils/strings.utils";
 import classNames from "classnames";
 
 interface Props {
@@ -33,7 +33,7 @@ const TestimonialCard: FC<Props> = ({ review }) => {
       <p className="text-lg text-grey-700">"{reviewText}"</p>
       <div className="flex gap-4 items-center">
         <img
-          src={getImageString(client.avatar?.url)}
+          src={getImageUrl(client.avatar?.url)}
           alt=""
           className="w-10 h-10"
         />

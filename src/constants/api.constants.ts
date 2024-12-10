@@ -1,3 +1,5 @@
+import { techCategories } from "data/services.data";
+
 export const ENDPOINTS = {
   footer: {
     enquiries: "/footer-enquiries",
@@ -8,6 +10,8 @@ export const ENDPOINTS = {
   companies: "/companies",
   reviews: "/reviews",
   blogs: "/blog-posts",
+  services: '/services',
+  techCategories: '/tech-categories',
   company: {
     knowYourCompany: "/know-your-company",
   },

@@ -1,11 +1,15 @@
-import React from "react";
-import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
 import Button from "components/shared/Button";
-import TitleSummary from "components/shared/TitleSummary";
-import { services } from "data/services.data";
 import ServiceCard from "components/shared/ServiceCard";
+import TitleSummary from "components/shared/TitleSummary";
+import React from "react";
+import { Service } from "types/models";
+import MaxWidthWrapper from "../layouts/MaxWidthWrapper";
 
-const ImpactServices: React.FC = () => {
+interface Props {
+  services: Service[];
+}
+
+const ImpactServices: React.FC<Props> = ({ services }) => {
   return (
     <div className="bg-gray-100 py-10">
       <MaxWidthWrapper>

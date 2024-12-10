@@ -1,11 +1,10 @@
-import React, { FC } from "react";
+import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import Button from "components/shared/Button";
+import { blurredBg } from "constants/assets.constants";
+import { FC } from "react";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { SiTicktick } from "react-icons/si";
-import { blurredBg } from "constants/assets.constants";
-import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import { TechCategory as TechCategoryI } from "types/models";
-import { techCategories } from "data/services.data";
 
 interface TechCategoryProps {
   techCategory: TechCategoryI;
@@ -21,10 +20,10 @@ const TechCategory: FC<TechCategoryProps> = ({ techCategory }) => {
         <div className="relative flex gap-4 flex-1 justify-start flex-wrap">
           {techCategory.techFrameworks.map((category) => (
             <div
-              key={category.id}
+              key={category.frameworkId}
               className="flex gap-2 rounded-full bg-gray-100 items-center px-3 py-1"
             >
-              <SiTicktick className="text-primary" />
+              <SiTicktick className="text-green-500" />
               <p>{category.title}</p>
             </div>
           ))}
@@ -34,12 +33,16 @@ const TechCategory: FC<TechCategoryProps> = ({ techCategory }) => {
   );
 };
 
-const TechStack = () => {
+interface TechStackProps {
+  techCategories: TechCategoryI[];
+}
+
+const TechStack: FC<TechStackProps> = ({ techCategories }) => {
   return (
     <div className="relative py-20">
       <img src={blurredBg} alt="" className=" w-full h-full absolute -z-10" />
       <MaxWidthWrapper>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 lg:gap-3">
           <p className="text-grey-700 text-sm font-light text-center lg:text-left">
             Explore Our Techstack
           </p>
@@ -52,7 +55,7 @@ const TechStack = () => {
               Get Started Today
             </Button>
           </div>
-          {techCategories.map((category) => (
+          {techCategories?.map((category) => (
             <TechCategory key={category.id} techCategory={category} />
           ))}
         </div>

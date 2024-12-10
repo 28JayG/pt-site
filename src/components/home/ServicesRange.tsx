@@ -16,7 +16,7 @@ const ServiceCardWithIllustration: FC<ServiceCardProps> = ({
   service,
   illustrationPosition,
 }) => {
-  const { color, description, illustrationUri, title } = service;
+  const { color, description, illustration: illustrationUri, title } = service;
 
   const getIllustrationClasses = () => {
     switch (illustrationPosition) {

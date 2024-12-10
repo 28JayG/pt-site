@@ -4,7 +4,7 @@ export interface Service {
   id: string;
   title: string;
   description: string;
-  illustrationUri: string;
+  illustration: StrapiImage;
   color: string;
 }
 
@@ -46,7 +46,7 @@ export interface Review {
 export interface TechCategory {
   id: string;
   title: string;
-  techFrameworks: { title: string; id: string }[];
+  techFrameworks: { title: string; frameworkId: string; id?: number }[];
 }
 
 export interface BlogContent {
@@ -61,4 +61,5 @@ export interface BlogPost {
   title: string;
   summary: string;
   content: BlogContent[];
+  publishedAt: string;
 }

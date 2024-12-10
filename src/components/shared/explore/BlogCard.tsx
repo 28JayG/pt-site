@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { BlogPost } from "types/models";
-import { getImageString } from "utils/strings.utils";
+import { getImageUrl } from "utils/strings.utils";
 
 interface BlogCardProps {
   blog: BlogPost;
@@ -13,7 +13,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
     <div className="bg-white w-full lg:h-68 rounded-3xl flex flex-col lg:flex-row p-5 lg:p-7 gap-5 lg:gap-7 items-center">
       <img
-        src={getImageString(thumbnail?.url)}
+        src={getImageUrl(thumbnail?.url)}
         alt={title}
         className="w-full h-52 object-cover lg:w-56 lg:h-52 rounded-3xl"
       />

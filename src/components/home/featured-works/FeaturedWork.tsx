@@ -2,7 +2,7 @@ import { FC } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { colors } from "styles/colors";
 import { Work } from "types/models";
-import { getImageString } from "utils/strings.utils";
+import { getImageUrl } from "utils/strings.utils";
 
 interface Props {
   work: Work;
@@ -13,7 +13,7 @@ const FeaturedWork: FC<Props> = ({ work }) => {
     <div className="relative flex flex-col lg:flex-row gap-7 lg:gap-28 items-start px-5 lg:px-0 lg:even:flex-row-reverse lg:even:pl-max-width-single-spacing lg:odd:pr-max-width-single-spacing">
       <div className="bg-green-50 shrink-0 w-full lg:w-175 aspect-square rounded-3xl">
         <img
-          src={getImageString(work.image?.url)}
+          src={getImageUrl(work.image?.url)}
           alt=""
           className="w-full h-full"
         />

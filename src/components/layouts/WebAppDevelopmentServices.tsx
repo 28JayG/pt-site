@@ -14,7 +14,7 @@ const WebAppDevelopmentServices: React.FC = () => {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
           <ServiceCard
-            illustrationUri="/SVG/hybrid_app.svg"
+            illustration="/SVG/hybrid_app.svg"
             title="Cross Platform mobile apps development"
             description="Maximise your reach with a single codebase. Our cross-platform
             solutions ensure seamless performance across iOS and Android,
@@ -22,7 +22,7 @@ const WebAppDevelopmentServices: React.FC = () => {
             cta={<Button color="black">Talk To Our Experts</Button>}
           />
           <ServiceCard
-            illustrationUri="/SVG/hybrid_app.svg"
+            illustration="/SVG/hybrid_app.svg"
             title=" Native mobile apps development"
             description="Unleash full power of device-specific features. Our native app
             development services for iOS and Android, ensures the highest

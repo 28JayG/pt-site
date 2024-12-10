@@ -19,10 +19,10 @@ const CompanyContactCard = () => (
           <LuMail />
           <p className="hidden lg:block">{COMPANY_MAIL}</p>
         </a>
-        <p className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center">
           <FaSkype />
           <p className="hidden lg:block">{COMPANY_SKYPE}</p>
-        </p>
+        </div>
       </div>
     }
   />
