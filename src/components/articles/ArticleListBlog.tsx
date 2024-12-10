@@ -98,9 +98,9 @@ const AllBlogs: React.FC<Props> = ({ blogs }) => {
           <input
             type="text"
             placeholder="Enter your e-mail address"
-            className="bg-transparent lg:text-white pl-5 placeholder:text-xs lg:placeholder:text-white"
+            className="bg-transparent w-auto lg:text-white placeholder:text-xs lg:placeholder:text-white"
           />
-          <div className="bg-black px-7 py-2 text-white rounded-lg">
+          <div className="bg-black px-3 lg:px-7 py-2 text-sm text-white rounded-lg lg:rounded-full">
             Subscribe
           </div>
         </div>
