@@ -56,6 +56,7 @@ export interface BlogContent {
 
 export interface BlogPost {
   id: number;
+  slug: string;
   bannerImage: StrapiImage;
   thumbnail: StrapiImage;
   title: string;

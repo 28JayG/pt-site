@@ -9,26 +9,23 @@ import { FaArrowRight } from "react-icons/fa";
 import { articleListArray } from "data/articleList.data";
 import MaxWidthWrapper from "components/layouts/MaxWidthWrapper";
 import { BlogPost } from "types/models";
-import { Pagination } from "types/ui.types";
+import { Pagination as PaginationI } from "types/ui.types";
 import BlogCard from "components/shared/explore/BlogCard";
+import Pagination from "components/shared/Pagination";
 
 interface Props {
   blogs: BlogPost[];
 }
 
-const size: number = 4;
-
 const AllBlogs: React.FC<Props> = ({ blogs }) => {
-  const [pagination, setPagination] = useState<Pagination>({
+  const [pagination, setPagination] = useState<PaginationI>({
     page: 0,
-    size: 6,
+    size: 4,
   });
 
   const handlePageSelect = (page: number) => {
     setPagination((prev) => ({ ...prev, page }));
   };
-
-  const totalPage = Math.ceil(blogs.length / size);
 
   return (
     <MaxWidthWrapper className="py-14 flex flex-col items-center text-center">
@@ -56,35 +53,11 @@ const AllBlogs: React.FC<Props> = ({ blogs }) => {
         ))}
       </div>
 
-      <div className="flex gap-4 items-center mb-20">
-        {totalPage > 5 && (
-          <IoArrowBackCircleOutline
-            size={25}
-            className="text-green-500 cursor-pointer"
-          />
-        )}
-        {Array(totalPage)
-          .fill("")
-          .map((_, index) => (
-            <div
-              key={index}
-              className={`p-2 text-center rounded-full w-10 font-semibold cursor-pointer ${
-                pagination.page === index
-                  ? "bg-green-500 text-white"
-                  : "bg-white text-green-500"
-              }`}
-              onClick={() => handlePageSelect(index)}
-            >
-              {(index + 1).toString().padStart(2, "0")}
-            </div>
-          ))}
-        {totalPage > 5 && (
-          <IoArrowForwardCircleOutline
-            size={25}
-            className="text-primary cursor-pointer"
-          />
-        )}
-      </div>
+      <Pagination
+        count={blogs.length}
+        rowPerPage={pagination.size}
+        onPageChange={handlePageSelect}
+      />
 
       <div className=" w-full px-4 py-8 lg:py-14 bg-primary flex flex-col gap-5 text-center items-center rounded-2xl justify-center">
         <p className="font-semibold text-2xl lg:text-4xl text-white">

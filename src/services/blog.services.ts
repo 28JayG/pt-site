@@ -19,3 +19,15 @@ export const fetchBlogs = async () =>
 
     return { data: response.data.data, success: true };
   });
+
+export const fetchBlogSlugs = async () =>
+  await apiRequest<string[]>(async () => {
+    const response = await AxiosInstance.get(
+      `${ENDPOINTS.blogs}?sort=publishedAt:desc`
+    );
+
+    return {
+      data: response.data.data.map((blog: BlogPost) => blog.slug),
+      success: true,
+    };
+  });
