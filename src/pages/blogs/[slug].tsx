@@ -1,6 +1,5 @@
 import ContactForm from "components/shared/ContactForm";
 import PageLayout from "components/layouts/PageLayout";
-import SingleBlogFullArticle from "components/layouts/SingleBlogFullArticle";
 import Explore from "components/shared/explore/Explore";
 import React from "react";
 import { PageProps } from "types/page.types";
@@ -9,6 +8,7 @@ import { fetchBlogs, fetchBlogSlugs } from "services/blog.services";
 import { BlogPost } from "types/models";
 import { GetStaticProps } from "next";
 import BlogHero from "components/blogs/BlogHero";
+import BlogContent from "components/blogs/BlogContent";
 
 interface Props extends PageProps {
   blogs: BlogPost[];
@@ -23,7 +23,7 @@ const BlogDetails: React.FC<Props> = ({ footer, blogs, blog }) => {
         bannerImage={blog.bannerImage}
         publishedAt={blog.publishedAt}
       />
-      <SingleBlogFullArticle content={blog.content} />
+      <BlogContent content={blog.content} />
       <Explore
         blogs={blogs}
         title="Related Articles & Resources"
