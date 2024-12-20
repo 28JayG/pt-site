@@ -20,7 +20,7 @@ import React from "react";
 import { fetchFeaturedBlogs } from "services/blog.services";
 import { getKnowYourCompany } from "services/company.services";
 import { fetchEnquiries, fetchFooterSections } from "services/footer.services";
-import { fetchServices, fetchTechCategories } from "services/services.services";
+import { fetchFeaturedServices, fetchTechCategories } from "services/services.services";
 import { KnowYourCompany } from "types/company.types";
 import { BlogPost, Service, TechCategory } from "types/models";
 import { PageProps } from "types/page.types";
@@ -41,7 +41,6 @@ const ServicePage: React.FC<Props> = ({
 }) => {
   return (
     <PageLayout footer={footer}>
-      <div>...</div>
       <div className="relative">
         <img
           src={blurredBg}
@@ -69,7 +68,7 @@ const ServicePage: React.FC<Props> = ({
         subtitle="Delve into our comprehensive techstack, supporting our full spectrum of digital consulting services."
       />
       {/* <FrequentlyAskedQues questions={questionsArray1} /> */}
-      {/* <ContactForm /> */}
+      <ContactForm />
     </PageLayout>
   );
 };
@@ -81,7 +80,7 @@ export async function getStaticProps() {
   const enquiries = await fetchEnquiries();
   const knowYourCompany = await getKnowYourCompany();
   const blogs = await fetchFeaturedBlogs();
-  const services = await fetchServices();
+  const services = await fetchFeaturedServices();
   const techCategories = await fetchTechCategories();
 
   return {

@@ -6,6 +6,17 @@ export interface Service {
   description: string;
   illustration: StrapiImage;
   color: string;
+  slug: string;
+  headline: string;
+  subHeadline: string;
+  tagline: string;
+  works: Work[];
+  relatedServices: this[];
+  relatedServicesDetails: {
+    title: string;
+    summary: string;
+  };
+  successStoriesDescription: string;
 }
 
 export interface Company {

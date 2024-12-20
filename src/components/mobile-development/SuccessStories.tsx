@@ -1,13 +1,14 @@
 import FeaturedWork from "components/home/featured-works/FeaturedWork";
 import { NextButton, PrevButton } from "components/shared/CarouseButtons";
-import workData from "data/work.data";
 import useItemSelector from "hooks/useItemSelector";
 import React from "react";
 import { Work } from "types/models";
 
-const works = workData.filter((work) => work.type === "mobile");
+interface Props {
+  works: Work[]
+}
 
-const SuccessStories: React.FC = () => {
+const SuccessStories: React.FC<Props> = ({works}) => {
   const { selectedItem, handleNext, handlePrev } = useItemSelector<Work>(works);
 
   return (

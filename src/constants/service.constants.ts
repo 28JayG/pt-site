@@ -9,3 +9,8 @@ export const serviceHeroTitle =
   "Expand your horizons with integrated digital solutions for business";
 export const serviceHeroSubtitle =
   "We provide a complete ecosystem of solutions designed to enhance efficiency, extend market reach, and sharpen your competitive edge.";
+
+export const companyServiceSlugs: string[] = [
+  "mobile-application-development",
+  "",
+];

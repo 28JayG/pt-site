@@ -7,6 +7,7 @@ import classNames from "classnames";
 
 interface Props {
   title: string;
+  tag?: string;
   subTitle?: string;
   headerClassName?: string;
   featuredContent?: React.ReactNode;
@@ -16,6 +17,7 @@ interface Props {
 const Hero: React.FC<Props> = ({
   title,
   subTitle,
+  tag,
   featuredContent,
   headerClassName,
   hideBackground,
@@ -37,6 +39,7 @@ const Hero: React.FC<Props> = ({
               headerClassName
             )}
           >
+            {!!tag && <div className="text-base " >{tag}</div>}
             <h2 className="text-green-900 md:text-6xl font-semibold text-2xl leading-8 lg:leading-18">
               {title}
             </h2>
